@@ -1221,7 +1221,7 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","bg","guankaCon","viewstack","scroller","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","xzTxt","xzBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","bg","guankaCon","viewstack","scroller","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -1508,7 +1508,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.y = 44;
 		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.xzBtn_i()];
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
 		return t;
 	};
 	_proto._HorizontalLayout1_i = function () {
@@ -1545,10 +1545,12 @@ window.skins={};
 		this.lvTxt = t;
 		t.bold = true;
 		t.size = 36;
-		t.text = "Lv.3";
+		t.text = "Lv.1";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.verticalCenter = 0;
-		t.x = 80;
+		t.width = 110;
+		t.x = 70;
 		return t;
 	};
 	_proto._Group1_i = function () {
@@ -1595,14 +1597,14 @@ window.skins={};
 		t.x = 74;
 		return t;
 	};
-	_proto.xzBtn_i = function () {
+	_proto.mdalBtn_i = function () {
 		var t = new eui.Group();
-		this.xzBtn = t;
+		this.mdalBtn = t;
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.touchChildren = false;
 		t.touchEnabled = true;
-		t.elementsContent = [this._Image5_i(),this._Image6_i(),this.xzTxt_i()];
+		t.elementsContent = [this._Image5_i(),this._Image6_i(),this.mdalTxt_i()];
 		return t;
 	};
 	_proto._Image5_i = function () {
@@ -1615,17 +1617,20 @@ window.skins={};
 	_proto._Image6_i = function () {
 		var t = new eui.Image();
 		t.source = "icon_xz1";
+		t.x = 0;
 		return t;
 	};
-	_proto.xzTxt_i = function () {
+	_proto.mdalTxt_i = function () {
 		var t = new eui.Label();
-		this.xzTxt = t;
+		this.mdalTxt = t;
 		t.bold = true;
 		t.size = 36;
-		t.text = "14";
+		t.text = "1";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.verticalCenter = 0;
-		t.x = 91;
+		t.width = 100;
+		t.x = 70;
 		return t;
 	};
 	_proto.friendBtn_i = function () {
