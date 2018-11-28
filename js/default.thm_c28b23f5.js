@@ -928,11 +928,11 @@ window.skins={};
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","list","awardTxt","txList","numTxt","renwuCon","nameTxt","guankaCon","refreshBtn","shareBtn","startLable","startBtn","closeBtn"];
+		this.skinParts = ["shade","titleTxt","list","awardTxt","txList","numTxt","renwuCon","txImg","rectMack","nameTxt","iconBase","guankaCon","refreshBtn","shareBtn","startLable","startBtn","closeBtn"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this.shade_i(),this._Group2_i()];
+		this.elementsContent = [this.shade_i(),this._Group3_i()];
 		this.states = [
 			new eui.State ("renwu",
 				[
@@ -960,7 +960,7 @@ window.skins={};
 		t.top = 0;
 		return t;
 	};
-	_proto._Group2_i = function () {
+	_proto._Group3_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
@@ -1123,11 +1123,19 @@ window.skins={};
 		this.guankaCon = t;
 		t.horizontalCenter = 0;
 		t.y = 600;
-		t.elementsContent = [this._Image4_i(),this.nameTxt_i(),this._AwardItem1_i()];
+		t.elementsContent = [this._Group2_i(),this.nameTxt_i(),this.iconBase_i()];
 		return t;
 	};
-	_proto._Image4_i = function () {
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.height = 100;
+		t.width = 100;
+		t.elementsContent = [this.txImg_i(),this.rectMack_i()];
+		return t;
+	};
+	_proto.txImg_i = function () {
 		var t = new eui.Image();
+		this.txImg = t;
 		t.height = 100;
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -1135,6 +1143,17 @@ window.skins={};
 		t.width = 100;
 		t.x = 0;
 		t.y = 0;
+		return t;
+	};
+	_proto.rectMack_i = function () {
+		var t = new eui.Rect();
+		this.rectMack = t;
+		t.ellipseWidth = 100;
+		t.fillAlpha = 1;
+		t.height = 90;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 90;
 		return t;
 	};
 	_proto.nameTxt_i = function () {
@@ -1148,8 +1167,10 @@ window.skins={};
 		t.x = 120;
 		return t;
 	};
-	_proto._AwardItem1_i = function () {
-		var t = new AwardItem();
+	_proto.iconBase_i = function () {
+		var t = new BaseComponent();
+		this.iconBase = t;
+		t.className = "AwardItem";
 		t.skinName = "AwardItemSkin";
 		t.verticalCenter = 0;
 		t.x = 220;
@@ -1182,10 +1203,10 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = false;
 		t.touchEnabled = true;
-		t.elementsContent = [this._Image5_i(),this.startLable_i()];
+		t.elementsContent = [this._Image4_i(),this.startLable_i()];
 		return t;
 	};
-	_proto._Image5_i = function () {
+	_proto._Image4_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
@@ -2791,9 +2812,10 @@ window.skins={};
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.scale9Grid = new egret.Rectangle(1,1,4,4);
+		t.scale9Grid = new egret.Rectangle(34,30,5,3);
 		t.source = "bar_bg";
 		t.verticalCenter = 0;
+		t.width = 625;
 		return t;
 	};
 	_proto.thumb_i = function () {
@@ -2802,8 +2824,8 @@ window.skins={};
 		t.scale9Grid = new egret.Rectangle(12,10,1,1);
 		t.source = "bar_thumb";
 		t.width = 595;
-		t.x = 16;
-		t.y = 18;
+		t.x = 15;
+		t.y = 15;
 		return t;
 	};
 	_proto.labelDisplay_i = function () {
@@ -2823,7 +2845,7 @@ window.skins={};
 	__extends(SignInSkin, _super);
 	function SignInSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","hintTxt1","hintTxt2","infoTxt3","btn1","btn2","btn3","btn4","btn5","btn6","btn7","list","closeBtn"];
+		this.skinParts = ["shade","titleTxt","hintTxt1","hintTxt2","infoTxt3","btn1","btn2","btn3","btn4","btn5","btn6","btn7","list","startLable","startBtn","closeBtn"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -2845,7 +2867,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.hintTxt1_i(),this.hintTxt2_i(),this.infoTxt3_i(),this._Group1_i(),this._Group2_i(),this.list_i(),this.closeBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.hintTxt1_i(),this.hintTxt2_i(),this.infoTxt3_i(),this._Group1_i(),this._Group2_i(),this.list_i(),this.startBtn_i(),this.closeBtn_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -2999,6 +3021,34 @@ window.skins={};
 		t.text = "+30";
 		return t;
 	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Group();
+		this.startBtn = t;
+		t.bottom = 110;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image2_i(),this.startLable_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_5";
+		return t;
+	};
+	_proto.startLable_i = function () {
+		var t = new eui.Label();
+		this.startLable = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 36;
+		t.text = "炫 耀";
+		t.verticalCenter = 0;
+		return t;
+	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
@@ -3016,17 +3066,18 @@ window.skins={};
 	__extends(TaskViewSkin, _super);
 	function TaskViewSkin() {
 		_super.call(this);
-		this.skinParts = ["titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","nameTxt"];
+		this.skinParts = ["titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
 		this.currentState = "input";
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this._Rect1_i(),this._Group3_i()];
+		this.elementsContent = [this._Rect1_i(),this._Group4_i()];
 		this.states = [
 			new eui.State ("input",
 				[
 					new eui.SetProperty("taskTxt","visible",false),
 					new eui.SetProperty("txImg","visible",false),
+					new eui.SetProperty("_Group3","visible",false),
 					new eui.SetProperty("nameTxt","visible",false)
 				])
 			,
@@ -3034,7 +3085,11 @@ window.skins={};
 				[
 					new eui.SetProperty("titleTxt","text","口令确认"),
 					new eui.SetProperty("_Group2","visible",false),
-					new eui.SetProperty("startLable","text","马上开始")
+					new eui.SetProperty("startLable","text","马上开始"),
+					new eui.SetProperty("txImg","x",53),
+					new eui.SetProperty("txImg","y",0),
+					new eui.SetProperty("txImg","scaleX",1),
+					new eui.SetProperty("txImg","scaleY",1)
 				])
 		];
 	}
@@ -3049,11 +3104,11 @@ window.skins={};
 		t.top = 0;
 		return t;
 	};
-	_proto._Group3_i = function () {
+	_proto._Group4_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this.txImg_i(),this.nameTxt_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -3198,13 +3253,31 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		this._Group3 = t;
+		t.horizontalCenter = 0;
+		t.y = 293;
+		t.elementsContent = [this.txImg_i(),this.rectMack_i()];
+		return t;
+	};
 	_proto.txImg_i = function () {
 		var t = new eui.Image();
 		this.txImg = t;
 		t.height = 95;
 		t.horizontalCenter = 0;
 		t.width = 95;
-		t.y = 293;
+		return t;
+	};
+	_proto.rectMack_i = function () {
+		var t = new eui.Rect();
+		this.rectMack = t;
+		t.ellipseWidth = 100;
+		t.fillAlpha = 1;
+		t.height = 90;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 90;
 		return t;
 	};
 	_proto.nameTxt_i = function () {
