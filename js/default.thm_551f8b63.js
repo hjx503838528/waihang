@@ -2777,6 +2777,48 @@ window.skins={};
 		return t;
 	};
 	return HomeSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/LoadBarSkin.exml'] = window.LoadBarSkin = (function (_super) {
+	__extends(LoadBarSkin, _super);
+	function LoadBarSkin() {
+		_super.call(this);
+		this.skinParts = ["thumb","labelDisplay"];
+		
+		this.minHeight = 18;
+		this.minWidth = 30;
+		this.elementsContent = [this._Image1_i(),this.thumb_i(),this.labelDisplay_i()];
+	}
+	var _proto = LoadBarSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.scale9Grid = new egret.Rectangle(1,1,4,4);
+		t.source = "bar_bg";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Image();
+		this.thumb = t;
+		t.scale9Grid = new egret.Rectangle(12,10,1,1);
+		t.source = "bar_thumb";
+		t.width = 595;
+		t.x = 16;
+		t.y = 18;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.fontFamily = "Tahoma";
+		t.horizontalCenter = 0;
+		t.size = 15;
+		t.textAlign = "center";
+		t.textColor = 0x707070;
+		t.verticalAlign = "middle";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return LoadBarSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/SignInSkin.exml'] = window.SignInSkin = (function (_super) {
 	__extends(SignInSkin, _super);
 	function SignInSkin() {

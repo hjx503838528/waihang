@@ -3,6 +3,10 @@
 		{
 			"keys": "description_json,bg_ad_png,bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,gameicon_json",
 			"name": "preload"
+		},
+		{
+			"keys": "loading_json",
+			"name": "loading"
 		}
 	],
 	"resources": [
@@ -58,16 +62,22 @@
 			"subkeys": "yun1,yun10,yun11,yun12,yun13,yun14,yun15,yun16,yun17,yun2,yun3,yun4,yun5,yun6,yun7,yun8,yun9"
 		},
 		{
-			"name": "init_json",
-			"type": "sheet",
 			"url": "assets/init.json",
-			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_png,thumb_pb_png,track_png,track_pb_png,track_sb_png,tracklight_png"
+			"type": "sheet",
+			"name": "init_json",
+			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
 		},
 		{
-			"name": "gameicon_json",
-			"type": "sheet",
 			"url": "assets/gameicon.json",
-			"subkeys": "icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,guandao6,guandao5,guandao4,guandao3,guandao2,guandao1,gold3,gold2,gold1,bottom,win2,win1,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon12,icon11,icon10,icon,title1"
+			"type": "sheet",
+			"name": "gameicon_json",
+			"subkeys": "bottom,gold1,gold2,gold3,guandao1,guandao2,guandao3,guandao4,guandao5,guandao6,icon,icon1,icon10,icon11,icon12,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon_bag,icon_bf,icon_close,icon_error,icon_gift,icon_guanka1,icon_guanka2,icon_guanka3,icon_help,icon_home,icon_luyin,icon_lx,icon_mail,icon_p2,icon_pj1,icon_pj3,icon_rank,icon_refresh,icon_right,icon_rubbish,icon_sao,icon_share,icon_xj,icon_xp1,icon_xp2,icon_xz1,icon_xz2,icon_zs,kuang_1,kuang_2,kuang_3,kuang_4,kuang_5,kuang_6,kuang_7,kuang_8,title1,win1,win2"
+		},
+		{
+			"url": "assets/loading.json",
+			"type": "sheet",
+			"name": "loading_json",
+			"subkeys": "bar_bg,bar_thumb,black"
 		}
 	]
 }
