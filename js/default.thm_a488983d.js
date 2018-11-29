@@ -928,12 +928,12 @@ window.skins={};
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
 		_super.call(this);
-		this.skinParts = ["titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
+		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
 		this.currentState = "input";
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this._Rect1_i(),this._Group4_i()];
+		this.elementsContent = [this.shade_i(),this._Group4_i()];
 		this.states = [
 			new eui.State ("input",
 				[
@@ -957,13 +957,15 @@ window.skins={};
 	}
 	var _proto = CommanViewSkin.prototype;
 
-	_proto._Rect1_i = function () {
+	_proto.shade_i = function () {
 		var t = new eui.Rect();
+		this.shade = t;
 		t.bottom = 0;
 		t.fillAlpha = 0.6;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
+		t.touchEnabled = true;
 		return t;
 	};
 	_proto._Group4_i = function () {
@@ -1038,12 +1040,19 @@ window.skins={};
 		t.x = 53;
 		t.y = 110;
 		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this._Rect2_i(),this._Rect3_i(),this._Rect4_i(),this._Rect5_i()];
+		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Rect4_i()];
 		return t;
 	};
 	_proto._HorizontalLayout1_i = function () {
 		var t = new eui.HorizontalLayout();
 		t.gap = 36;
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
 		return t;
 	};
 	_proto._Rect2_i = function () {
@@ -1061,13 +1070,6 @@ window.skins={};
 		return t;
 	};
 	_proto._Rect4_i = function () {
-		var t = new eui.Rect();
-		t.fillColor = 0x666666;
-		t.height = 6;
-		t.width = 80;
-		return t;
-	};
-	_proto._Rect5_i = function () {
 		var t = new eui.Rect();
 		t.fillColor = 0x666666;
 		t.height = 6;
@@ -1175,6 +1177,7 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
+		t.touchEnabled = true;
 		return t;
 	};
 	_proto._Group2_i = function () {
@@ -3603,6 +3606,7 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
+		t.touchEnabled = true;
 		return t;
 	};
 	_proto._Group3_i = function () {
@@ -3824,6 +3828,7 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
+		t.touchEnabled = true;
 		return t;
 	};
 	_proto._Group2_i = function () {
