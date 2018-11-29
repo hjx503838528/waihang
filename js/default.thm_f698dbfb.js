@@ -928,27 +928,244 @@ window.skins={};
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","list","awardTxt","txList","numTxt","renwuCon","txImg","rectMack","nameTxt","iconBase","guankaCon","refreshBtn","shareBtn","startLable","startBtn","closeBtn"];
+		this.skinParts = ["titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
+		this.currentState = "input";
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this.shade_i(),this._Group3_i()];
+		this.elementsContent = [this._Rect1_i(),this._Group4_i()];
 		this.states = [
-			new eui.State ("renwu",
+			new eui.State ("input",
 				[
-					new eui.SetProperty("guankaCon","visible",false),
-					new eui.SetProperty("refreshBtn","visible",false),
-					new eui.SetProperty("shareBtn","visible",false)
+					new eui.SetProperty("taskTxt","visible",false),
+					new eui.SetProperty("txImg","visible",false),
+					new eui.SetProperty("_Group3","visible",false),
+					new eui.SetProperty("nameTxt","visible",false)
 				])
 			,
-			new eui.State ("haoyou",
+			new eui.State ("output",
 				[
-					new eui.SetProperty("renwuCon","visible",false),
-					new eui.SetProperty("startLable","text","下一关")
+					new eui.SetProperty("titleTxt","text","口令确认"),
+					new eui.SetProperty("_Group2","visible",false),
+					new eui.SetProperty("startLable","text","马上开始"),
+					new eui.SetProperty("txImg","x",53),
+					new eui.SetProperty("txImg","y",0),
+					new eui.SetProperty("txImg","scaleX",1),
+					new eui.SetProperty("txImg","scaleY",1)
 				])
 		];
 	}
 	var _proto = CommanViewSkin.prototype;
+
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	_proto._Group4_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "bg3_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "输入口令";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.taskTxt_i = function () {
+		var t = new eui.Label();
+		this.taskTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.lineSpacing = 4;
+		t.size = 30;
+		t.text = "将代替“阿婆”，完成“激流勇进”关卡";
+		t.textColor = 0x333333;
+		t.width = 540;
+		t.y = 226;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		this._Group2 = t;
+		t.horizontalCenter = 0;
+		t.y = 240;
+		t.elementsContent = [this.numTxt_i(),this.editable_i(),this._Group1_i()];
+		return t;
+	};
+	_proto.numTxt_i = function () {
+		var t = new eui.BitmapLabel();
+		this.numTxt = t;
+		t.font = "font1_fnt";
+		t.letterSpacing = 50;
+		t.text = "0000";
+		t.touchEnabled = false;
+		return t;
+	};
+	_proto.editable_i = function () {
+		var t = new eui.EditableText();
+		this.editable = t;
+		t.alpha = 0.1;
+		t.height = 90;
+		t.text = "";
+		t.width = 430;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.x = 53;
+		t.y = 110;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this._Rect2_i(),this._Rect3_i(),this._Rect4_i(),this._Rect5_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 36;
+		return t;
+	};
+	_proto._Rect2_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect3_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect4_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect5_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Group();
+		this.startBtn = t;
+		t.bottom = 105;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image2_i(),this.startLable_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_6";
+		t.y = 0;
+		return t;
+	};
+	_proto.startLable_i = function () {
+		var t = new eui.Label();
+		this.startLable = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 36;
+		t.text = "加 入";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		this._Group3 = t;
+		t.horizontalCenter = 0;
+		t.y = 293;
+		t.elementsContent = [this.txImg_i(),this.rectMack_i()];
+		return t;
+	};
+	_proto.txImg_i = function () {
+		var t = new eui.Image();
+		this.txImg = t;
+		t.height = 95;
+		t.horizontalCenter = 0;
+		t.width = 95;
+		return t;
+	};
+	_proto.rectMack_i = function () {
+		var t = new eui.Rect();
+		this.rectMack = t;
+		t.ellipseWidth = 100;
+		t.fillAlpha = 1;
+		t.height = 90;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 90;
+		return t;
+	};
+	_proto.nameTxt_i = function () {
+		var t = new eui.Label();
+		this.nameTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.lineSpacing = 4;
+		t.size = 30;
+		t.text = "阿婆";
+		t.textColor = 0x333333;
+		t.y = 408;
+		return t;
+	};
+	return CommanViewSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/FriendHelpSkin.exml'] = window.FriendHelpSkin = (function (_super) {
+	__extends(FriendHelpSkin, _super);
+	function FriendHelpSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","titleTxt","list","awardNameTxt","txImg","rectMack","txCon","nameTxt","iconBase","infoCon","refreshBtn","shareBtn","startLable","startBtn","hintTxt","closeBtn"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group2_i()];
+	}
+	var _proto = FriendHelpSkin.prototype;
 
 	_proto.shade_i = function () {
 		var t = new eui.Rect();
@@ -960,11 +1177,11 @@ window.skins={};
 		t.top = 0;
 		return t;
 	};
-	_proto._Group3_i = function () {
+	_proto._Group2_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this._Group1_i(),this._Image3_i(),this.awardTxt_i(),this.renwuCon_i(),this.guankaCon_i(),this.refreshBtn_i(),this.shareBtn_i(),this.startBtn_i(),this.closeBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this._Group1_i(),this._Image3_i(),this.awardNameTxt_i(),this.infoCon_i(),this.refreshBtn_i(),this.shareBtn_i(),this.startBtn_i(),this.hintTxt_i(),this.closeBtn_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -980,7 +1197,7 @@ window.skins={};
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = "这里是任务名称";
+		t.text = "好友帮助通关";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -1046,9 +1263,9 @@ window.skins={};
 		t.y = 330;
 		return t;
 	};
-	_proto.awardTxt_i = function () {
+	_proto.awardNameTxt_i = function () {
 		var t = new eui.Label();
-		this.awardTxt = t;
+		this.awardNameTxt = t;
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 30;
@@ -1057,77 +1274,17 @@ window.skins={};
 		t.y = 540;
 		return t;
 	};
-	_proto.renwuCon_i = function () {
+	_proto.infoCon_i = function () {
 		var t = new eui.Group();
-		this.renwuCon = t;
-		t.horizontalCenter = 0;
-		t.y = 610;
-		t.elementsContent = [this.txList_i(),this.numTxt_i()];
-		return t;
-	};
-	_proto.txList_i = function () {
-		var t = new eui.List();
-		this.txList = t;
-		t.itemRendererSkinName = TxItemSkin;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.layout = this._HorizontalLayout2_i();
-		t.dataProvider = this._ArrayCollection2_i();
-		return t;
-	};
-	_proto._HorizontalLayout2_i = function () {
-		var t = new eui.HorizontalLayout();
-		t.gap = -30;
-		return t;
-	};
-	_proto._ArrayCollection2_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i()];
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto.numTxt_i = function () {
-		var t = new eui.Label();
-		this.numTxt = t;
-		t.fontFamily = "黑体";
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.size = 30;
-		t.text = "232人正在参加…";
-		t.textColor = 0x333333;
-		t.verticalCenter = 0;
-		t.x = 155;
-		return t;
-	};
-	_proto.guankaCon_i = function () {
-		var t = new eui.Group();
-		this.guankaCon = t;
+		this.infoCon = t;
 		t.horizontalCenter = 0;
 		t.y = 600;
-		t.elementsContent = [this._Group2_i(),this.nameTxt_i(),this.iconBase_i()];
+		t.elementsContent = [this.txCon_i(),this.nameTxt_i(),this.iconBase_i()];
 		return t;
 	};
-	_proto._Group2_i = function () {
+	_proto.txCon_i = function () {
 		var t = new eui.Group();
+		this.txCon = t;
 		t.height = 100;
 		t.width = 100;
 		t.elementsContent = [this.txImg_i(),this.rectMack_i()];
@@ -1168,9 +1325,8 @@ window.skins={};
 		return t;
 	};
 	_proto.iconBase_i = function () {
-		var t = new BaseComponent();
+		var t = new AwardItem();
 		this.iconBase = t;
-		t.className = "AwardItem";
 		t.skinName = "AwardItemSkin";
 		t.verticalCenter = 0;
 		t.x = 220;
@@ -1221,8 +1377,19 @@ window.skins={};
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = "开 始";
+		t.text = "下一关";
 		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.hintTxt_i = function () {
+		var t = new eui.Label();
+		this.hintTxt = t;
+		t.bottom = 60;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 26;
+		t.text = "分享得20金币";
+		t.textColor = 0x666666;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
@@ -1237,7 +1404,7 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
-	return CommanViewSkin;
+	return FriendHelpSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/GameSkin.exml'] = window.GameSkin = (function (_super) {
 	__extends(GameSkin, _super);
 	function GameSkin() {
@@ -2798,49 +2965,6 @@ window.skins={};
 		return t;
 	};
 	return HomeSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/LoadBarSkin.exml'] = window.LoadBarSkin = (function (_super) {
-	__extends(LoadBarSkin, _super);
-	function LoadBarSkin() {
-		_super.call(this);
-		this.skinParts = ["thumb","labelDisplay"];
-		
-		this.minHeight = 18;
-		this.minWidth = 30;
-		this.elementsContent = [this._Image1_i(),this.thumb_i(),this.labelDisplay_i()];
-	}
-	var _proto = LoadBarSkin.prototype;
-
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.scale9Grid = new egret.Rectangle(34,30,5,3);
-		t.source = "bar_bg";
-		t.verticalCenter = 0;
-		t.width = 625;
-		return t;
-	};
-	_proto.thumb_i = function () {
-		var t = new eui.Image();
-		this.thumb = t;
-		t.scale9Grid = new egret.Rectangle(12,10,1,1);
-		t.source = "bar_thumb";
-		t.width = 595;
-		t.x = 15;
-		t.y = 15;
-		return t;
-	};
-	_proto.labelDisplay_i = function () {
-		var t = new eui.Label();
-		this.labelDisplay = t;
-		t.fontFamily = "Tahoma";
-		t.horizontalCenter = 0;
-		t.size = 15;
-		t.textAlign = "center";
-		t.textColor = 0x707070;
-		t.verticalAlign = "middle";
-		t.verticalCenter = 0;
-		return t;
-	};
-	return LoadBarSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/SignInSkin.exml'] = window.SignInSkin = (function (_super) {
 	__extends(SignInSkin, _super);
 	function SignInSkin() {
@@ -3066,37 +3190,17 @@ window.skins={};
 	__extends(TaskViewSkin, _super);
 	function TaskViewSkin() {
 		_super.call(this);
-		this.skinParts = ["titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
+		this.skinParts = ["shade","titleTxt","list","awardNameTxt","txList","numTxt","renwuCon","startLable","startBtn","closeBtn"];
 		
-		this.currentState = "input";
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this._Rect1_i(),this._Group4_i()];
-		this.states = [
-			new eui.State ("input",
-				[
-					new eui.SetProperty("taskTxt","visible",false),
-					new eui.SetProperty("txImg","visible",false),
-					new eui.SetProperty("_Group3","visible",false),
-					new eui.SetProperty("nameTxt","visible",false)
-				])
-			,
-			new eui.State ("output",
-				[
-					new eui.SetProperty("titleTxt","text","口令确认"),
-					new eui.SetProperty("_Group2","visible",false),
-					new eui.SetProperty("startLable","text","马上开始"),
-					new eui.SetProperty("txImg","x",53),
-					new eui.SetProperty("txImg","y",0),
-					new eui.SetProperty("txImg","scaleX",1),
-					new eui.SetProperty("txImg","scaleY",1)
-				])
-		];
+		this.elementsContent = [this.shade_i(),this._Group2_i()];
 	}
 	var _proto = TaskViewSkin.prototype;
 
-	_proto._Rect1_i = function () {
+	_proto.shade_i = function () {
 		var t = new eui.Rect();
+		this.shade = t;
 		t.bottom = 0;
 		t.fillAlpha = 0.6;
 		t.left = 0;
@@ -3104,17 +3208,17 @@ window.skins={};
 		t.top = 0;
 		return t;
 	};
-	_proto._Group4_i = function () {
+	_proto._Group2_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this._Group1_i(),this._Image3_i(),this.awardNameTxt_i(),this.renwuCon_i(),this.startBtn_i(),this.closeBtn_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = "bg3_png";
+		t.source = "bg4_png";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -3124,92 +3228,142 @@ window.skins={};
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = "输入口令";
+		t.text = "这里是任务名称";
 		t.textColor = 0x333333;
 		t.y = 120;
-		return t;
-	};
-	_proto.taskTxt_i = function () {
-		var t = new eui.Label();
-		this.taskTxt = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 3;
-		t.lineSpacing = 4;
-		t.size = 30;
-		t.text = "将代替“阿婆”，完成“激流勇进”关卡";
-		t.textColor = 0x333333;
-		t.width = 540;
-		t.y = 226;
-		return t;
-	};
-	_proto._Group2_i = function () {
-		var t = new eui.Group();
-		this._Group2 = t;
-		t.horizontalCenter = 0;
-		t.y = 240;
-		t.elementsContent = [this.numTxt_i(),this.editable_i(),this._Group1_i()];
-		return t;
-	};
-	_proto.numTxt_i = function () {
-		var t = new eui.BitmapLabel();
-		this.numTxt = t;
-		t.font = "font1_fnt";
-		t.letterSpacing = 50;
-		t.text = "0000";
-		t.touchEnabled = false;
-		return t;
-	};
-	_proto.editable_i = function () {
-		var t = new eui.EditableText();
-		this.editable = t;
-		t.alpha = 0.1;
-		t.height = 90;
-		t.text = "";
-		t.width = 430;
 		return t;
 	};
 	_proto._Group1_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
+		t.y = 190;
+		t.elementsContent = [this._Image2_i(),this.list_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.x = 53;
-		t.y = 110;
+		t.source = "kuang_8";
+		return t;
+	};
+	_proto.list_i = function () {
+		var t = new eui.List();
+		this.list = t;
+		t.horizontalCenter = 0;
+		t.itemRendererSkinName = AwardItemSkin;
+		t.verticalCenter = 0;
 		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this._Rect2_i(),this._Rect3_i(),this._Rect4_i(),this._Rect5_i()];
+		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._HorizontalLayout1_i = function () {
 		var t = new eui.HorizontalLayout();
-		t.gap = 36;
+		t.gap = 100;
 		return t;
 	};
-	_proto._Rect2_i = function () {
-		var t = new eui.Rect();
-		t.fillColor = 0x666666;
-		t.height = 6;
-		t.width = 80;
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
 		return t;
 	};
-	_proto._Rect3_i = function () {
-		var t = new eui.Rect();
-		t.fillColor = 0x666666;
-		t.height = 6;
-		t.width = 80;
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+30";
 		return t;
 	};
-	_proto._Rect4_i = function () {
-		var t = new eui.Rect();
-		t.fillColor = 0x666666;
-		t.height = 6;
-		t.width = 80;
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+30";
 		return t;
 	};
-	_proto._Rect5_i = function () {
-		var t = new eui.Rect();
-		t.fillColor = 0x666666;
-		t.height = 6;
-		t.width = 80;
+	_proto._Object3_i = function () {
+		var t = {};
+		t.source = "icon_xz2";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "icon_gift";
+		t.y = 330;
+		return t;
+	};
+	_proto.awardNameTxt_i = function () {
+		var t = new eui.Label();
+		this.awardNameTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 30;
+		t.text = "特别礼物";
+		t.textColor = 0x333333;
+		t.y = 540;
+		return t;
+	};
+	_proto.renwuCon_i = function () {
+		var t = new eui.Group();
+		this.renwuCon = t;
+		t.horizontalCenter = 0;
+		t.y = 610;
+		t.elementsContent = [this.txList_i(),this.numTxt_i()];
+		return t;
+	};
+	_proto.txList_i = function () {
+		var t = new eui.List();
+		this.txList = t;
+		t.itemRendererSkinName = TxItemSkin;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.layout = this._HorizontalLayout2_i();
+		t.dataProvider = this._ArrayCollection2_i();
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = -30;
+		return t;
+	};
+	_proto._ArrayCollection2_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i()];
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		t.source = "black";
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		t.source = "gold2";
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		t.source = "gold2";
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		t.source = "gold2";
+		return t;
+	};
+	_proto.numTxt_i = function () {
+		var t = new eui.Label();
+		this.numTxt = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 30;
+		t.text = "232人正在参加…";
+		t.textColor = 0x333333;
+		t.verticalCenter = 0;
+		t.x = 155;
 		return t;
 	};
 	_proto.startBtn_i = function () {
@@ -3219,10 +3373,10 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = false;
 		t.touchEnabled = true;
-		t.elementsContent = [this._Image2_i(),this.startLable_i()];
+		t.elementsContent = [this._Image4_i(),this.startLable_i()];
 		return t;
 	};
-	_proto._Image2_i = function () {
+	_proto._Image4_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
@@ -3237,7 +3391,7 @@ window.skins={};
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = "加 入";
+		t.text = "开 始";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -3253,55 +3407,16 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
-	_proto._Group3_i = function () {
-		var t = new eui.Group();
-		this._Group3 = t;
-		t.horizontalCenter = 0;
-		t.y = 293;
-		t.elementsContent = [this.txImg_i(),this.rectMack_i()];
-		return t;
-	};
-	_proto.txImg_i = function () {
-		var t = new eui.Image();
-		this.txImg = t;
-		t.height = 95;
-		t.horizontalCenter = 0;
-		t.width = 95;
-		return t;
-	};
-	_proto.rectMack_i = function () {
-		var t = new eui.Rect();
-		this.rectMack = t;
-		t.ellipseWidth = 100;
-		t.fillAlpha = 1;
-		t.height = 90;
-		t.horizontalCenter = 0;
-		t.verticalCenter = 0;
-		t.width = 90;
-		return t;
-	};
-	_proto.nameTxt_i = function () {
-		var t = new eui.Label();
-		this.nameTxt = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 3;
-		t.lineSpacing = 4;
-		t.size = 30;
-		t.text = "阿婆";
-		t.textColor = 0x333333;
-		t.y = 408;
-		return t;
-	};
 	return TaskViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/TxItemSkin.exml'] = window.TxItemSkin = (function (_super) {
 	__extends(TxItemSkin, _super);
 	function TxItemSkin() {
 		_super.call(this);
-		this.skinParts = ["iconImg"];
+		this.skinParts = ["iconImg","mackRect"];
 		
 		this.height = 60;
 		this.width = 60;
-		this.elementsContent = [this.iconImg_i()];
+		this.elementsContent = [this.iconImg_i(),this.mackRect_i()];
 		
 		eui.Binding.$bindProperties(this, ["hostComponent.data.source"],[0],this.iconImg,"source");
 	}
@@ -3312,8 +3427,23 @@ window.skins={};
 		this.iconImg = t;
 		t.height = 60;
 		t.horizontalCenter = 0;
+		t.mask = this.mackRect;
 		t.verticalCenter = 0;
 		t.width = 60;
+		return t;
+	};
+	_proto.mackRect_i = function () {
+		var t = new eui.Rect();
+		this.mackRect = t;
+		t.bottom = 0;
+		t.ellipseWidth = 100;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		if(this.iconImg)
+		{
+			this.iconImg.mask = this.mackRect;
+		}
 		return t;
 	};
 	return TxItemSkin;

@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_ad_png,bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,gameicon_json",
+			"keys": "description_json,bg_ad_png,bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,gameicon_json,loading_bg_jpg",
 			"name": "preload"
 		},
 		{
-			"keys": "loading_json",
+			"keys": "loading_json,loading_bg_jpg",
 			"name": "loading"
 		}
 	],
@@ -78,6 +78,11 @@
 			"type": "sheet",
 			"name": "loading_json",
 			"subkeys": "bar_bg,bar_thumb,black"
+		},
+		{
+			"url": "assets/loading_bg.jpg",
+			"type": "image",
+			"name": "loading_bg_jpg"
 		}
 	]
 }
