@@ -1612,13 +1612,19 @@ window.skins={};
 		t.right = 0;
 		t.source = "bg1_png";
 		t.top = 0;
+		t.visible = false;
 		return t;
 	};
 	_proto.scroller_i = function () {
 		var t = new eui.Scroller();
 		this.scroller = t;
-		t.bottom = 112;
+		t.bottom = 0;
+		t.bounces = false;
 		t.horizontalCenter = 0;
+		t.scrollPolicyH = "off";
+		t.scrollPolicyV = "on";
+		t.top = 0;
+		t.width = 750;
 		t.viewport = this.viewstack_i();
 		return t;
 	};
@@ -1626,7 +1632,6 @@ window.skins={};
 		var t = new eui.ViewStack();
 		this.viewstack = t;
 		t.anchorOffsetY = 0;
-		t.height = 1166;
 		t.selectedIndex = 0;
 		t.width = 750;
 		t.elementsContent = [this.guankaCon_i()];
@@ -1636,7 +1641,7 @@ window.skins={};
 		var t = new eui.Group();
 		this.guankaCon = t;
 		t.horizontalCenter = 0;
-		t.y = 350;
+		t.y = 0;
 		return t;
 	};
 	_proto.yunCon_i = function () {
@@ -1719,6 +1724,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.source = "kuang_7";
 		t.verticalCenter = 0;
+		t.width = 210;
 		return t;
 	};
 	_proto._Image2_i = function () {
@@ -1874,28 +1880,29 @@ window.skins={};
 		t.height = 94;
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
+		t.visible = false;
 		t.width = 94;
 		return t;
 	};
 	_proto.txImg_i = function () {
 		var t = new eui.Image();
 		this.txImg = t;
-		t.height = 90;
+		t.height = 140;
 		t.horizontalCenter = 0;
 		t.source = "";
 		t.verticalCenter = 0;
-		t.width = 90;
+		t.width = 140;
 		return t;
 	};
 	_proto.rectMack_i = function () {
 		var t = new eui.Rect();
 		this.rectMack = t;
-		t.ellipseWidth = 100;
+		t.ellipseWidth = 200;
 		t.fillAlpha = 1;
-		t.height = 90;
+		t.height = 140;
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.width = 90;
+		t.width = 140;
 		return t;
 	};
 	_proto._Group4_i = function () {
@@ -1959,21 +1966,42 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["btn0","btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9","btn10","btn11","btn12","btn13","btn14","btn15","btn16","btn17","btn18","btn19","btn20","btn21","btn22","btn23","btn24","btn25","btn26","btn27","btn28","btn29"];
 		
-		this.height = 2340;
-		this.width = 720;
+		this.height = 3050;
+		this.width = 800;
 		this.elementsContent = [this._Group3_i()];
 	}
 	var _proto = GuanKaSkin.prototype;
 
 	_proto._Group3_i = function () {
 		var t = new eui.Group();
-		t.height = 2600;
-		t.scaleX = 0.9;
-		t.scaleY = 0.9;
 		t.width = 800;
 		t.x = 0;
 		t.y = 0;
-		t.elementsContent = [this._Group1_i(),this._Group2_i()];
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Group1_i(),this._Group2_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.left = 0;
+		t.right = 0;
+		t.source = "bg1_png";
+		t.y = 0;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.left = 0;
+		t.right = 0;
+		t.source = "bg1_png";
+		t.y = 1124;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.left = 0;
+		t.right = 0;
+		t.source = "bg1_png";
+		t.y = 2748;
 		return t;
 	};
 	_proto._Group1_i = function () {
@@ -1983,8 +2011,567 @@ window.skins={};
 		t.scaleY = 1;
 		t.width = 800;
 		t.x = 0;
+		t.y = 350;
+		t.elementsContent = [this._Image4_i(),this._Image5_i(),this._Image6_i(),this._Image7_i(),this._Image8_i(),this._Image9_i(),this._Image10_i(),this._Image11_i(),this._Image12_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this._Image18_i(),this._Image19_i(),this._Image20_i(),this._Image21_i(),this._Image22_i(),this._Image23_i(),this._Image24_i(),this._Image25_i(),this._Image26_i(),this._Image27_i(),this._Image28_i(),this._Image29_i(),this._Image30_i(),this._Image31_i(),this._Image32_i(),this._Image33_i(),this._Image34_i(),this._Image35_i(),this._Image36_i(),this._Image37_i(),this._Image38_i(),this._Image39_i(),this._Image40_i(),this._Image41_i(),this._Image42_i()];
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao3";
+		t.x = 400;
 		t.y = 0;
-		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Image4_i(),this._Image5_i(),this._Image6_i(),this._Image7_i(),this._Image8_i(),this._Image9_i(),this._Image10_i(),this._Image11_i(),this._Image12_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this._Image18_i(),this._Image19_i(),this._Image20_i(),this._Image21_i(),this._Image22_i(),this._Image23_i(),this._Image24_i(),this._Image25_i(),this._Image26_i(),this._Image27_i(),this._Image28_i(),this._Image29_i(),this._Image30_i(),this._Image31_i(),this._Image32_i(),this._Image33_i(),this._Image34_i(),this._Image35_i(),this._Image36_i(),this._Image37_i(),this._Image38_i(),this._Image39_i()];
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 0;
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 200;
+		return t;
+	};
+	_proto._Image8_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 200;
+		t.y = 200;
+		return t;
+	};
+	_proto._Image9_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 200;
+		t.y = 400;
+		return t;
+	};
+	_proto._Image10_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 400;
+		return t;
+	};
+	_proto._Image11_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 0;
+		t.y = 600;
+		return t;
+	};
+	_proto._Image12_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 0;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image13_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image14_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image15_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 400;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image16_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image17_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 200;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image18_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 200;
+		t.y = 600;
+		return t;
+	};
+	_proto._Image19_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 600;
+		return t;
+	};
+	_proto._Image20_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 600;
+		t.y = 600;
+		return t;
+	};
+	_proto._Image21_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 600;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image22_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 600;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image23_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 600;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image24_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image25_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image26_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image27_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image28_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image29_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image30_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 400;
+		t.y = 1600;
+		return t;
+	};
+	_proto._Image31_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 200;
+		t.y = 1600;
+		return t;
+	};
+	_proto._Image32_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 200;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image33_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image34_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 600;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image35_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 600;
+		t.y = 2000;
+		return t;
+	};
+	_proto._Image36_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 2000;
+		return t;
+	};
+	_proto._Image37_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 2000;
+		return t;
+	};
+	_proto._Image38_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 2000;
+		return t;
+	};
+	_proto._Image39_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 2200;
+		return t;
+	};
+	_proto._Image40_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 2200;
+		return t;
+	};
+	_proto._Image41_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 2200;
+		return t;
+	};
+	_proto._Image42_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 400;
+		t.y = 2400;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.x = 0;
+		t.y = 350;
+		t.elementsContent = [this.btn0_i(),this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i(),this.btn5_i(),this.btn6_i(),this.btn7_i(),this.btn8_i(),this.btn9_i(),this.btn10_i(),this.btn11_i(),this.btn12_i(),this.btn13_i(),this.btn14_i(),this.btn15_i(),this.btn16_i(),this.btn17_i(),this.btn18_i(),this.btn19_i(),this.btn20_i(),this.btn21_i(),this.btn22_i(),this.btn23_i(),this.btn24_i(),this.btn25_i(),this.btn26_i(),this.btn27_i(),this.btn28_i(),this.btn29_i()];
+		return t;
+	};
+	_proto.btn0_i = function () {
+		var t = new eui.Component();
+		this.btn0 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 437.5;
+		t.y = 2400;
+		return t;
+	};
+	_proto.btn1_i = function () {
+		var t = new eui.Component();
+		this.btn1 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 400;
+		t.y = 2250;
+		return t;
+	};
+	_proto.btn2_i = function () {
+		var t = new eui.Component();
+		this.btn2 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 150;
+		t.y = 2250;
+		return t;
+	};
+	_proto.btn3_i = function () {
+		var t = new eui.Component();
+		this.btn3 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 65;
+		t.y = 2050;
+		return t;
+	};
+	_proto.btn4_i = function () {
+		var t = new eui.Component();
+		this.btn4 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 300;
+		t.y = 2050;
+		return t;
+	};
+	_proto.btn5_i = function () {
+		var t = new eui.Component();
+		this.btn5 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 575;
+		t.y = 2050;
+		return t;
+	};
+	_proto.btn6_i = function () {
+		var t = new eui.Component();
+		this.btn6 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 600;
+		t.y = 1850;
+		return t;
+	};
+	_proto.btn7_i = function () {
+		var t = new eui.Component();
+		this.btn7 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 367;
+		t.y = 1850;
+		return t;
+	};
+	_proto.btn8_i = function () {
+		var t = new eui.Component();
+		this.btn8 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 240;
+		t.y = 1754;
+		return t;
+	};
+	_proto.btn9_i = function () {
+		var t = new eui.Component();
+		this.btn9 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 400;
+		t.y = 1650;
+		return t;
+	};
+	_proto.btn10_i = function () {
+		var t = new eui.Component();
+		this.btn10 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 350;
+		t.y = 1450;
+		return t;
+	};
+	_proto.btn11_i = function () {
+		var t = new eui.Component();
+		this.btn11 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 100;
+		t.y = 1450;
+		return t;
+	};
+	_proto.btn12_i = function () {
+		var t = new eui.Component();
+		this.btn12 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 38;
+		t.y = 1250;
+		return t;
+	};
+	_proto.btn13_i = function () {
+		var t = new eui.Component();
+		this.btn13 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 350;
+		t.y = 1250;
+		return t;
+	};
+	_proto.btn14_i = function () {
+		var t = new eui.Component();
+		this.btn14 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 637;
+		t.y = 1250;
+		return t;
+	};
+	_proto.btn15_i = function () {
+		var t = new eui.Component();
+		this.btn15 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 637;
+		t.y = 1050;
+		return t;
+	};
+	_proto.btn16_i = function () {
+		var t = new eui.Component();
+		this.btn16 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 637;
+		t.y = 850;
+		return t;
+	};
+	_proto.btn17_i = function () {
+		var t = new eui.Component();
+		this.btn17 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 600;
+		t.y = 650;
+		return t;
+	};
+	_proto.btn18_i = function () {
+		var t = new eui.Component();
+		this.btn18 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 400;
+		t.y = 650;
+		return t;
+	};
+	_proto.btn19_i = function () {
+		var t = new eui.Component();
+		this.btn19 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 237;
+		t.y = 750;
+		return t;
+	};
+	_proto.btn20_i = function () {
+		var t = new eui.Component();
+		this.btn20 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 400;
+		t.y = 1050;
+		return t;
+	};
+	_proto.btn21_i = function () {
+		var t = new eui.Component();
+		this.btn21 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 200;
+		t.y = 1050;
+		return t;
+	};
+	_proto.btn22_i = function () {
+		var t = new eui.Component();
+		this.btn22 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 37.5;
+		t.y = 950;
+		return t;
+	};
+	_proto.btn23_i = function () {
+		var t = new eui.Component();
+		this.btn23 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 40;
+		t.y = 750;
+		return t;
+	};
+	_proto.btn24_i = function () {
+		var t = new eui.Component();
+		this.btn24 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 37;
+		t.y = 550;
+		return t;
+	};
+	_proto.btn25_i = function () {
+		var t = new eui.Component();
+		this.btn25 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 237;
+		t.y = 450;
+		return t;
+	};
+	_proto.btn26_i = function () {
+		var t = new eui.Component();
+		this.btn26 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 200;
+		t.y = 250;
+		return t;
+	};
+	_proto.btn27_i = function () {
+		var t = new eui.Component();
+		this.btn27 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 40;
+		t.y = 150;
+		return t;
+	};
+	_proto.btn28_i = function () {
+		var t = new eui.Component();
+		this.btn28 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 200;
+		t.y = 50;
+		return t;
+	};
+	_proto.btn29_i = function () {
+		var t = new eui.Component();
+		this.btn29 = t;
+		t.skinName = "GkItemSkin";
+		t.x = 400;
+		t.y = 50;
+		return t;
+	};
+	return GuanKaSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/GuanKaSkin1.exml'] = window.GuanKaSkin1 = (function (_super) {
+	__extends(GuanKaSkin1, _super);
+	function GuanKaSkin1() {
+		_super.call(this);
+		this.skinParts = ["btn0","btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9","btn10","btn11","btn12","btn13","btn14","btn15","btn16","btn17","btn18","btn19","btn20","btn21","btn22","btn23","btn24","btn25","btn26","btn27","btn28","btn29"];
+		
+		this.height = 5000;
+		this.width = 720;
+		this.elementsContent = [this._Group4_i()];
+	}
+	var _proto = GuanKaSkin1.prototype;
+
+	_proto._Group4_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 0.9;
+		t.scaleY = 0.9;
+		t.top = 0;
+		t.width = 800;
+		t.x = 0;
+		t.elementsContent = [this._Group1_i(),this._Group2_i(),this._Group3_i()];
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.width = 800;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Image4_i(),this._Image5_i(),this._Image6_i(),this._Image7_i(),this._Image8_i(),this._Image9_i(),this._Image10_i(),this._Image11_i(),this._Image12_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this._Image18_i(),this._Image19_i(),this._Image20_i(),this._Image21_i(),this._Image22_i(),this._Image23_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -2150,119 +2737,149 @@ window.skins={};
 		t.y = 1200;
 		return t;
 	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.width = 800;
+		t.y = 1400;
+		t.elementsContent = [this._Image24_i(),this._Image25_i(),this._Image26_i(),this._Image27_i(),this._Image28_i(),this._Image29_i(),this._Image30_i(),this._Image31_i(),this._Image32_i(),this._Image33_i(),this._Image34_i(),this._Image35_i(),this._Image36_i(),this._Image37_i(),this._Image38_i(),this._Image39_i()];
+		return t;
+	};
 	_proto._Image24_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao4";
-		t.x = 0;
-		t.y = 1400;
+		t.bottom = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao6";
+		t.x = 400;
 		return t;
 	};
 	_proto._Image25_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 200;
-		t.y = 1400;
+		t.bottom = 200;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao2";
+		t.x = 400;
 		return t;
 	};
 	_proto._Image26_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao2";
-		t.x = 400;
-		t.y = 1400;
+		t.bottom = 200;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao5";
+		t.x = 200;
 		return t;
 	};
 	_proto._Image27_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao3";
-		t.x = 400;
-		t.y = 1600;
+		t.bottom = 200;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao4";
+		t.x = 0;
 		return t;
 	};
 	_proto._Image28_i = function () {
 		var t = new eui.Image();
+		t.bottom = 400;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.source = "guandao1";
-		t.x = 200;
-		t.y = 1600;
+		t.x = 0;
 		return t;
 	};
 	_proto._Image29_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao4";
+		t.bottom = 400;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao5";
 		t.x = 200;
-		t.y = 1800;
 		return t;
 	};
 	_proto._Image30_i = function () {
 		var t = new eui.Image();
+		t.bottom = 400;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.source = "guandao5";
 		t.x = 400;
-		t.y = 1800;
 		return t;
 	};
 	_proto._Image31_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao2";
+		t.bottom = 400;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao3";
 		t.x = 600;
-		t.y = 1800;
 		return t;
 	};
 	_proto._Image32_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao3";
+		t.bottom = 600;
+		t.source = "guandao2";
 		t.x = 600;
-		t.y = 2000;
 		return t;
 	};
 	_proto._Image33_i = function () {
 		var t = new eui.Image();
+		t.bottom = 600;
 		t.source = "guandao5";
 		t.x = 400;
-		t.y = 2000;
 		return t;
 	};
 	_proto._Image34_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao5";
+		t.bottom = 600;
+		t.source = "guandao4";
 		t.x = 200;
-		t.y = 2000;
 		return t;
 	};
 	_proto._Image35_i = function () {
 		var t = new eui.Image();
+		t.bottom = 800;
 		t.source = "guandao1";
-		t.x = 0;
-		t.y = 2000;
+		t.x = 200;
 		return t;
 	};
 	_proto._Image36_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao4";
-		t.x = 0;
-		t.y = 2200;
+		t.bottom = 800;
+		t.source = "guandao3";
+		t.x = 400;
 		return t;
 	};
 	_proto._Image37_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 200;
-		t.y = 2200;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 0;
 		return t;
 	};
 	_proto._Image38_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao2";
-		t.x = 400;
-		t.y = 2200;
+		t.bottom = 1000;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao5";
+		t.x = 200;
 		return t;
 	};
 	_proto._Image39_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao6";
-		t.x = 400;
-		t.y = 2400;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 0;
 		return t;
 	};
-	_proto._Group2_i = function () {
+	_proto._Group3_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.left = 0;
@@ -2270,6 +2887,7 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.top = 0;
+		t.visible = false;
 		t.x = 0;
 		t.y = 0;
 		t.elementsContent = [this.btn0_i(),this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i(),this.btn5_i(),this.btn6_i(),this.btn7_i(),this.btn8_i(),this.btn9_i(),this.btn10_i(),this.btn11_i(),this.btn12_i(),this.btn13_i(),this.btn14_i(),this.btn15_i(),this.btn16_i(),this.btn17_i(),this.btn18_i(),this.btn19_i(),this.btn20_i(),this.btn21_i(),this.btn22_i(),this.btn23_i(),this.btn24_i(),this.btn25_i(),this.btn26_i(),this.btn27_i(),this.btn28_i(),this.btn29_i()];
@@ -2515,7 +3133,7 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
-	return GuanKaSkin;
+	return GuanKaSkin1;
 })(eui.Skin);generateEUI.paths['resource/skins/HomeSkin.exml'] = window.HomeSkin = (function (_super) {
 	__extends(HomeSkin, _super);
 	function HomeSkin() {
