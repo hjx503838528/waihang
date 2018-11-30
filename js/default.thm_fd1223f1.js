@@ -34,17 +34,17 @@ window.skins={};
 			,
 			new eui.State ("upAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",checkbox_select_up_png)
+					new eui.SetProperty("_Image1","source","checkbox_select_up_png")
 				])
 			,
 			new eui.State ("downAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",checkbox_select_down_png)
+					new eui.SetProperty("_Image1","source","checkbox_select_down_png")
 				])
 			,
 			new eui.State ("disabledAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",checkbox_select_disabled_png)
+					new eui.SetProperty("_Image1","source","checkbox_select_disabled_png")
 				])
 		];
 	}
@@ -52,31 +52,33 @@ window.skins={};
 
 	_proto._Group1_i = function () {
 		var t = new eui.Group();
-		t.percentHeight = 100%;
-		t.percentWidth = 100%;
-		t.elementsContent = [this._layout1_i(),this._Image1_i(),this.labelDisplay_i()];
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
 		return t;
 	};
-	_proto._layout1_i = function () {
-		var t = new eui.layout();
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.verticalAlign = "middle";
 		return t;
 	};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		this._Image1 = t;
 		t.alpha = 1;
-		t.fillMode = scale;
-		t.source = checkbox_unselect_png;
+		t.fillMode = "scale";
+		t.source = "checkbox_unselect_png";
 		return t;
 	};
 	_proto.labelDisplay_i = function () {
 		var t = new eui.Label();
 		this.labelDisplay = t;
-		t.fontFamily = Tahoma;
+		t.fontFamily = "Tahoma";
 		t.size = 20;
-		t.textAlign = center;
+		t.textAlign = "center";
 		t.textColor = 0x707070;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return CheckBoxSkin;
@@ -97,6 +99,7 @@ window.skins={};
 		this.thumb = t;
 		t.height = 8;
 		t.scale9Grid = new egret.Rectangle(3,3,2,2);
+		t.source = "";
 		t.verticalCenter = 0;
 		t.width = 30;
 		return t;
@@ -119,15 +122,15 @@ window.skins={};
 		this.track = t;
 		t.height = 6;
 		t.scale9Grid = new egret.Rectangle(1,1,4,4);
-		t.source = track_sb_png;
+		t.source = "track_sb_png";
 		t.verticalCenter = 0;
-		t.percentWidth = 100%;
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.thumb_i = function () {
 		var t = new eui.Image();
 		this.thumb = t;
-		t.source = thumb_png;
+		t.source = "thumb_png";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -148,7 +151,7 @@ window.skins={};
 			,
 			new eui.State ("down",
 				[
-					new eui.SetProperty("_Image1","source",button_down_png)
+					new eui.SetProperty("_Image1","source","button_down_png")
 				])
 			,
 			new eui.State ("disabled",
@@ -164,24 +167,24 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		this._Image1 = t;
-		t.percentHeight = 100%;
+		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,3,8,8);
-		t.source = button_up_png;
-		t.percentWidth = 100%;
+		t.source = "button_up_png";
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.labelDisplay_i = function () {
 		var t = new eui.Label();
 		this.labelDisplay = t;
 		t.bottom = 8;
-		t.fontFamily = Tahoma;
+		t.fontFamily = "Tahoma";
 		t.left = 8;
 		t.right = 8;
 		t.size = 20;
-		t.textAlign = center;
+		t.textAlign = "center";
 		t.textColor = 0xFFFFFF;
 		t.top = 8;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return ItemRendererSkin;
@@ -203,7 +206,7 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.scale9Grid = new egret.Rectangle(2,2,12,12);
-		t.source = border_png;
+		t.source = "border_png";
 		t.top = 0;
 		return t;
 	};
@@ -222,14 +225,14 @@ window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
-		t.source = header_png;
+		t.source = "header_png";
 		t.top = 0;
 		return t;
 	};
 	_proto.titleDisplay_i = function () {
 		var t = new eui.Label();
 		this.titleDisplay = t;
-		t.fontFamily = Tahoma;
+		t.fontFamily = "Tahoma";
 		t.left = 15;
 		t.right = 5;
 		t.size = 20;
@@ -243,7 +246,7 @@ window.skins={};
 		this.closeButton = t;
 		t.bottom = 5;
 		t.horizontalCenter = 0;
-		t.label = close;
+		t.label = "close";
 		return t;
 	};
 	return PanelSkin;
@@ -261,30 +264,30 @@ window.skins={};
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.percentHeight = 100%;
+		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,1,4,4);
-		t.source = track_pb_png;
+		t.source = "track_pb_png";
 		t.verticalCenter = 0;
-		t.percentWidth = 100%;
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.thumb_i = function () {
 		var t = new eui.Image();
 		this.thumb = t;
-		t.percentHeight = 100%;
-		t.source = thumb_pb_png;
-		t.percentWidth = 100%;
+		t.percentHeight = 100;
+		t.source = "thumb_pb_png";
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.labelDisplay_i = function () {
 		var t = new eui.Label();
 		this.labelDisplay = t;
-		t.fontFamily = Tahoma;
+		t.fontFamily = "Tahoma";
 		t.horizontalCenter = 0;
 		t.size = 15;
-		t.textAlign = center;
+		t.textAlign = "center";
 		t.textColor = 0x707070;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -313,17 +316,17 @@ window.skins={};
 			,
 			new eui.State ("upAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",radiobutton_select_up_png)
+					new eui.SetProperty("_Image1","source","radiobutton_select_up_png")
 				])
 			,
 			new eui.State ("downAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",radiobutton_select_down_png)
+					new eui.SetProperty("_Image1","source","radiobutton_select_down_png")
 				])
 			,
 			new eui.State ("disabledAndSelected",
 				[
-					new eui.SetProperty("_Image1","source",radiobutton_select_disabled_png)
+					new eui.SetProperty("_Image1","source","radiobutton_select_disabled_png")
 				])
 		];
 	}
@@ -331,31 +334,33 @@ window.skins={};
 
 	_proto._Group1_i = function () {
 		var t = new eui.Group();
-		t.percentHeight = 100%;
-		t.percentWidth = 100%;
-		t.elementsContent = [this._layout1_i(),this._Image1_i(),this.labelDisplay_i()];
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this._Image1_i(),this.labelDisplay_i()];
 		return t;
 	};
-	_proto._layout1_i = function () {
-		var t = new eui.layout();
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.verticalAlign = "middle";
 		return t;
 	};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		this._Image1 = t;
 		t.alpha = 1;
-		t.fillMode = scale;
-		t.source = radiobutton_unselect_png;
+		t.fillMode = "scale";
+		t.source = "radiobutton_unselect_png";
 		return t;
 	};
 	_proto.labelDisplay_i = function () {
 		var t = new eui.Label();
 		this.labelDisplay = t;
-		t.fontFamily = Tahoma;
+		t.fontFamily = "Tahoma";
 		t.size = 20;
-		t.textAlign = center;
+		t.textAlign = "center";
 		t.textColor = 0x707070;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return RadioButtonSkin;
@@ -375,13 +380,13 @@ window.skins={};
 		var t = new eui.HScrollBar();
 		this.horizontalScrollBar = t;
 		t.bottom = 0;
-		t.percentWidth = 100%;
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.verticalScrollBar_i = function () {
 		var t = new eui.VScrollBar();
 		this.verticalScrollBar = t;
-		t.percentHeight = 100%;
+		t.percentHeight = 100;
 		t.right = 0;
 		return t;
 	};
@@ -418,35 +423,36 @@ window.skins={};
 
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.percentHeight = 100%;
+		t.percentHeight = 100;
 		t.scale9Grid = new egret.Rectangle(1,3,8,8);
-		t.source = button_up_png;
-		t.percentWidth = 100%;
+		t.source = "button_up_png";
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto._Rect1_i = function () {
 		var t = new eui.Rect();
 		t.fillColor = 0xffffff;
-		t.percentHeight = 100%;
-		t.percentWidth = 100%;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.textDisplay_i = function () {
 		var t = new eui.EditableText();
 		this.textDisplay = t;
 		t.height = 24;
-		t.left = 10;
-		t.right = 10;
+		t.left = "10";
+		t.right = "10";
 		t.size = 20;
 		t.textColor = 0x000000;
-		t.verticalCenter = 0;
-		t.percentWidth = 100%;
+		t.verticalCenter = "0";
+		t.percentWidth = 100;
 		return t;
 	};
 	_proto.promptDisplay_i = function () {
 		var t = new eui.BitmapLabel();
 		this.promptDisplay = t;
-		t.font = font1_fnt;
+		t.font = "font1_fnt";
+		t.text = "";
 		t.verticalCenter = 0;
 		t.x = 58;
 		return t;
@@ -484,16 +490,16 @@ window.skins={};
 	};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		t.source = tips2;
+		t.source = "tips2";
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 50;
-		t.text = 1;
+		t.text = "1";
 		t.textColor = 0xffffff;
 		t.y = 202;
 		return t;
@@ -509,17 +515,17 @@ window.skins={};
 		this.states = [
 			new eui.State ("up",
 				[
-					new eui.SetProperty("_Image1","source",off_png)
+					new eui.SetProperty("_Image1","source","off_png")
 				])
 			,
 			new eui.State ("down",
 				[
-					new eui.SetProperty("_Image1","source",off_png)
+					new eui.SetProperty("_Image1","source","off_png")
 				])
 			,
 			new eui.State ("disabled",
 				[
-					new eui.SetProperty("_Image1","source",off_png)
+					new eui.SetProperty("_Image1","source","off_png")
 				])
 			,
 			new eui.State ("upAndSelected",
@@ -543,14 +549,14 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		this._Image1 = t;
-		t.source = on_png;
+		t.source = "on_png";
 		return t;
 	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
 		this._Image2 = t;
 		t.horizontalCenter = -18;
-		t.source = handle_png;
+		t.source = "handle_png";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -573,6 +579,7 @@ window.skins={};
 		t.height = 30;
 		t.horizontalCenter = 0;
 		t.scale9Grid = new egret.Rectangle(3,3,2,2);
+		t.source = "";
 		t.width = 8;
 		return t;
 	};
@@ -592,10 +599,10 @@ window.skins={};
 	_proto.track_i = function () {
 		var t = new eui.Image();
 		this.track = t;
-		t.percentHeight = 100%;
+		t.percentHeight = 100;
 		t.horizontalCenter = 0;
 		t.scale9Grid = new egret.Rectangle(1,1,4,4);
-		t.source = track_png;
+		t.source = "track_png";
 		t.width = 7;
 		return t;
 	};
@@ -603,7 +610,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.thumb = t;
 		t.horizontalCenter = 0;
-		t.source = thumb_png;
+		t.source = "thumb_png";
 		return t;
 	};
 	return VSliderSkin;
@@ -632,7 +639,7 @@ window.skins={};
 	_proto.labTxt_i = function () {
 		var t = new eui.Label();
 		this.labTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.size = 26;
 		t.textColor = 0x666666;
 		t.verticalCenter = 0;
@@ -670,7 +677,7 @@ window.skins={};
 		this.iconDisplay = t;
 		t.right = -3;
 		t.scale9Grid = new egret.Rectangle(21,23,6,6);
-		t.source = icon1;
+		t.source = "icon1";
 		t.y = 0;
 		return t;
 	};
@@ -681,10 +688,10 @@ window.skins={};
 		t.bottom = -25;
 		t.horizontalCenter = 0;
 		t.size = 20;
-		t.text = 消息;
-		t.textAlign = center;
+		t.text = "消息";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return ButSkin1;
@@ -716,7 +723,7 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_1;
+		t.source = "kuang_1";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -724,7 +731,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconDisplay = t;
 		t.horizontalCenter = 0;
-		t.source = icon_mail;
+		t.source = "icon_mail";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -735,10 +742,10 @@ window.skins={};
 		t.bottom = -25;
 		t.horizontalCenter = 0;
 		t.size = 20;
-		t.text = 消息;
-		t.textAlign = center;
+		t.text = "消息";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return ButSkin3;
@@ -770,7 +777,7 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_3;
+		t.source = "kuang_3";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -778,7 +785,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconDisplay = t;
 		t.horizontalCenter = 2;
-		t.source = icon_mail;
+		t.source = "icon_mail";
 		t.verticalCenter = 2;
 		return t;
 	};
@@ -789,10 +796,10 @@ window.skins={};
 		t.bottom = -25;
 		t.horizontalCenter = 0;
 		t.size = 20;
-		t.text = 消息;
-		t.textAlign = center;
+		t.text = "消息";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		return t;
 	};
 	return ButSkin5;
@@ -824,7 +831,7 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_7;
+		t.source = "kuang_7";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -835,7 +842,7 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["iconDisplay","labelDisplay"];
 		
-		this.currentState = no;
+		this.currentState = "no";
 		this.minHeight = 50;
 		this.minWidth = 100;
 		this.elementsContent = [this._Image1_i(),this.iconDisplay_i(),this.labelDisplay_i()];
@@ -846,8 +853,8 @@ window.skins={};
 			,
 			new eui.State ("no",
 				[
-					new eui.SetProperty("_Image1","source",kuang_3),
-					new eui.SetProperty("iconDisplay","source",gold2)
+					new eui.SetProperty("_Image1","source","kuang_3"),
+					new eui.SetProperty("iconDisplay","source","gold2")
 				])
 		];
 	}
@@ -857,7 +864,7 @@ window.skins={};
 		var t = new eui.Image();
 		this._Image1 = t;
 		t.horizontalCenter = 0;
-		t.source = kuang_2;
+		t.source = "kuang_2";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -865,7 +872,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconDisplay = t;
 		t.horizontalCenter = 2;
-		t.source = icon_right;
+		t.source = "icon_right";
 		t.verticalCenter = 15;
 		return t;
 	};
@@ -875,10 +882,10 @@ window.skins={};
 		t.bold = true;
 		t.horizontalCenter = 0;
 		t.size = 30;
-		t.text = 1;
-		t.textAlign = center;
+		t.text = "1";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		t.y = 20;
 		return t;
 	};
@@ -899,7 +906,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconDisplay = t;
 		t.horizontalCenter = 2;
-		t.source = icon_guanka1;
+		t.source = "icon_guanka1";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -909,10 +916,10 @@ window.skins={};
 		t.bold = true;
 		t.horizontalCenter = 0;
 		t.size = 50;
-		t.text = 1;
-		t.textAlign = center;
+		t.text = "1";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
-		t.verticalAlign = middle;
+		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -923,7 +930,7 @@ window.skins={};
 		_super.call(this);
 		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
-		this.currentState = input;
+		this.currentState = "input";
 		this.height = 1334;
 		this.width = 750;
 		this.elementsContent = [this.shade_i(),this._Group4_i()];
@@ -938,9 +945,9 @@ window.skins={};
 			,
 			new eui.State ("output",
 				[
-					new eui.SetProperty("titleTxt","text",口令确认),
+					new eui.SetProperty("titleTxt","text","口令确认"),
 					new eui.SetProperty("_Group2","visible",false),
-					new eui.SetProperty("startLable","text",马上开始),
+					new eui.SetProperty("startLable","text","马上开始"),
 					new eui.SetProperty("txImg","x",53),
 					new eui.SetProperty("txImg","y",0),
 					new eui.SetProperty("txImg","scaleX",1),
@@ -971,17 +978,17 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = bg3_png;
+		t.source = "bg3_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 输入口令;
+		t.text = "输入口令";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -989,11 +996,11 @@ window.skins={};
 	_proto.taskTxt_i = function () {
 		var t = new eui.Label();
 		this.taskTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.lineSpacing = 4;
 		t.size = 30;
-		t.text = 将代替“阿婆”，完成“激流勇进”关卡;
+		t.text = "将代替“阿婆”，完成“激流勇进”关卡";
 		t.textColor = 0x333333;
 		t.width = 540;
 		t.y = 226;
@@ -1010,9 +1017,9 @@ window.skins={};
 	_proto.numTxt_i = function () {
 		var t = new eui.BitmapLabel();
 		this.numTxt = t;
-		t.font = font1_fnt;
+		t.font = "font1_fnt";
 		t.letterSpacing = 50;
-		t.text = 0000;
+		t.text = "0000";
 		t.touchEnabled = false;
 		return t;
 	};
@@ -1021,6 +1028,7 @@ window.skins={};
 		this.editable = t;
 		t.alpha = 0.1;
 		t.height = 90;
+		t.text = "";
 		t.width = 430;
 		return t;
 	};
@@ -1031,7 +1039,13 @@ window.skins={};
 		t.scaleY = 1;
 		t.x = 53;
 		t.y = 110;
-		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Rect4_i(),this._layout1_i()];
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Rect4_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 36;
 		return t;
 	};
 	_proto._Rect1_i = function () {
@@ -1062,10 +1076,6 @@ window.skins={};
 		t.width = 80;
 		return t;
 	};
-	_proto._layout1_i = function () {
-		var t = new eui.layout();
-		return t;
-	};
 	_proto.startBtn_i = function () {
 		var t = new eui.Group();
 		this.startBtn = t;
@@ -1081,28 +1091,29 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_6;
+		t.source = "kuang_6";
 		t.y = 0;
 		return t;
 	};
 	_proto.startLable_i = function () {
 		var t = new eui.Label();
 		this.startLable = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = 加 入;
+		t.text = "加 入";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
@@ -1136,11 +1147,11 @@ window.skins={};
 	_proto.nameTxt_i = function () {
 		var t = new eui.Label();
 		this.nameTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.lineSpacing = 4;
 		t.size = 30;
-		t.text = 阿婆;
+		t.text = "阿婆";
 		t.textColor = 0x333333;
 		t.y = 408;
 		return t;
@@ -1179,17 +1190,17 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = bg4_png;
+		t.source = "bg4_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 好友帮助通关;
+		t.text = "好友帮助通关";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -1205,7 +1216,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_8;
+		t.source = "kuang_8";
 		return t;
 	};
 	_proto.list_i = function () {
@@ -1214,6 +1225,36 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.itemRendererSkinName = AwardItemSkin;
 		t.verticalCenter = 0;
+		t.layout = this._HorizontalLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 100;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.source = "icon_xz2";
+		t.text = "+30";
 		return t;
 	};
 	_proto._Image3_i = function () {
@@ -1221,17 +1262,17 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = icon_gift;
+		t.source = "icon_gift";
 		t.y = 330;
 		return t;
 	};
 	_proto.awardNameTxt_i = function () {
 		var t = new eui.Label();
 		this.awardNameTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 30;
-		t.text = 特别礼物;
+		t.text = "特别礼物";
 		t.textColor = 0x333333;
 		t.y = 540;
 		return t;
@@ -1258,6 +1299,7 @@ window.skins={};
 		t.height = 100;
 		t.scaleX = 1;
 		t.scaleY = 1;
+		t.source = "";
 		t.width = 100;
 		t.x = 0;
 		t.y = 0;
@@ -1277,9 +1319,9 @@ window.skins={};
 	_proto.nameTxt_i = function () {
 		var t = new eui.Label();
 		this.nameTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.size = 30;
-		t.text = 阿婆;
+		t.text = "阿婆";
 		t.textColor = 0x333333;
 		t.verticalCenter = 0;
 		t.x = 120;
@@ -1288,7 +1330,7 @@ window.skins={};
 	_proto.iconBase_i = function () {
 		var t = new AwardItem();
 		this.iconBase = t;
-		t.skinName = AwardItemSkin;
+		t.skinName = "AwardItemSkin";
 		t.verticalCenter = 0;
 		t.x = 220;
 		return t;
@@ -1299,7 +1341,7 @@ window.skins={};
 		t.left = 75;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = icon_refresh;
+		t.source = "icon_refresh";
 		t.y = 737;
 		return t;
 	};
@@ -1309,7 +1351,7 @@ window.skins={};
 		t.right = 75;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = icon_share;
+		t.source = "icon_share";
 		t.y = 737;
 		return t;
 	};
@@ -1328,17 +1370,17 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_6;
+		t.source = "kuang_6";
 		t.y = 0;
 		return t;
 	};
 	_proto.startLable_i = function () {
 		var t = new eui.Label();
 		this.startLable = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = 下一关;
+		t.text = "下一关";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -1346,21 +1388,22 @@ window.skins={};
 		var t = new eui.Label();
 		this.hintTxt = t;
 		t.bottom = 60;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 26;
-		t.text = 分享得20金币;
+		t.text = "分享得20金币";
 		t.textColor = 0x666666;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
@@ -1375,12 +1418,193 @@ window.skins={};
 		this.width = 750;
 		this.yun_i();
 		this.elementsContent = [this.bg_i(),this.scroller_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		
+		eui.Binding.$bindProperties(this, ["yun3"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [800],[],this._Object1,"x");
+		eui.Binding.$bindProperties(this, [242],[],this._Object2,"x");
+		eui.Binding.$bindProperties(this, ["yun4"],[0],this._TweenItem2,"target");
+		eui.Binding.$bindProperties(this, [-600],[],this._Object3,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object4,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object5,"x");
+		eui.Binding.$bindProperties(this, ["yun2"],[0],this._TweenItem3,"target");
+		eui.Binding.$bindProperties(this, [-300],[],this._Object6,"x");
+		eui.Binding.$bindProperties(this, [-162],[],this._Object7,"x");
+		eui.Binding.$bindProperties(this, ["yun1"],[0],this._TweenItem4,"target");
+		eui.Binding.$bindProperties(this, [445],[],this._Object8,"x");
+		eui.Binding.$bindProperties(this, [280],[],this._Object9,"x");
+		eui.Binding.$bindProperties(this, [336],[],this._Object10,"x");
+		eui.Binding.$bindProperties(this, ["yun0"],[0],this._TweenItem5,"target");
+		eui.Binding.$bindProperties(this, [110],[],this._Object11,"x");
+		eui.Binding.$bindProperties(this, [75],[],this._Object12,"x");
 	}
 	var _proto = GameSkin.prototype;
 
 	_proto.yun_i = function () {
 		var t = new egret.tween.TweenGroup();
 		this.yun = t;
+		t.items = [this._TweenItem1_i(),this._TweenItem2_i(),this._TweenItem3_i(),this._TweenItem4_i(),this._TweenItem5_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._To1_i(),this._To2_i()];
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._TweenItem2_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem2 = t;
+		t.paths = [this._To3_i(),this._To4_i(),this._To5_i()];
+		return t;
+	};
+	_proto._To3_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 18000;
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto._To4_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 21000;
+		t.props = this._Object4_i();
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		this._Object4 = t;
+		return t;
+	};
+	_proto._To5_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 500;
+		t.props = this._Object5_i();
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		this._Object5 = t;
+		return t;
+	};
+	_proto._TweenItem3_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem3 = t;
+		t.paths = [this._To6_i(),this._To7_i()];
+		return t;
+	};
+	_proto._To6_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object6_i();
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		this._Object6 = t;
+		return t;
+	};
+	_proto._To7_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 14000;
+		t.props = this._Object7_i();
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		this._Object7 = t;
+		return t;
+	};
+	_proto._TweenItem4_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem4 = t;
+		t.paths = [this._To8_i(),this._To9_i(),this._To10_i()];
+		return t;
+	};
+	_proto._To8_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object8_i();
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		this._Object8 = t;
+		return t;
+	};
+	_proto._To9_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 12000;
+		t.props = this._Object9_i();
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		this._Object9 = t;
+		return t;
+	};
+	_proto._To10_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object10_i();
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		this._Object10 = t;
+		return t;
+	};
+	_proto._TweenItem5_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem5 = t;
+		t.paths = [this._To11_i(),this._To12_i()];
+		return t;
+	};
+	_proto._To11_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object11_i();
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		this._Object11 = t;
+		return t;
+	};
+	_proto._To12_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object12_i();
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
+		this._Object12 = t;
 		return t;
 	};
 	_proto.bg_i = function () {
@@ -1389,7 +1613,7 @@ window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
-		t.source = bg1_png;
+		t.source = "bg1_png";
 		t.top = 0;
 		t.visible = false;
 		return t;
@@ -1400,8 +1624,8 @@ window.skins={};
 		t.bottom = 0;
 		t.bounces = false;
 		t.horizontalCenter = 0;
-		t.scrollPolicyH = off;
-		t.scrollPolicyV = on;
+		t.scrollPolicyH = "off";
+		t.scrollPolicyV = "on";
 		t.top = 0;
 		t.width = 750;
 		t.viewport = this.viewstack_i();
@@ -1413,6 +1637,14 @@ window.skins={};
 		t.anchorOffsetY = 0;
 		t.selectedIndex = 0;
 		t.width = 750;
+		t.elementsContent = [this.guankaCon_i()];
+		return t;
+	};
+	_proto.guankaCon_i = function () {
+		var t = new eui.Group();
+		this.guankaCon = t;
+		t.horizontalCenter = 0;
+		t.y = 0;
 		return t;
 	};
 	_proto.yunCon_i = function () {
@@ -1430,7 +1662,7 @@ window.skins={};
 	_proto.yun0_i = function () {
 		var t = new eui.Image();
 		this.yun0 = t;
-		t.source = yun12;
+		t.source = "yun12";
 		t.x = 75;
 		t.y = -85;
 		return t;
@@ -1438,56 +1670,46 @@ window.skins={};
 	_proto.yun1_i = function () {
 		var t = new eui.Image();
 		this.yun1 = t;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = 336;
 		t.y = -97;
-		if(this.yun1)
-		{
-			this.yun1.source = this.yun1;
-		}
 		return t;
 	};
 	_proto.yun2_i = function () {
 		var t = new eui.Image();
 		this.yun2 = t;
-		t.source = this.yun2;
+		t.source = "yun2";
 		t.x = -162;
 		t.y = -97;
-		if(this.yun2)
-		{
-			this.yun2.source = this.yun2;
-		}
 		return t;
 	};
 	_proto.yun3_i = function () {
 		var t = new eui.Image();
 		this.yun3 = t;
-		t.source = this.yun3;
+		t.source = "yun3";
 		t.x = 242;
 		t.y = 77;
-		if(this.yun3)
-		{
-			this.yun3.source = this.yun3;
-		}
 		return t;
 	};
 	_proto.yun4_i = function () {
 		var t = new eui.Image();
 		this.yun4 = t;
-		t.source = this.yun4;
+		t.source = "yun4";
 		t.x = -125;
 		t.y = 72;
-		if(this.yun4)
-		{
-			this.yun4.source = this.yun4;
-		}
 		return t;
 	};
 	_proto._Group2_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.y = 44;
-		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i(),this._layout1_i()];
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 40;
 		return t;
 	};
 	_proto.lvBtn_i = function () {
@@ -1503,14 +1725,14 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_7;
+		t.source = "kuang_7";
 		t.verticalCenter = 0;
 		t.width = 210;
 		return t;
 	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
-		t.source = icon_zs;
+		t.source = "icon_zs";
 		t.x = 0;
 		t.y = 0;
 		return t;
@@ -1520,8 +1742,8 @@ window.skins={};
 		this.lvTxt = t;
 		t.bold = true;
 		t.size = 36;
-		t.text = Lv.1;
-		t.textAlign = center;
+		t.text = "Lv.1";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.verticalCenter = 0;
 		t.width = 110;
@@ -1541,21 +1763,21 @@ window.skins={};
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
 		t.scale9Grid = new egret.Rectangle(36,33,14,13);
-		t.source = kuang_7;
+		t.source = "kuang_7";
 		t.verticalCenter = 0;
 		t.width = 232;
 		return t;
 	};
 	_proto._Image4_i = function () {
 		var t = new eui.Image();
-		t.source = gold1;
+		t.source = "gold1";
 		return t;
 	};
 	_proto.jiaBtn_i = function () {
 		var t = new eui.Image();
 		this.jiaBtn = t;
 		t.right = -25;
-		t.source = icon6;
+		t.source = "icon6";
 		t.y = -22;
 		return t;
 	};
@@ -1564,8 +1786,8 @@ window.skins={};
 		this.goldTxt = t;
 		t.bold = true;
 		t.size = 36;
-		t.text = 1234;
-		t.textAlign = center;
+		t.text = "1234";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.verticalCenter = 0;
 		t.width = 122;
@@ -1585,13 +1807,13 @@ window.skins={};
 	_proto._Image5_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_7;
+		t.source = "kuang_7";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto._Image6_i = function () {
 		var t = new eui.Image();
-		t.source = icon_xz1;
+		t.source = "icon_xz1";
 		t.x = 0;
 		return t;
 	};
@@ -1600,24 +1822,20 @@ window.skins={};
 		this.mdalTxt = t;
 		t.bold = true;
 		t.size = 36;
-		t.text = 1;
-		t.textAlign = center;
+		t.text = "1";
+		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.verticalCenter = 0;
 		t.width = 100;
 		t.x = 70;
 		return t;
 	};
-	_proto._layout1_i = function () {
-		var t = new eui.layout();
-		return t;
-	};
 	_proto.friendBtn_i = function () {
 		var t = new eui.Button();
 		this.friendBtn = t;
-		t.icon = icon12;
+		t.icon = "icon12";
 		t.right = 40;
-		t.skinName = ButSkin3;
+		t.skinName = "ButSkin3";
 		t.y = 169;
 		return t;
 	};
@@ -1638,7 +1856,7 @@ window.skins={};
 		t.scale9Grid = new egret.Rectangle(60,66,36,64);
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = bottom;
+		t.source = "bottom";
 		t.y = 51;
 		return t;
 	};
@@ -1652,7 +1870,7 @@ window.skins={};
 	_proto._Image8_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = kuang_4;
+		t.source = "kuang_4";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -1671,6 +1889,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.txImg = t;
 		t.height = 142;
+		t.source = "";
 		t.width = 142;
 		t.x = 9;
 		t.y = 9;
@@ -1691,15 +1910,22 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 100;
 		t.y = 28;
-		t.elementsContent = [this.xiaoxiBtn_i(),this.bagBtn_i(),this.rankBtn_i(),this.helpBtn_i(),this._layout2_i()];
+		t.layout = this._HorizontalLayout2_i();
+		t.elementsContent = [this.xiaoxiBtn_i(),this.bagBtn_i(),this.rankBtn_i(),this.helpBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 20;
+		t.paddingRight = 0;
 		return t;
 	};
 	_proto.xiaoxiBtn_i = function () {
 		var t = new eui.Button();
 		this.xiaoxiBtn = t;
-		t.icon = icon_mail;
-		t.label = 消息;
-		t.skinName = ButSkin3;
+		t.icon = "icon_mail";
+		t.label = "消息";
+		t.skinName = "ButSkin3";
 		t.x = -7.83;
 		t.y = -579.05;
 		return t;
@@ -1707,9 +1933,9 @@ window.skins={};
 	_proto.bagBtn_i = function () {
 		var t = new eui.Button();
 		this.bagBtn = t;
-		t.icon = icon_bag;
-		t.label = 口袋;
-		t.skinName = ButSkin3;
+		t.icon = "icon_bag";
+		t.label = "口袋";
+		t.skinName = "ButSkin3";
 		t.x = 0;
 		t.y = 0;
 		return t;
@@ -1717,9 +1943,9 @@ window.skins={};
 	_proto.rankBtn_i = function () {
 		var t = new eui.Button();
 		this.rankBtn = t;
-		t.icon = icon_rank;
-		t.label = 排行;
-		t.skinName = ButSkin3;
+		t.icon = "icon_rank";
+		t.label = "排行";
+		t.skinName = "ButSkin3";
 		t.x = 0;
 		t.y = 0;
 		return t;
@@ -1727,15 +1953,11 @@ window.skins={};
 	_proto.helpBtn_i = function () {
 		var t = new eui.Button();
 		this.helpBtn = t;
-		t.icon = icon_help;
-		t.label = 帮助;
-		t.skinName = ButSkin3;
+		t.icon = "icon_help";
+		t.label = "帮助";
+		t.skinName = "ButSkin3";
 		t.x = 0;
 		t.y = 0;
-		return t;
-	};
-	_proto._layout2_i = function () {
-		var t = new eui.layout();
 		return t;
 	};
 	return GameSkin;
@@ -1763,7 +1985,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.left = 0;
 		t.right = 0;
-		t.source = bg1_png;
+		t.source = "bg1_png";
 		t.y = 0;
 		return t;
 	};
@@ -1771,7 +1993,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.left = 0;
 		t.right = 0;
-		t.source = bg1_png;
+		t.source = "bg1_png";
 		t.y = 1124;
 		return t;
 	};
@@ -1779,7 +2001,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.left = 0;
 		t.right = 0;
-		t.source = bg1_png;
+		t.source = "bg1_png";
 		t.y = 2748;
 		return t;
 	};
@@ -1798,273 +2020,273 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image5_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image6_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image7_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 200;
 		return t;
 	};
 	_proto._Image8_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 200;
 		t.y = 200;
 		return t;
 	};
 	_proto._Image9_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 200;
 		t.y = 400;
 		return t;
 	};
 	_proto._Image10_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 400;
 		return t;
 	};
 	_proto._Image11_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 0;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image12_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 0;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image13_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image14_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image15_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image16_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image17_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 200;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image18_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 200;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image19_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image20_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 600;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image21_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 600;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image22_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 600;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image23_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 600;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image24_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image25_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image26_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image27_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 1400;
 		return t;
 	};
 	_proto._Image28_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 1400;
 		return t;
 	};
 	_proto._Image29_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		t.y = 1400;
 		return t;
 	};
 	_proto._Image30_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		t.y = 1600;
 		return t;
 	};
 	_proto._Image31_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 200;
 		t.y = 1600;
 		return t;
 	};
 	_proto._Image32_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 200;
 		t.y = 1800;
 		return t;
 	};
 	_proto._Image33_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 1800;
 		return t;
 	};
 	_proto._Image34_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 600;
 		t.y = 1800;
 		return t;
 	};
 	_proto._Image35_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 600;
 		t.y = 2000;
 		return t;
 	};
 	_proto._Image36_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 2000;
 		return t;
 	};
 	_proto._Image37_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 2000;
 		return t;
 	};
 	_proto._Image38_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 2000;
 		return t;
 	};
 	_proto._Image39_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 2200;
 		return t;
 	};
 	_proto._Image40_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 2200;
 		return t;
 	};
 	_proto._Image41_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		t.y = 2200;
 		return t;
 	};
 	_proto._Image42_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 400;
 		t.y = 2400;
 		return t;
@@ -2357,161 +2579,161 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image3_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 0;
 		return t;
 	};
 	_proto._Image4_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 200;
 		return t;
 	};
 	_proto._Image5_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 200;
 		t.y = 200;
 		return t;
 	};
 	_proto._Image6_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 200;
 		t.y = 400;
 		return t;
 	};
 	_proto._Image7_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 400;
 		return t;
 	};
 	_proto._Image8_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 0;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image9_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 0;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image10_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image11_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image12_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image13_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image14_i = function () {
 		var t = new eui.Image();
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 200;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image15_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 200;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image16_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image17_i = function () {
 		var t = new eui.Image();
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 600;
 		t.y = 600;
 		return t;
 	};
 	_proto._Image18_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 600;
 		t.y = 800;
 		return t;
 	};
 	_proto._Image19_i = function () {
 		var t = new eui.Image();
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 600;
 		t.y = 1000;
 		return t;
 	};
 	_proto._Image20_i = function () {
 		var t = new eui.Image();
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 600;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image21_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image22_i = function () {
 		var t = new eui.Image();
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		t.y = 1200;
 		return t;
 	};
 	_proto._Image23_i = function () {
 		var t = new eui.Image();
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		t.y = 1200;
 		return t;
@@ -2529,7 +2751,7 @@ window.skins={};
 		t.bottom = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao6;
+		t.source = "guandao6";
 		t.x = 400;
 		return t;
 	};
@@ -2538,7 +2760,7 @@ window.skins={};
 		t.bottom = 200;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		return t;
 	};
@@ -2547,7 +2769,7 @@ window.skins={};
 		t.bottom = 200;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		return t;
 	};
@@ -2556,7 +2778,7 @@ window.skins={};
 		t.bottom = 200;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		return t;
 	};
@@ -2565,7 +2787,7 @@ window.skins={};
 		t.bottom = 400;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 0;
 		return t;
 	};
@@ -2574,7 +2796,7 @@ window.skins={};
 		t.bottom = 400;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		return t;
 	};
@@ -2583,7 +2805,7 @@ window.skins={};
 		t.bottom = 400;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		return t;
 	};
@@ -2592,42 +2814,42 @@ window.skins={};
 		t.bottom = 400;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 600;
 		return t;
 	};
 	_proto._Image32_i = function () {
 		var t = new eui.Image();
 		t.bottom = 600;
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 600;
 		return t;
 	};
 	_proto._Image33_i = function () {
 		var t = new eui.Image();
 		t.bottom = 600;
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 400;
 		return t;
 	};
 	_proto._Image34_i = function () {
 		var t = new eui.Image();
 		t.bottom = 600;
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 200;
 		return t;
 	};
 	_proto._Image35_i = function () {
 		var t = new eui.Image();
 		t.bottom = 800;
-		t.source = guandao1;
+		t.source = "guandao1";
 		t.x = 200;
 		return t;
 	};
 	_proto._Image36_i = function () {
 		var t = new eui.Image();
 		t.bottom = 800;
-		t.source = guandao3;
+		t.source = "guandao3";
 		t.x = 400;
 		return t;
 	};
@@ -2635,7 +2857,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao2;
+		t.source = "guandao2";
 		t.x = 400;
 		t.y = 0;
 		return t;
@@ -2645,7 +2867,7 @@ window.skins={};
 		t.bottom = 1000;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao5;
+		t.source = "guandao5";
 		t.x = 200;
 		return t;
 	};
@@ -2653,7 +2875,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = guandao4;
+		t.source = "guandao4";
 		t.x = 0;
 		t.y = 0;
 		return t;
@@ -2923,12 +3145,251 @@ window.skins={};
 		this.width = 750;
 		this.yun_i();
 		this.elementsContent = [this._Image1_i(),this.yunCon_i(),this.iconCon_i(),this.startBtn_i()];
+		
+		eui.Binding.$bindProperties(this, ["yun0"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [750],[],this._Object1,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object2,"x");
+		eui.Binding.$bindProperties(this, ["yun11"],[0],this._TweenItem2,"target");
+		eui.Binding.$bindProperties(this, [-600],[],this._Object3,"x");
+		eui.Binding.$bindProperties(this, [800],[],this._Object4,"x");
+		eui.Binding.$bindProperties(this, ["yun10"],[0],this._TweenItem3,"target");
+		eui.Binding.$bindProperties(this, [-300],[],this._Object5,"x");
+		eui.Binding.$bindProperties(this, [-20],[],this._Object6,"x");
+		eui.Binding.$bindProperties(this, ["yun3"],[0],this._TweenItem4,"target");
+		eui.Binding.$bindProperties(this, [400],[],this._Object7,"x");
+		eui.Binding.$bindProperties(this, [300],[],this._Object8,"x");
+		eui.Binding.$bindProperties(this, ["yun4"],[0],this._TweenItem5,"target");
+		eui.Binding.$bindProperties(this, [-150],[],this._Object9,"x");
+		eui.Binding.$bindProperties(this, [20],[],this._Object10,"x");
+		eui.Binding.$bindProperties(this, ["yun5"],[0],this._TweenItem6,"target");
+		eui.Binding.$bindProperties(this, [250],[],this._Object11,"x");
+		eui.Binding.$bindProperties(this, [360],[],this._Object12,"x");
+		eui.Binding.$bindProperties(this, ["yun7"],[0],this._TweenItem7,"target");
+		eui.Binding.$bindProperties(this, [360],[],this._Object13,"x");
+		eui.Binding.$bindProperties(this, [300],[],this._Object14,"x");
 	}
 	var _proto = HomeSkin.prototype;
 
 	_proto.yun_i = function () {
 		var t = new egret.tween.TweenGroup();
 		this.yun = t;
+		t.items = [this._TweenItem1_i(),this._TweenItem2_i(),this._TweenItem3_i(),this._TweenItem4_i(),this._TweenItem5_i(),this._TweenItem6_i(),this._TweenItem7_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._Set1_i(),this._To1_i(),this._To2_i()];
+		return t;
+	};
+	_proto._Set1_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._TweenItem2_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem2 = t;
+		t.paths = [this._To3_i(),this._To4_i()];
+		return t;
+	};
+	_proto._To3_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 25000;
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto._To4_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 25000;
+		t.props = this._Object4_i();
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		this._Object4 = t;
+		return t;
+	};
+	_proto._TweenItem3_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem3 = t;
+		t.paths = [this._To5_i(),this._To6_i()];
+		return t;
+	};
+	_proto._To5_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object5_i();
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		this._Object5 = t;
+		return t;
+	};
+	_proto._To6_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object6_i();
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		this._Object6 = t;
+		return t;
+	};
+	_proto._TweenItem4_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem4 = t;
+		t.paths = [this._Set2_i(),this._To7_i(),this._To8_i()];
+		return t;
+	};
+	_proto._Set2_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To7_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object7_i();
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		this._Object7 = t;
+		return t;
+	};
+	_proto._To8_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object8_i();
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		this._Object8 = t;
+		return t;
+	};
+	_proto._TweenItem5_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem5 = t;
+		t.paths = [this._Set3_i(),this._To9_i(),this._To10_i()];
+		return t;
+	};
+	_proto._Set3_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To9_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object9_i();
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		this._Object9 = t;
+		return t;
+	};
+	_proto._To10_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object10_i();
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		this._Object10 = t;
+		return t;
+	};
+	_proto._TweenItem6_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem6 = t;
+		t.paths = [this._Set4_i(),this._To11_i(),this._To12_i()];
+		return t;
+	};
+	_proto._Set4_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To11_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object11_i();
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		this._Object11 = t;
+		return t;
+	};
+	_proto._To12_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object12_i();
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
+		this._Object12 = t;
+		return t;
+	};
+	_proto._TweenItem7_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem7 = t;
+		t.paths = [this._Set5_i(),this._To13_i(),this._To14_i()];
+		return t;
+	};
+	_proto._Set5_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To13_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object13_i();
+		return t;
+	};
+	_proto._Object13_i = function () {
+		var t = {};
+		this._Object13 = t;
+		return t;
+	};
+	_proto._To14_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object14_i();
+		return t;
+	};
+	_proto._Object14_i = function () {
+		var t = {};
+		this._Object14 = t;
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -2936,7 +3397,7 @@ window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
-		t.source = bg1_png;
+		t.source = "bg1_png";
 		t.top = 0;
 		return t;
 	};
@@ -2953,7 +3414,7 @@ window.skins={};
 	_proto.yun15_i = function () {
 		var t = new eui.Image();
 		this.yun15 = t;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = -118;
 		t.y = -64;
 		return t;
@@ -2961,79 +3422,55 @@ window.skins={};
 	_proto.yun1_i = function () {
 		var t = new eui.Image();
 		this.yun1 = t;
-		t.source = this.yun2;
+		t.source = "yun2";
 		t.x = 174;
 		t.y = -87;
-		if(this.yun15)
-		{
-			this.yun15.source = this.yun1;
-		}
 		return t;
 	};
 	_proto.yun2_i = function () {
 		var t = new eui.Image();
 		this.yun2 = t;
-		t.source = this.yun3;
+		t.source = "yun3";
 		t.x = -201;
 		t.y = 220;
-		if(this.yun1)
-		{
-			this.yun1.source = this.yun2;
-		}
 		return t;
 	};
 	_proto.yun3_i = function () {
 		var t = new eui.Image();
 		this.yun3 = t;
-		t.source = this.yun4;
+		t.source = "yun4";
 		t.x = 343;
 		t.y = 151;
-		if(this.yun2)
-		{
-			this.yun2.source = this.yun3;
-		}
 		return t;
 	};
 	_proto.yun4_i = function () {
 		var t = new eui.Image();
 		this.yun4 = t;
-		t.source = this.yun5;
+		t.source = "yun5";
 		t.x = 11;
 		t.y = 400;
-		if(this.yun3)
-		{
-			this.yun3.source = this.yun4;
-		}
 		return t;
 	};
 	_proto.yun5_i = function () {
 		var t = new eui.Image();
 		this.yun5 = t;
-		t.source = this.yun6;
+		t.source = "yun6";
 		t.x = 302;
 		t.y = 350;
-		if(this.yun4)
-		{
-			this.yun4.source = this.yun5;
-		}
 		return t;
 	};
 	_proto.yun6_i = function () {
 		var t = new eui.Image();
 		this.yun6 = t;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = -147;
 		t.y = 550;
-		if(this.yun5)
-		{
-			this.yun5.source = this.yun6;
-		}
 		return t;
 	};
 	_proto.yun7_i = function () {
 		var t = new eui.Image();
 		this.yun7 = t;
-		t.source = this.yun2;
+		t.source = "yun2";
 		t.x = 247;
 		t.y = 610;
 		return t;
@@ -3041,7 +3478,7 @@ window.skins={};
 	_proto.yun8_i = function () {
 		var t = new eui.Image();
 		this.yun8 = t;
-		t.source = this.yun3;
+		t.source = "yun3";
 		t.x = -150;
 		t.y = 755.5;
 		return t;
@@ -3050,14 +3487,14 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun14 = t;
 		t.bottom = 290;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = 157;
 		return t;
 	};
 	_proto.yun9_i = function () {
 		var t = new eui.Image();
 		this.yun9 = t;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = 320;
 		t.y = 820;
 		return t;
@@ -3066,7 +3503,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun13 = t;
 		t.bottom = 115;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = -129;
 		return t;
 	};
@@ -3074,7 +3511,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun16 = t;
 		t.bottom = -120;
-		t.source = this.yun3;
+		t.source = "yun3";
 		t.x = 220;
 		return t;
 	};
@@ -3082,7 +3519,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun12 = t;
 		t.bottom = 90;
-		t.source = this.yun5;
+		t.source = "yun5";
 		t.x = 355;
 		return t;
 	};
@@ -3090,7 +3527,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun11 = t;
 		t.bottom = -100;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = 278;
 		return t;
 	};
@@ -3098,14 +3535,14 @@ window.skins={};
 		var t = new eui.Image();
 		this.yun10 = t;
 		t.bottom = -50;
-		t.source = this.yun5;
+		t.source = "yun5";
 		t.x = -139;
 		return t;
 	};
 	_proto.yun0_i = function () {
 		var t = new eui.Image();
 		this.yun0 = t;
-		t.source = this.yun1;
+		t.source = "yun1";
 		t.x = -122;
 		t.y = -10;
 		return t;
@@ -3124,11 +3561,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = this.icon;
-		if(this.icon)
-		{
-			this.icon.source = this.icon;
-		}
+		t.source = "icon";
 		return t;
 	};
 	_proto.title_i = function () {
@@ -3136,7 +3569,7 @@ window.skins={};
 		this.title = t;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = title1;
+		t.source = "title1";
 		t.y = 210;
 		return t;
 	};
@@ -3145,8 +3578,9 @@ window.skins={};
 		this.startBtn = t;
 		t.bottom = 300;
 		t.horizontalCenter = 0;
-		t.icon = icon11;
-		t.skinName = ButSkin1;
+		t.icon = "icon11";
+		t.label = "";
+		t.skinName = "ButSkin1";
 		return t;
 	};
 	return HomeSkin;
@@ -3185,17 +3619,17 @@ window.skins={};
 		this.bg = t;
 		t.horizontalCenter = 0;
 		t.scale9Grid = new egret.Rectangle(354,458,144,78);
-		t.source = bg3_png;
+		t.source = "bg3_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 通知;
+		t.text = "通知";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -3203,12 +3637,12 @@ window.skins={};
 	_proto.contentTxt_i = function () {
 		var t = new eui.Label();
 		this.contentTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.lineSpacing = 12;
 		t.size = 30;
-		t.text = 想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么;
-		t.textAlign = center;
+		t.text = "想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
 		t.width = 560;
 		t.y = 196;
@@ -3229,28 +3663,29 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_6;
+		t.source = "kuang_6";
 		t.y = 0;
 		return t;
 	};
 	_proto.startLable_i = function () {
 		var t = new eui.Label();
 		this.startLable = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = 知道啦;
+		t.text = "知道啦";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
@@ -3270,7 +3705,7 @@ window.skins={};
 	_proto.rankIcon_i = function () {
 		var t = new eui.Image();
 		this.rankIcon = t;
-		t.source = rank1;
+		t.source = "rank1";
 		t.verticalCenter = 0;
 		t.x = 30;
 		return t;
@@ -3278,9 +3713,9 @@ window.skins={};
 	_proto.rankNum_i = function () {
 		var t = new eui.Label();
 		this.rankNum = t;
-		t.fontFamily = 黑体;
-		t.text = 1;
-		t.textAlign = center;
+		t.fontFamily = "黑体";
+		t.text = "1";
+		t.textAlign = "center";
 		t.textColor = 0x333333;
 		t.verticalCenter = 0;
 		t.width = 70;
@@ -3314,6 +3749,7 @@ window.skins={};
 		t.mask = this.mackRect;
 		t.scaleX = 1;
 		t.scaleY = 1;
+		t.source = "";
 		t.verticalCenter = 0;
 		t.width = 60;
 		t.x = 170;
@@ -3337,8 +3773,8 @@ window.skins={};
 	_proto.nameTxt_i = function () {
 		var t = new eui.Label();
 		this.nameTxt = t;
-		t.fontFamily = 黑体;
-		t.text = 派大星;
+		t.fontFamily = "黑体";
+		t.text = "派大星";
 		t.textColor = 0x333333;
 		t.verticalCenter = 0;
 		t.x = 205;
@@ -3347,8 +3783,8 @@ window.skins={};
 	_proto.lvTxt_i = function () {
 		var t = new eui.Label();
 		this.lvTxt = t;
-		t.fontFamily = 黑体;
-		t.text = Lv.99;
+		t.fontFamily = "黑体";
+		t.text = "Lv.99";
 		t.textColor = 0x333333;
 		t.verticalCenter = 0;
 		t.x = 490;
@@ -3388,17 +3824,17 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = bg4_png;
+		t.source = "bg4_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 排行榜;
+		t.text = "排行榜";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -3406,11 +3842,12 @@ window.skins={};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
@@ -3428,6 +3865,75 @@ window.skins={};
 		var t = new eui.List();
 		this.list = t;
 		t.itemRendererSkinName = RankItemSkin;
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.lv = "Lv.100";
+		t.name = "派大星";
+		t.rank = "1";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.lv = "Lv.99";
+		t.name = "派大星";
+		t.rank = "2";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.lv = "Lv.88";
+		t.name = "派大星";
+		t.rank = "3";
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		t.lv = "Lv.77";
+		t.name = "派大星派大星派...";
+		t.rank = "4";
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		t.lv = "Lv.66";
+		t.name = "派大星派大星派...";
+		t.rank = "5";
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		t.lv = "Lv.55";
+		t.name = "派大星派大星派...";
+		t.rank = "6";
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		t.lv = "Lv.44";
+		t.name = "派大星派大星派...";
+		t.rank = "7";
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		t.lv = "Lv.8";
+		t.name = "派大星派大星派...";
+		t.rank = "8";
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		t.lv = "Lv.8";
+		t.name = "派大星派大星派...";
+		t.rank = "9";
 		return t;
 	};
 	return RankSkin;
@@ -3464,17 +3970,17 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = bg4_png;
+		t.source = "bg4_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 签到成功;
+		t.text = "签到成功";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -3482,10 +3988,10 @@ window.skins={};
 	_proto.hintTxt1_i = function () {
 		var t = new eui.Label();
 		this.hintTxt1 = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 26;
-		t.text = 连续签到7天可获得大礼包;
+		t.text = "连续签到7天可获得大礼包";
 		t.textColor = 0x666666;
 		t.y = 195;
 		return t;
@@ -3493,10 +3999,10 @@ window.skins={};
 	_proto.hintTxt2_i = function () {
 		var t = new eui.Label();
 		this.hintTxt2 = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 26;
-		t.text = 连续一天签到，您获得了：;
+		t.text = "连续一天签到，您获得了：";
 		t.textColor = 0x333333;
 		t.y = 562;
 		return t;
@@ -3504,10 +4010,10 @@ window.skins={};
 	_proto.infoTxt3_i = function () {
 		var t = new eui.Label();
 		this.infoTxt3 = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 26;
-		t.text = 分享到群里，额外获得20金币;
+		t.text = "分享到群里，额外获得20金币";
 		t.textColor = 0x333333;
 		t.y = 851;
 		return t;
@@ -3516,7 +4022,13 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.y = 275;
-		t.elementsContent = [this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i(),this._layout1_i()];
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 30;
 		return t;
 	};
 	_proto.btn1_i = function () {
@@ -3543,15 +4055,17 @@ window.skins={};
 		t.skinName = "DayItemSkin";
 		return t;
 	};
-	_proto._layout1_i = function () {
-		var t = new eui.layout();
-		return t;
-	};
 	_proto._Group2_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.y = 415;
-		t.elementsContent = [this.btn5_i(),this.btn6_i(),this.btn7_i(),this._layout2_i()];
+		t.layout = this._HorizontalLayout2_i();
+		t.elementsContent = [this.btn5_i(),this.btn6_i(),this.btn7_i()];
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 30;
 		return t;
 	};
 	_proto.btn5_i = function () {
@@ -3572,16 +4086,36 @@ window.skins={};
 		t.skinName = "DayItemSkin";
 		return t;
 	};
-	_proto._layout2_i = function () {
-		var t = new eui.layout();
-		return t;
-	};
 	_proto.list_i = function () {
 		var t = new eui.List();
 		this.list = t;
 		t.horizontalCenter = 0;
 		t.itemRendererSkinName = AwardItemSkin;
 		t.y = 634;
+		t.layout = this._HorizontalLayout3_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._HorizontalLayout3_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 50;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+30";
 		return t;
 	};
 	_proto.startBtn_i = function () {
@@ -3599,27 +4133,28 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_5;
+		t.source = "kuang_5";
 		return t;
 	};
 	_proto.startLable_i = function () {
 		var t = new eui.Label();
 		this.startLable = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = 炫 耀;
+		t.text = "炫 耀";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
@@ -3657,17 +4192,17 @@ window.skins={};
 	_proto._Image1_i = function () {
 		var t = new eui.Image();
 		t.horizontalCenter = 0;
-		t.source = bg4_png;
+		t.source = "bg4_png";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 40;
-		t.text = 这里是任务名称;
+		t.text = "这里是任务名称";
 		t.textColor = 0x333333;
 		t.y = 120;
 		return t;
@@ -3683,7 +4218,7 @@ window.skins={};
 		var t = new eui.Image();
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_8;
+		t.source = "kuang_8";
 		return t;
 	};
 	_proto.list_i = function () {
@@ -3692,6 +4227,36 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.itemRendererSkinName = AwardItemSkin;
 		t.verticalCenter = 0;
+		t.layout = this._HorizontalLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 100;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.source = "icon_xz2";
+		t.text = "+30";
 		return t;
 	};
 	_proto._Image3_i = function () {
@@ -3699,17 +4264,17 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = icon_gift;
+		t.source = "icon_gift";
 		t.y = 330;
 		return t;
 	};
 	_proto.awardNameTxt_i = function () {
 		var t = new eui.Label();
 		this.awardNameTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
 		t.size = 30;
-		t.text = 特别礼物;
+		t.text = "特别礼物";
 		t.textColor = 0x333333;
 		t.y = 540;
 		return t;
@@ -3728,16 +4293,48 @@ window.skins={};
 		t.itemRendererSkinName = TxItemSkin;
 		t.scaleX = 1;
 		t.scaleY = 1;
+		t.layout = this._HorizontalLayout2_i();
+		t.dataProvider = this._ArrayCollection2_i();
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = -30;
+		return t;
+	};
+	_proto._ArrayCollection2_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i()];
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		t.source = "black";
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		t.source = "gold2";
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		t.source = "gold2";
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		t.source = "gold2";
 		return t;
 	};
 	_proto.numTxt_i = function () {
 		var t = new eui.Label();
 		this.numTxt = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.size = 30;
-		t.text = 232人正在参加…;
+		t.text = "232人正在参加…";
 		t.textColor = 0x333333;
 		t.verticalCenter = 0;
 		t.x = 155;
@@ -3758,28 +4355,29 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = kuang_6;
+		t.source = "kuang_6";
 		t.y = 0;
 		return t;
 	};
 	_proto.startLable_i = function () {
 		var t = new eui.Label();
 		this.startLable = t;
-		t.fontFamily = 黑体;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.size = 36;
-		t.text = 开 始;
+		t.text = "开 始";
 		t.verticalCenter = 0;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
 		var t = new eui.Button();
 		this.closeBtn = t;
-		t.icon = icon_close;
+		t.icon = "icon_close";
+		t.label = "";
 		t.right = 50;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.skinName = ButSkin1;
+		t.skinName = "ButSkin1";
 		t.y = 50;
 		return t;
 	};
