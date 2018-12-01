@@ -2906,7 +2906,6 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.top = 0;
-		t.visible = false;
 		t.x = 0;
 		t.y = 0;
 		t.elementsContent = [this.btn0_i(),this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i(),this.btn5_i(),this.btn6_i(),this.btn7_i(),this.btn8_i(),this.btn9_i(),this.btn10_i(),this.btn11_i(),this.btn12_i(),this.btn13_i(),this.btn14_i(),this.btn15_i(),this.btn16_i(),this.btn17_i(),this.btn18_i(),this.btn19_i(),this.btn20_i(),this.btn21_i(),this.btn22_i(),this.btn23_i(),this.btn24_i(),this.btn25_i(),this.btn26_i(),this.btn27_i(),this.btn28_i(),this.btn29_i()];
