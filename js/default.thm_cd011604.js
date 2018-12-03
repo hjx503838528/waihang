@@ -3643,6 +3643,7 @@ window.skins={};
 	_proto._Scroller1_i = function () {
 		var t = new eui.Scroller();
 		t.bottom = 0;
+		t.bounces = false;
 		t.left = 0;
 		t.right = 0;
 		t.top = 0;
@@ -4410,7 +4411,7 @@ window.skins={};
 	};
 	_proto._Object4_i = function () {
 		var t = {};
-		t.source = "black";
+		t.source = "gold2";
 		return t;
 	};
 	_proto._Object5_i = function () {
