@@ -42,6 +42,7 @@
 		"resource/skins/GuanKaSkin.exml",
 		"resource/skins/GuanKaSkin1.exml",
 		"resource/skins/HomeSkin.exml",
+		"resource/skins/MapSkin.exml",
 		"resource/skins/message/MessageSkin.exml",
 		"resource/skins/rank/RankItemSkin.exml",
 		"resource/skins/rank/RankSkin.exml",

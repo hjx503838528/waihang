@@ -900,11 +900,11 @@ window.skins={};
 	__extends(GkItemSkin, _super);
 	function GkItemSkin() {
 		_super.call(this);
-		this.skinParts = ["iconDisplay","labelDisplay"];
+		this.skinParts = ["iconDisplay","labelDisplay","stateImg"];
 		
 		this.height = 100;
 		this.width = 125;
-		this.elementsContent = [this.iconDisplay_i(),this.labelDisplay_i()];
+		this.elementsContent = [this.iconDisplay_i(),this.labelDisplay_i(),this.stateImg_i()];
 	}
 	var _proto = GkItemSkin.prototype;
 
@@ -927,6 +927,15 @@ window.skins={};
 		t.textColor = 0xffffff;
 		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.stateImg_i = function () {
+		var t = new eui.Image();
+		this.stateImg = t;
+		t.right = 2;
+		t.source = "icon13";
+		t.visible = false;
+		t.y = 2;
 		return t;
 	};
 	return GkItemSkin;
@@ -3619,6 +3628,63 @@ window.skins={};
 		return t;
 	};
 	return HomeSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/MapSkin.exml'] = window.MapSkin = (function (_super) {
+	__extends(MapSkin, _super);
+	function MapSkin() {
+		_super.call(this);
+		this.skinParts = ["bg","gdCon","btnCon","mainCon"];
+		
+		this.height = 1334;
+		this.width = 720;
+		this.elementsContent = [this._Scroller1_i()];
+	}
+	var _proto = MapSkin.prototype;
+
+	_proto._Scroller1_i = function () {
+		var t = new eui.Scroller();
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.viewport = this.mainCon_i();
+		return t;
+	};
+	_proto.mainCon_i = function () {
+		var t = new eui.Group();
+		this.mainCon = t;
+		t.elementsContent = [this.bg_i(),this.gdCon_i(),this.btnCon_i()];
+		return t;
+	};
+	_proto.bg_i = function () {
+		var t = new eui.Rect();
+		this.bg = t;
+		t.fillAlpha = 0.8;
+		t.left = 0;
+		t.right = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.gdCon_i = function () {
+		var t = new eui.Group();
+		this.gdCon = t;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.width = 750;
+		t.y = 0;
+		return t;
+	};
+	_proto.btnCon_i = function () {
+		var t = new eui.Group();
+		this.btnCon = t;
+		t.horizontalCenter = 0;
+		t.touchChildren = true;
+		t.touchEnabled = false;
+		t.width = 750;
+		t.y = 0;
+		return t;
+	};
+	return MapSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/message/MessageSkin.exml'] = window.MessageSkin = (function (_super) {
 	__extends(MessageSkin, _super);
 	function MessageSkin() {
