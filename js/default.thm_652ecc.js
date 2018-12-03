@@ -4396,37 +4396,11 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.layout = this._HorizontalLayout2_i();
-		t.dataProvider = this._ArrayCollection2_i();
 		return t;
 	};
 	_proto._HorizontalLayout2_i = function () {
 		var t = new eui.HorizontalLayout();
 		t.gap = -30;
-		return t;
-	};
-	_proto._ArrayCollection2_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i()];
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		t.source = "gold2";
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		t.source = "gold2";
 		return t;
 	};
 	_proto.numTxt_i = function () {
@@ -4493,8 +4467,6 @@ window.skins={};
 		this.height = 60;
 		this.width = 60;
 		this.elementsContent = [this.iconImg_i(),this.mackRect_i()];
-		
-		eui.Binding.$bindProperties(this, ["hostComponent.data.source"],[0],this.iconImg,"source");
 	}
 	var _proto = TxItemSkin.prototype;
 
@@ -4504,6 +4476,7 @@ window.skins={};
 		t.height = 60;
 		t.horizontalCenter = 0;
 		t.mask = this.mackRect;
+		t.source = "";
 		t.verticalCenter = 0;
 		t.width = 60;
 		return t;
