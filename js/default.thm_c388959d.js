@@ -2348,7 +2348,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn0_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn0 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 437.5;
@@ -2356,7 +2356,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn1_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn1 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 400;
@@ -2364,7 +2364,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn2_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn2 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 150;
@@ -2372,7 +2372,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn3_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn3 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 65;
@@ -2380,7 +2380,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn4_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn4 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 300;
@@ -2388,7 +2388,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn5_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn5 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 575;
@@ -2396,7 +2396,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn6_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn6 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 600;
@@ -2404,7 +2404,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn7_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn7 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 367;
@@ -2412,7 +2412,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn8_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn8 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 240;
@@ -2420,7 +2420,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn9_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn9 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 400;
@@ -2428,7 +2428,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn10_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn10 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 350;
@@ -2436,7 +2436,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn11_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn11 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 100;
@@ -2444,7 +2444,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn12_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn12 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 38;
@@ -2452,7 +2452,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn13_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn13 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 350;
@@ -2460,7 +2460,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn14_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn14 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 637;
@@ -2468,7 +2468,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn15_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn15 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 637;
@@ -2476,7 +2476,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn16_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn16 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 637;
@@ -2484,7 +2484,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn17_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn17 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 600;
@@ -2492,7 +2492,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn18_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn18 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 400;
@@ -2500,7 +2500,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn19_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn19 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 237;
@@ -2508,7 +2508,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn20_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn20 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 400;
@@ -2516,7 +2516,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn21_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn21 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 200;
@@ -2524,7 +2524,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn22_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn22 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 37.5;
@@ -2532,7 +2532,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn23_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn23 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 40;
@@ -2540,7 +2540,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn24_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn24 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 37;
@@ -2548,7 +2548,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn25_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn25 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 237;
@@ -2556,7 +2556,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn26_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn26 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 200;
@@ -2564,7 +2564,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn27_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn27 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 40;
@@ -2572,7 +2572,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn28_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn28 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 200;
@@ -2580,7 +2580,7 @@ window.skins={};
 		return t;
 	};
 	_proto.btn29_i = function () {
-		var t = new eui.Component();
+		var t = new GkItem();
 		this.btn29 = t;
 		t.skinName = "GkItemSkin";
 		t.x = 400;
