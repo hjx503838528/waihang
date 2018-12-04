@@ -1439,12 +1439,12 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","bg","guankaCon","viewstack","scroller","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","bg","guankaCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
 		this.yun_i();
-		this.elementsContent = [this.bg_i(),this.scroller_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		this.elementsContent = [this._Group5_i()];
 		
 		eui.Binding.$bindProperties(this, ["yun3"],[0],this._TweenItem1,"target");
 		eui.Binding.$bindProperties(this, [800],[],this._Object1,"x");
@@ -1634,37 +1634,21 @@ window.skins={};
 		this._Object12 = t;
 		return t;
 	};
+	_proto._Group5_i = function () {
+		var t = new eui.Group();
+		t.bottom = 0;
+		t.horizontalCenter = 0;
+		t.top = 0;
+		t.width = 750;
+		t.elementsContent = [this.bg_i(),this.guankaCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		return t;
+	};
 	_proto.bg_i = function () {
 		var t = new eui.Image();
 		this.bg = t;
-		t.bottom = 0;
-		t.left = 0;
-		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
 		t.source = "bg1_png";
-		t.top = 0;
-		t.visible = false;
-		return t;
-	};
-	_proto.scroller_i = function () {
-		var t = new eui.Scroller();
-		this.scroller = t;
-		t.bottom = 0;
-		t.bounces = false;
-		t.horizontalCenter = 0;
-		t.scrollPolicyH = "off";
-		t.scrollPolicyV = "on";
-		t.top = 0;
-		t.width = 750;
-		t.viewport = this.viewstack_i();
-		return t;
-	};
-	_proto.viewstack_i = function () {
-		var t = new eui.ViewStack();
-		this.viewstack = t;
-		t.anchorOffsetY = 0;
-		t.selectedIndex = 0;
-		t.width = 750;
-		t.elementsContent = [this.guankaCon_i()];
 		return t;
 	};
 	_proto.guankaCon_i = function () {
@@ -3632,37 +3616,37 @@ window.skins={};
 	__extends(MapSkin, _super);
 	function MapSkin() {
 		_super.call(this);
-		this.skinParts = ["bg","gdCon","btnCon","mainCon"];
+		this.skinParts = ["bgCon","gdCon","btnCon","mainCon","scroller"];
 		
 		this.height = 1334;
-		this.width = 720;
-		this.elementsContent = [this._Scroller1_i()];
+		this.width = 750;
+		this.elementsContent = [this.scroller_i()];
 	}
 	var _proto = MapSkin.prototype;
 
-	_proto._Scroller1_i = function () {
+	_proto.scroller_i = function () {
 		var t = new eui.Scroller();
-		t.bottom = 0;
+		this.scroller = t;
 		t.bounces = false;
+		t.height = 1334;
 		t.left = 0;
 		t.right = 0;
-		t.top = 0;
+		t.scrollPolicyH = "off";
+		t.y = 0;
 		t.viewport = this.mainCon_i();
 		return t;
 	};
 	_proto.mainCon_i = function () {
 		var t = new eui.Group();
 		this.mainCon = t;
-		t.elementsContent = [this.bg_i(),this.gdCon_i(),this.btnCon_i()];
+		t.elementsContent = [this.bgCon_i(),this.gdCon_i(),this.btnCon_i()];
 		return t;
 	};
-	_proto.bg_i = function () {
-		var t = new eui.Rect();
-		this.bg = t;
-		t.fillAlpha = 0.8;
-		t.left = 0;
-		t.right = 0;
-		t.y = 0;
+	_proto.bgCon_i = function () {
+		var t = new eui.Group();
+		this.bgCon = t;
+		t.touchChildren = true;
+		t.touchEnabled = false;
 		return t;
 	};
 	_proto.gdCon_i = function () {
@@ -3671,8 +3655,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = false;
 		t.touchEnabled = false;
-		t.width = 750;
-		t.y = 0;
+		t.width = 800;
 		return t;
 	};
 	_proto.btnCon_i = function () {
@@ -3681,8 +3664,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = true;
 		t.touchEnabled = false;
-		t.width = 750;
-		t.y = 0;
+		t.width = 800;
 		return t;
 	};
 	return MapSkin;
