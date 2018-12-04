@@ -4134,25 +4134,25 @@ window.skins={};
 		return t;
 	};
 	_proto.btn1_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn1 = t;
 		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.btn2_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn2 = t;
 		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.btn3_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn3 = t;
 		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.btn4_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn4 = t;
 		t.skinName = "DayItemSkin";
 		return t;
@@ -4171,19 +4171,19 @@ window.skins={};
 		return t;
 	};
 	_proto.btn5_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn5 = t;
 		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.btn6_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn6 = t;
 		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.btn7_i = function () {
-		var t = new eui.Component();
+		var t = new DayItem();
 		this.btn7 = t;
 		t.skinName = "DayItemSkin";
 		return t;
