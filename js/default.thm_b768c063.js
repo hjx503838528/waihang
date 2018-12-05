@@ -4328,19 +4328,19 @@ window.skins={};
 	_proto._Object1_i = function () {
 		var t = {};
 		t.source = "gold2";
-		t.text = "+30";
+		t.text = "+0";
 		return t;
 	};
 	_proto._Object2_i = function () {
 		var t = {};
 		t.source = "icon_xp1";
-		t.text = "+30";
+		t.text = "+0";
 		return t;
 	};
 	_proto._Object3_i = function () {
 		var t = {};
 		t.source = "icon_xz2";
-		t.text = "+30";
+		t.text = "+0";
 		return t;
 	};
 	_proto._Image3_i = function () {
@@ -4368,12 +4368,19 @@ window.skins={};
 		this.renwuCon = t;
 		t.horizontalCenter = 0;
 		t.y = 610;
+		t.layout = this._HorizontalLayout3_i();
 		t.elementsContent = [this.txList_i(),this.numTxt_i()];
+		return t;
+	};
+	_proto._HorizontalLayout3_i = function () {
+		var t = new eui.HorizontalLayout();
 		return t;
 	};
 	_proto.txList_i = function () {
 		var t = new eui.List();
 		this.txList = t;
+		t.height = 60;
+		t.horizontalCenter = -115;
 		t.itemRendererSkinName = TxItemSkin;
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -4389,11 +4396,13 @@ window.skins={};
 		var t = new eui.Label();
 		this.numTxt = t;
 		t.fontFamily = "黑体";
+		t.height = 60;
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.size = 30;
 		t.text = "232人正在参加…";
 		t.textColor = 0x333333;
+		t.verticalAlign = "middle";
 		t.verticalCenter = 0;
 		t.x = 155;
 		return t;
