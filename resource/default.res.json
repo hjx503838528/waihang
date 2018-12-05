@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,bg_ad_png,bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,gameicon_json",
+			"keys": "bg_ad_png,bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,gameicon_json",
 			"name": "preload"
 		},
 		{
@@ -10,11 +10,6 @@
 		}
 	],
 	"resources": [
-		{
-			"url": "config/description.json",
-			"type": "json",
-			"name": "description_json"
-		},
 		{
 			"url": "assets/bg_ad.png",
 			"type": "image",
