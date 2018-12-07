@@ -2740,7 +2740,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.rankIcon = t;
 		t.source = "rank1";
-		t.verticalCenter = 0;
+		t.verticalCenter = -2;
 		t.x = 30;
 		return t;
 	};
@@ -2899,75 +2899,6 @@ window.skins={};
 		var t = new eui.List();
 		this.list = t;
 		t.itemRendererSkinName = RankItemSkin;
-		t.dataProvider = this._ArrayCollection1_i();
-		return t;
-	};
-	_proto._ArrayCollection1_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i()];
-		return t;
-	};
-	_proto._Object1_i = function () {
-		var t = {};
-		t.lv = "Lv.100";
-		t.name = "派大星";
-		t.rank = "1";
-		return t;
-	};
-	_proto._Object2_i = function () {
-		var t = {};
-		t.lv = "Lv.99";
-		t.name = "派大星";
-		t.rank = "2";
-		return t;
-	};
-	_proto._Object3_i = function () {
-		var t = {};
-		t.lv = "Lv.88";
-		t.name = "派大星";
-		t.rank = "3";
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		t.lv = "Lv.77";
-		t.name = "派大星派大星派...";
-		t.rank = "4";
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		t.lv = "Lv.66";
-		t.name = "派大星派大星派...";
-		t.rank = "5";
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		t.lv = "Lv.55";
-		t.name = "派大星派大星派...";
-		t.rank = "6";
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		t.lv = "Lv.44";
-		t.name = "派大星派大星派...";
-		t.rank = "7";
-		return t;
-	};
-	_proto._Object8_i = function () {
-		var t = {};
-		t.lv = "Lv.8";
-		t.name = "派大星派大星派...";
-		t.rank = "8";
-		return t;
-	};
-	_proto._Object9_i = function () {
-		var t = {};
-		t.lv = "Lv.8";
-		t.name = "派大星派大星派...";
-		t.rank = "9";
 		return t;
 	};
 	return RankSkin;
