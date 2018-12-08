@@ -1,15 +1,15 @@
 {
 	"initial": [
-		"./js/egret.min_47fd10ef.js",
-		"./js/egret.web.min_b09156fe.js",
-		"./js/eui.min_3a32cbd5.js",
+		"./js/egret.min_f1f027d7.js",
+		"./js/egret.web.min_2dd0bd72.js",
+		"./js/eui.min_4f767512.js",
 		"./js/assetsmanager.min_70d22011.js",
 		"./js/tween.min_6c5a88f9.js",
-		"./js/game.min_b4f45a13.js",
+		"./js/game.min_45aa06f6.js",
 		"./js/promise.min_83a6a5d.js"
 	],
 	"game": [
-		"./js/default.thm_6b0e9e0c.js",
-		"./js/main.min_4388190e.js"
+		"./js/default.thm_1655f3f7.js",
+		"./js/main.min_4bd58500.js"
 	]
 }
