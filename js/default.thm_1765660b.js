@@ -813,7 +813,7 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","bg","guankaCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -1014,20 +1014,12 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.top = 0;
 		t.width = 750;
-		t.elementsContent = [this.bg_i(),this.guankaCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
 		return t;
 	};
-	_proto.bg_i = function () {
-		var t = new eui.Image();
-		this.bg = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "bg1_png";
-		return t;
-	};
-	_proto.guankaCon_i = function () {
+	_proto.mapCon_i = function () {
 		var t = new eui.Group();
-		this.guankaCon = t;
+		this.mapCon = t;
 		t.horizontalCenter = 0;
 		t.y = 0;
 		return t;
@@ -3153,7 +3145,7 @@ window.skins={};
 	__extends(FriendHelpSkin, _super);
 	function FriendHelpSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","list","awardNameTxt","txImg","rectMack","txCon","nameTxt","iconBase","infoCon","refreshBtn","shareBtn","startLable","startBtn","hintTxt","closeBtn"];
+		this.skinParts = ["shade","titleTxt","list","awardNameTxt","txImg","rectMack","txCon","nameTxt","infoCon","refreshBtn","shareBtn","startLable","startBtn","hintTxt","closeBtn"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -3274,7 +3266,13 @@ window.skins={};
 		this.infoCon = t;
 		t.horizontalCenter = 0;
 		t.y = 600;
-		t.elementsContent = [this.txCon_i(),this.nameTxt_i(),this.iconBase_i()];
+		t.layout = this._HorizontalLayout2_i();
+		t.elementsContent = [this.txCon_i(),this.nameTxt_i()];
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 15;
 		return t;
 	};
 	_proto.txCon_i = function () {
@@ -3311,20 +3309,15 @@ window.skins={};
 	_proto.nameTxt_i = function () {
 		var t = new eui.Label();
 		this.nameTxt = t;
+		t.bottom = 0;
 		t.fontFamily = "黑体";
+		t.height = 100;
 		t.size = 30;
 		t.text = "阿婆";
 		t.textColor = 0x333333;
-		t.verticalCenter = 0;
+		t.top = 0;
+		t.verticalAlign = "middle";
 		t.x = 120;
-		return t;
-	};
-	_proto.iconBase_i = function () {
-		var t = new AwardItem();
-		this.iconBase = t;
-		t.skinName = "AwardItemSkin";
-		t.verticalCenter = 0;
-		t.x = 220;
 		return t;
 	};
 	_proto.refreshBtn_i = function () {
@@ -3404,11 +3397,11 @@ window.skins={};
 	__extends(SignInSkin, _super);
 	function SignInSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","hintTxt1","hintTxt2","infoTxt3","btn1","btn2","btn3","btn4","btn5","btn6","btn7","list","startLable","startBtn","closeBtn"];
+		this.skinParts = ["shade","titleTxt","hintTxt1","hintTxt2","infoTxt3","topCon","bottomCon","list","startLable","startBtn","closeBtn"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this.shade_i(),this._Group3_i()];
+		this.elementsContent = [this.shade_i(),this._Group1_i()];
 	}
 	var _proto = SignInSkin.prototype;
 
@@ -3423,11 +3416,11 @@ window.skins={};
 		t.touchEnabled = true;
 		return t;
 	};
-	_proto._Group3_i = function () {
+	_proto._Group1_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.hintTxt1_i(),this.hintTxt2_i(),this.infoTxt3_i(),this._Group1_i(),this._Group2_i(),this.list_i(),this.startBtn_i(),this.closeBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.hintTxt1_i(),this.hintTxt2_i(),this.infoTxt3_i(),this.topCon_i(),this.bottomCon_i(),this.list_i(),this.startBtn_i(),this.closeBtn_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -3481,12 +3474,12 @@ window.skins={};
 		t.y = 851;
 		return t;
 	};
-	_proto._Group1_i = function () {
+	_proto.topCon_i = function () {
 		var t = new eui.Group();
+		this.topCon = t;
 		t.horizontalCenter = 0;
 		t.y = 275;
 		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i()];
 		return t;
 	};
 	_proto._HorizontalLayout1_i = function () {
@@ -3494,59 +3487,17 @@ window.skins={};
 		t.gap = 30;
 		return t;
 	};
-	_proto.btn1_i = function () {
-		var t = new DayItem();
-		this.btn1 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto.btn2_i = function () {
-		var t = new DayItem();
-		this.btn2 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto.btn3_i = function () {
-		var t = new DayItem();
-		this.btn3 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto.btn4_i = function () {
-		var t = new DayItem();
-		this.btn4 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto._Group2_i = function () {
+	_proto.bottomCon_i = function () {
 		var t = new eui.Group();
+		this.bottomCon = t;
 		t.horizontalCenter = 0;
 		t.y = 415;
 		t.layout = this._HorizontalLayout2_i();
-		t.elementsContent = [this.btn5_i(),this.btn6_i(),this.btn7_i()];
 		return t;
 	};
 	_proto._HorizontalLayout2_i = function () {
 		var t = new eui.HorizontalLayout();
 		t.gap = 30;
-		return t;
-	};
-	_proto.btn5_i = function () {
-		var t = new DayItem();
-		this.btn5 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto.btn6_i = function () {
-		var t = new DayItem();
-		this.btn6 = t;
-		t.skinName = "DayItemSkin";
-		return t;
-	};
-	_proto.btn7_i = function () {
-		var t = new DayItem();
-		this.btn7 = t;
-		t.skinName = "DayItemSkin";
 		return t;
 	};
 	_proto.list_i = function () {

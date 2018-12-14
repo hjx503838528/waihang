@@ -5,11 +5,10 @@
 		"./js/eui.min_4f767512.js",
 		"./js/assetsmanager.min_70d22011.js",
 		"./js/tween.min_6c5a88f9.js",
-		"./js/game.min_45aa06f6.js",
-		"./js/promise.min_83a6a5d.js"
+		"./js/game.min_45aa06f6.js"
 	],
 	"game": [
-		"./js/default.thm_1655f3f7.js",
-		"./js/main.min_cdaa232c.js"
+		"./js/default.thm_1765660b.js",
+		"./js/main.min_f5de4097.js"
 	]
 }
