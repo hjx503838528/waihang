@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,gameicon_json,bgm_mp3,button_mp3",
+			"keys": "bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,bgm_mp3,button_mp3,gameicon_json,music_on_png,music_off_png",
 			"name": "preload"
 		},
 		{
@@ -75,12 +75,6 @@
 			"subkeys": "guandao2,guandao3,guandao4,guandao5,guandao6,guandao1"
 		},
 		{
-			"name": "gameicon_json",
-			"type": "sheet",
-			"url": "assets/gameicon.json",
-			"subkeys": "icon_mail,icon_p2,icon_pj1,icon_pj3,icon_rank,icon_refresh,icon_right,icon_rubbish,icon_sao,icon_share,icon_xj,icon_xp1,icon_xp2,icon_xz1,icon_xz2,icon_zs,icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10,icon11,icon12,kuang_1,kuang_2,kuang_3,kuang_4,kuang_5,kuang_6,kuang_7,kuang_8,rank1,rank2,rank3,title1,win1,win2,bottom,gold1,gold2,gold3,icon,icon_bag,icon_bf,icon_close,icon_error,icon_gift,icon_guanka1,icon_guanka2,icon_guanka3,icon_help,icon_home,icon_luyin,icon_lx,icon14,icon15,icon16,icon13"
-		},
-		{
 			"name": "bgm_mp3",
 			"type": "sound",
 			"url": "assets/sound/bgm.mp3"
@@ -89,6 +83,22 @@
 			"name": "button_mp3",
 			"type": "sound",
 			"url": "assets/sound/button.mp3"
+		},
+		{
+			"name": "gameicon_json",
+			"type": "sheet",
+			"url": "assets/gameicon.json",
+			"subkeys": "track,thumb,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,win2,win1,title1,rank3,rank2,rank1,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon13,icon14,icon15,icon16"
+		},
+		{
+			"name": "music_on_png",
+			"type": "image",
+			"url": "assets/music_on.png"
+		},
+		{
+			"name": "music_off_png",
+			"type": "image",
+			"url": "assets/music_off.png"
 		}
 	]
 }
