@@ -2503,7 +2503,10 @@ window.skins={};
 			new eui.State ("no",
 				[
 					new eui.SetProperty("_Image1","source","kuang_3"),
-					new eui.SetProperty("iconDisplay","source","gold2")
+					new eui.SetProperty("iconDisplay","source","gold2"),
+					new eui.SetProperty("iconDisplay","horizontalCenter",0),
+					new eui.SetProperty("iconDisplay","verticalCenter",15),
+					new eui.SetProperty("labelDisplay","y",18)
 				])
 		];
 	}
