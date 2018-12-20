@@ -780,11 +780,11 @@ window.skins={};
 	__extends(ButSkin6, _super);
 	function ButSkin6() {
 		_super.call(this);
-		this.skinParts = [];
+		this.skinParts = ["iconDisplay","labelDisplay"];
 		
 		this.minHeight = 50;
 		this.minWidth = 100;
-		this.elementsContent = [this._Image1_i()];
+		this.elementsContent = [this.iconDisplay_i(),this.labelDisplay_i()];
 		this.states = [
 			new eui.State ("up",
 				[
@@ -801,10 +801,21 @@ window.skins={};
 	}
 	var _proto = ButSkin6.prototype;
 
-	_proto._Image1_i = function () {
+	_proto.iconDisplay_i = function () {
 		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.right = -3;
+		t.source = "kuang_6";
+		t.y = 0;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
-		t.source = "kuang_7";
+		t.size = 36;
+		t.text = "炫耀一下";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -813,7 +824,7 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","musicBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -1014,7 +1025,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.top = 0;
 		t.width = 750;
-		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.musicBtn_i(),this.friendBtn_i(),this.bottomCom_i()];
 		return t;
 	};
 	_proto.mapCon_i = function () {
@@ -1205,6 +1216,18 @@ window.skins={};
 		t.verticalCenter = -2;
 		t.width = 100;
 		t.x = 70;
+		return t;
+	};
+	_proto.musicBtn_i = function () {
+		var t = new eui.Image();
+		this.musicBtn = t;
+		t.anchorOffsetX = 40;
+		t.anchorOffsetY = 40;
+		t.height = 80;
+		t.source = "music_off_png";
+		t.width = 80;
+		t.x = 60;
+		t.y = 200;
 		return t;
 	};
 	_proto.friendBtn_i = function () {
@@ -2480,7 +2503,10 @@ window.skins={};
 			new eui.State ("no",
 				[
 					new eui.SetProperty("_Image1","source","kuang_3"),
-					new eui.SetProperty("iconDisplay","source","gold2")
+					new eui.SetProperty("iconDisplay","source","gold2"),
+					new eui.SetProperty("iconDisplay","horizontalCenter",0),
+					new eui.SetProperty("iconDisplay","verticalCenter",15),
+					new eui.SetProperty("labelDisplay","y",18)
 				])
 		];
 	}
@@ -2610,112 +2636,6 @@ window.skins={};
 		return t;
 	};
 	return MapSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/message/MessageSkin.exml'] = window.MessageSkin = (function (_super) {
-	__extends(MessageSkin, _super);
-	function MessageSkin() {
-		_super.call(this);
-		this.skinParts = ["shade","bg","titleTxt","contentTxt","startLable","startBtn","closeBtn"];
-		
-		this.height = 1334;
-		this.width = 750;
-		this.elementsContent = [this.shade_i(),this._Group1_i()];
-	}
-	var _proto = MessageSkin.prototype;
-
-	_proto.shade_i = function () {
-		var t = new eui.Rect();
-		this.shade = t;
-		t.bottom = 0;
-		t.fillAlpha = 0.6;
-		t.left = 0;
-		t.right = 0;
-		t.top = 0;
-		t.touchEnabled = true;
-		return t;
-	};
-	_proto._Group1_i = function () {
-		var t = new eui.Group();
-		t.horizontalCenter = 0;
-		t.verticalCenter = 0;
-		t.elementsContent = [this.bg_i(),this.titleTxt_i(),this.contentTxt_i(),this.startBtn_i(),this.closeBtn_i()];
-		return t;
-	};
-	_proto.bg_i = function () {
-		var t = new eui.Image();
-		this.bg = t;
-		t.horizontalCenter = 0;
-		t.scale9Grid = new egret.Rectangle(354,458,144,78);
-		t.source = "bg3_png";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto.titleTxt_i = function () {
-		var t = new eui.Label();
-		this.titleTxt = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 3;
-		t.size = 40;
-		t.text = "通知";
-		t.textColor = 0x333333;
-		t.y = 120;
-		return t;
-	};
-	_proto.contentTxt_i = function () {
-		var t = new eui.Label();
-		this.contentTxt = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 0;
-		t.lineSpacing = 12;
-		t.size = 30;
-		t.text = "想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么";
-		t.textAlign = "center";
-		t.textColor = 0x333333;
-		t.width = 560;
-		t.y = 196;
-		return t;
-	};
-	_proto.startBtn_i = function () {
-		var t = new eui.Group();
-		this.startBtn = t;
-		t.bottom = 90;
-		t.horizontalCenter = 0;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image1_i(),this.startLable_i()];
-		return t;
-	};
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "kuang_6";
-		t.y = 0;
-		return t;
-	};
-	_proto.startLable_i = function () {
-		var t = new eui.Label();
-		this.startLable = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 0;
-		t.size = 36;
-		t.text = "知道啦";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto.closeBtn_i = function () {
-		var t = new eui.Button();
-		this.closeBtn = t;
-		t.icon = "icon_close";
-		t.label = "";
-		t.right = 50;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.skinName = "ButSkin1";
-		t.y = 50;
-		return t;
-	};
-	return MessageSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/rank/RankItemSkin.exml'] = window.RankItemSkin = (function (_super) {
 	__extends(RankItemSkin, _super);
 	function RankItemSkin() {
@@ -3141,6 +3061,223 @@ window.skins={};
 		return t;
 	};
 	return CommanViewSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/HSliderSkin.exml'] = window.HSliderSkin = (function (_super) {
+	__extends(HSliderSkin, _super);
+	function HSliderSkin() {
+		_super.call(this);
+		this.skinParts = ["track","thumb"];
+		
+		this.minHeight = 8;
+		this.minWidth = 20;
+		this.elementsContent = [this.track_i(),this.thumb_i()];
+	}
+	var _proto = HSliderSkin.prototype;
+
+	_proto.track_i = function () {
+		var t = new eui.Image();
+		this.track = t;
+		t.scale9Grid = new egret.Rectangle(7,4,2,2);
+		t.source = "track";
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		t.x = 0;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Image();
+		this.thumb = t;
+		t.source = "thumb";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return HSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/DailyItemSkin.exml'] = window.DailyItemSkin = (function (_super) {
+	__extends(DailyItemSkin, _super);
+	function DailyItemSkin() {
+		_super.call(this);
+		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","awardImg","awardTxt"];
+		
+		this.height = 120;
+		this.width = 560;
+		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this.awardImg_i(),this.awardTxt_i()];
+	}
+	var _proto = DailyItemSkin.prototype;
+
+	_proto.selectBtn_i = function () {
+		var t = new eui.Image();
+		this.selectBtn = t;
+		t.source = "icon16";
+		t.x = 5;
+		t.y = 5;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.size = 30;
+		t.text = "找多少人pk";
+		t.textColor = 0x333333;
+		t.x = 60;
+		t.y = 10;
+		return t;
+	};
+	_proto.numTxt_i = function () {
+		var t = new eui.Label();
+		this.numTxt = t;
+		t.fontFamily = "黑体";
+		t.right = 10;
+		t.size = 26;
+		t.text = "还差5人";
+		t.textColor = 0x666666;
+		t.y = 10;
+		return t;
+	};
+	_proto.hSlider_i = function () {
+		var t = new eui.HSlider();
+		this.hSlider = t;
+		t.height = 20;
+		t.skinName = "HSliderSkin";
+		t.value = 0;
+		t.width = 380;
+		t.x = 60;
+		t.y = 80;
+		return t;
+	};
+	_proto.awardImg_i = function () {
+		var t = new eui.Image();
+		this.awardImg = t;
+		t.source = "gold3";
+		t.x = 460;
+		t.y = 70;
+		return t;
+	};
+	_proto.awardTxt_i = function () {
+		var t = new eui.Label();
+		this.awardTxt = t;
+		t.fontFamily = "黑体";
+		t.right = 10;
+		t.size = 24;
+		t.text = "x50";
+		t.textColor = 0x333333;
+		t.y = 76;
+		return t;
+	};
+	return DailyItemSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/DailyTaskSkin.exml'] = window.DailyTaskSkin = (function (_super) {
+	__extends(DailyTaskSkin, _super);
+	function DailyTaskSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","titleTxt","infoTxt","startBtn","list","closeBtn"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group1_i()];
+	}
+	var _proto = DailyTaskSkin.prototype;
+
+	_proto.shade_i = function () {
+		var t = new eui.Rect();
+		this.shade = t;
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchEnabled = true;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.infoTxt_i(),this.startBtn_i(),this.list_i(),this.closeBtn_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "bg4_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "日常挑战";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.infoTxt_i = function () {
+		var t = new eui.Label();
+		this.infoTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 26;
+		t.text = "分享得20金币";
+		t.textColor = 0x333333;
+		t.y = 851;
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Button();
+		this.startBtn = t;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "炫耀一下";
+		t.skinName = "ButSkin6";
+		t.y = 730;
+		return t;
+	};
+	_proto.list_i = function () {
+		var t = new eui.List();
+		this.list = t;
+		t.horizontalCenter = 0;
+		t.itemRendererSkinName = DailyItemSkin;
+		t.y = 250;
+		t.layout = this._VerticalLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._VerticalLayout1_i = function () {
+		var t = new eui.VerticalLayout();
+		t.gap = 10;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	return DailyTaskSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/FriendHelpSkin.exml'] = window.FriendHelpSkin = (function (_super) {
 	__extends(FriendHelpSkin, _super);
 	function FriendHelpSkin() {
@@ -3393,6 +3530,112 @@ window.skins={};
 		return t;
 	};
 	return FriendHelpSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/MessageSkin.exml'] = window.MessageSkin = (function (_super) {
+	__extends(MessageSkin, _super);
+	function MessageSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","bg","titleTxt","contentTxt","startLable","startBtn","closeBtn"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group1_i()];
+	}
+	var _proto = MessageSkin.prototype;
+
+	_proto.shade_i = function () {
+		var t = new eui.Rect();
+		this.shade = t;
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchEnabled = true;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this.bg_i(),this.titleTxt_i(),this.contentTxt_i(),this.startBtn_i(),this.closeBtn_i()];
+		return t;
+	};
+	_proto.bg_i = function () {
+		var t = new eui.Image();
+		this.bg = t;
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(354,458,144,78);
+		t.source = "bg3_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "通知";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.contentTxt_i = function () {
+		var t = new eui.Label();
+		this.contentTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.lineSpacing = 12;
+		t.size = 30;
+		t.text = "想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么想说什么";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.width = 560;
+		t.y = 196;
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Group();
+		this.startBtn = t;
+		t.bottom = 90;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image1_i(),this.startLable_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_6";
+		t.y = 0;
+		return t;
+	};
+	_proto.startLable_i = function () {
+		var t = new eui.Label();
+		this.startLable = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 36;
+		t.text = "知道啦";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	return MessageSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/SignInSkin.exml'] = window.SignInSkin = (function (_super) {
 	__extends(SignInSkin, _super);
 	function SignInSkin() {
