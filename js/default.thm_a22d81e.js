@@ -824,7 +824,7 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","musicBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -1025,7 +1025,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.top = 0;
 		t.width = 750;
-		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.musicBtn_i(),this.friendBtn_i(),this.bottomCom_i()];
+		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
 		return t;
 	};
 	_proto.mapCon_i = function () {
@@ -1216,18 +1216,6 @@ window.skins={};
 		t.verticalCenter = -2;
 		t.width = 100;
 		t.x = 70;
-		return t;
-	};
-	_proto.musicBtn_i = function () {
-		var t = new eui.Image();
-		this.musicBtn = t;
-		t.anchorOffsetX = 40;
-		t.anchorOffsetY = 40;
-		t.height = 80;
-		t.source = "music_off_png";
-		t.width = 80;
-		t.x = 60;
-		t.y = 200;
 		return t;
 	};
 	_proto.friendBtn_i = function () {
