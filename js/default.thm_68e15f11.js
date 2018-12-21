@@ -2808,7 +2808,7 @@ window.skins={};
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
+		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","hintTxt","putBtn","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
 		this.currentState = "input";
 		this.height = 1334;
@@ -2818,6 +2818,8 @@ window.skins={};
 			new eui.State ("input",
 				[
 					new eui.SetProperty("taskTxt","visible",false),
+					new eui.SetProperty("hintTxt","visible",false),
+					new eui.SetProperty("startBtn","visible",false),
 					new eui.SetProperty("txImg","visible",false),
 					new eui.SetProperty("_Group3","visible",false),
 					new eui.SetProperty("nameTxt","visible",false)
@@ -2827,7 +2829,8 @@ window.skins={};
 				[
 					new eui.SetProperty("titleTxt","text","口令确认"),
 					new eui.SetProperty("_Group2","visible",false),
-					new eui.SetProperty("startLable","text","马上开始"),
+					new eui.SetProperty("hintTxt","visible",false),
+					new eui.SetProperty("putBtn","visible",false),
 					new eui.SetProperty("txImg","x",53),
 					new eui.SetProperty("txImg","y",0),
 					new eui.SetProperty("txImg","scaleX",1),
@@ -2852,7 +2855,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.hintTxt_i(),this.putBtn_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -2965,33 +2968,36 @@ window.skins={};
 		t.width = 80;
 		return t;
 	};
-	_proto.startBtn_i = function () {
-		var t = new eui.Group();
-		this.startBtn = t;
-		t.bottom = 105;
-		t.horizontalCenter = 0;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image2_i(),this.startLable_i()];
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "kuang_6";
-		t.y = 0;
-		return t;
-	};
-	_proto.startLable_i = function () {
+	_proto.hintTxt_i = function () {
 		var t = new eui.Label();
-		this.startLable = t;
+		this.hintTxt = t;
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
-		t.size = 36;
-		t.text = "加 入";
-		t.verticalCenter = 0;
+		t.size = 30;
+		t.text = "口令错误";
+		t.textColor = 0xe52929;
+		t.touchEnabled = false;
+		t.y = 408;
+		return t;
+	};
+	_proto.putBtn_i = function () {
+		var t = new eui.Button();
+		this.putBtn = t;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "加 入";
+		t.skinName = "ButSkin6";
+		t.y = 480;
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Button();
+		this.startBtn = t;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "马上开始";
+		t.skinName = "ButSkin6";
+		t.y = 480;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
@@ -3920,6 +3926,7 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "icon_share";
+		t.visible = false;
 		t.y = 742;
 		return t;
 	};
@@ -3929,6 +3936,7 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "icon_refresh";
+		t.visible = false;
 		t.x = 75;
 		t.y = 742;
 		return t;
