@@ -3089,11 +3089,11 @@ window.skins={};
 	__extends(DailyItemSkin, _super);
 	function DailyItemSkin() {
 		_super.call(this);
-		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","awardImg","awardTxt"];
+		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","track","thumb","awardImg","awardTxt"];
 		
 		this.height = 120;
 		this.width = 560;
-		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this.awardImg_i(),this.awardTxt_i()];
+		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this._Group1_i(),this.awardImg_i(),this.awardTxt_i()];
 	}
 	var _proto = DailyItemSkin.prototype;
 
@@ -3133,9 +3133,36 @@ window.skins={};
 		t.height = 20;
 		t.skinName = "HSliderSkin";
 		t.value = 0;
+		t.visible = false;
 		t.width = 380;
 		t.x = 60;
 		t.y = 80;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.x = 60;
+		t.y = 65;
+		t.elementsContent = [this.track_i(),this.thumb_i()];
+		return t;
+	};
+	_proto.track_i = function () {
+		var t = new eui.Image();
+		this.track = t;
+		t.scale9Grid = new egret.Rectangle(7,4,2,2);
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "track";
+		t.verticalCenter = 0;
+		t.width = 380;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Image();
+		this.thumb = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "thumb";
 		return t;
 	};
 	_proto.awardImg_i = function () {
