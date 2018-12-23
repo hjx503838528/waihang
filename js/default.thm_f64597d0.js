@@ -2888,7 +2888,7 @@ window.skins={};
 		t.textColor = 0x333333;
 		t.touchEnabled = false;
 		t.width = 540;
-		t.y = 226;
+		t.y = 218;
 		return t;
 	};
 	_proto._Group2_i = function () {
