@@ -1,0 +1,174 @@
+{
+	"groups": [
+		{
+			"keys": "bg1_png,bg2_png,bg10_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,bgm_mp3,button_mp3,gameicon_json,music_on_png,music_off_png,task_on1_mp3,task_on2_mp3,task1_mp3,gold1_mp3,gold2_mp3,guanqia_mp3,medal_mp3,game1_mp3,game2_mp3,task_win1_mp3,task_win2_mp3,up_mp3,share_mp3,message_mp3",
+			"name": "preload"
+		},
+		{
+			"keys": "loading_json,loading_bg_jpg",
+			"name": "loading"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bg1.png",
+			"type": "image",
+			"name": "bg1_png"
+		},
+		{
+			"url": "assets/bg2.png",
+			"type": "image",
+			"name": "bg2_png"
+		},
+		{
+			"url": "assets/bg10.png",
+			"type": "image",
+			"name": "bg10_png"
+		},
+		{
+			"url": "assets/bg3.png",
+			"type": "image",
+			"name": "bg3_png"
+		},
+		{
+			"url": "assets/bg4.png",
+			"type": "image",
+			"name": "bg4_png"
+		},
+		{
+			"url": "assets/font1.fnt",
+			"type": "font",
+			"name": "font1_fnt"
+		},
+		{
+			"url": "assets/font1.png",
+			"type": "image",
+			"name": "font1_png"
+		},
+		{
+			"url": "assets/yun.json",
+			"type": "sheet",
+			"name": "yun_json",
+			"subkeys": "yun1,yun10,yun11,yun12,yun13,yun14,yun15,yun16,yun17,yun2,yun3,yun4,yun5,yun6,yun7,yun8,yun9"
+		},
+		{
+			"url": "assets/init.json",
+			"type": "sheet",
+			"name": "init_json",
+			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
+		},
+		{
+			"url": "assets/loading.json",
+			"type": "sheet",
+			"name": "loading_json",
+			"subkeys": "bar_bg,bar_thumb,black"
+		},
+		{
+			"url": "assets/loading_bg.jpg",
+			"type": "image",
+			"name": "loading_bg_jpg"
+		},
+		{
+			"name": "guangdao_json",
+			"type": "sheet",
+			"url": "assets/guangdao.json",
+			"subkeys": "guandao2,guandao3,guandao4,guandao5,guandao6,guandao1"
+		},
+		{
+			"name": "bgm_mp3",
+			"type": "sound",
+			"url": "assets/sound/bgm.mp3"
+		},
+		{
+			"name": "button_mp3",
+			"type": "sound",
+			"url": "assets/sound/button.mp3"
+		},
+		{
+			"name": "gameicon_json",
+			"type": "sheet",
+			"url": "assets/gameicon.json",
+			"subkeys": "track,thumb,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,win2,win1,title1,rank3,rank2,rank1,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon13,icon14,icon15,icon16"
+		},
+		{
+			"name": "music_on_png",
+			"type": "image",
+			"url": "assets/music_on.png"
+		},
+		{
+			"name": "music_off_png",
+			"type": "image",
+			"url": "assets/music_off.png"
+		},
+		{
+			"name": "task_on1_mp3",
+			"type": "sound",
+			"url": "assets/sound/task_on1.mp3"
+		},
+		{
+			"name": "task_on2_mp3",
+			"type": "sound",
+			"url": "assets/sound/task_on2.mp3"
+		},
+		{
+			"name": "task1_mp3",
+			"type": "sound",
+			"url": "assets/sound/task1.mp3"
+		},
+		{
+			"name": "gold1_mp3",
+			"type": "sound",
+			"url": "assets/sound/gold1.mp3"
+		},
+		{
+			"name": "gold2_mp3",
+			"type": "sound",
+			"url": "assets/sound/gold2.mp3"
+		},
+		{
+			"name": "guanqia_mp3",
+			"type": "sound",
+			"url": "assets/sound/guanqia.mp3"
+		},
+		{
+			"name": "medal_mp3",
+			"type": "sound",
+			"url": "assets/sound/medal.mp3"
+		},
+		{
+			"name": "game1_mp3",
+			"type": "sound",
+			"url": "assets/sound/game1.mp3"
+		},
+		{
+			"name": "game2_mp3",
+			"type": "sound",
+			"url": "assets/sound/game2.mp3"
+		},
+		{
+			"name": "task_win1_mp3",
+			"type": "sound",
+			"url": "assets/sound/task_win1.mp3"
+		},
+		{
+			"name": "task_win2_mp3",
+			"type": "sound",
+			"url": "assets/sound/task_win2.mp3"
+		},
+		{
+			"name": "up_mp3",
+			"type": "sound",
+			"url": "assets/sound/up.mp3"
+		},
+		{
+			"name": "share_mp3",
+			"type": "sound",
+			"url": "assets/sound/share.mp3"
+		},
+		{
+			"name": "message_mp3",
+			"type": "sound",
+			"url": "assets/sound/message.mp3"
+		}
+	]
+}
