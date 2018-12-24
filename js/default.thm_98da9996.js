@@ -2808,7 +2808,7 @@ window.skins={};
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","startLable","startBtn","closeBtn","txImg","rectMack","nameTxt"];
+		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","hintTxt","putBtn","startBtn","closeBtn","txImg","rectMack","nameTxt"];
 		
 		this.currentState = "input";
 		this.height = 1334;
@@ -2818,6 +2818,8 @@ window.skins={};
 			new eui.State ("input",
 				[
 					new eui.SetProperty("taskTxt","visible",false),
+					new eui.SetProperty("hintTxt","visible",false),
+					new eui.SetProperty("startBtn","visible",false),
 					new eui.SetProperty("txImg","visible",false),
 					new eui.SetProperty("_Group3","visible",false),
 					new eui.SetProperty("nameTxt","visible",false)
@@ -2827,7 +2829,8 @@ window.skins={};
 				[
 					new eui.SetProperty("titleTxt","text","口令确认"),
 					new eui.SetProperty("_Group2","visible",false),
-					new eui.SetProperty("startLable","text","马上开始"),
+					new eui.SetProperty("hintTxt","visible",false),
+					new eui.SetProperty("putBtn","visible",false),
 					new eui.SetProperty("txImg","x",53),
 					new eui.SetProperty("txImg","y",0),
 					new eui.SetProperty("txImg","scaleX",1),
@@ -2852,7 +2855,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this.hintTxt_i(),this.putBtn_i(),this.startBtn_i(),this.closeBtn_i(),this._Group3_i(),this.nameTxt_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -2885,7 +2888,7 @@ window.skins={};
 		t.textColor = 0x333333;
 		t.touchEnabled = false;
 		t.width = 540;
-		t.y = 226;
+		t.y = 218;
 		return t;
 	};
 	_proto._Group2_i = function () {
@@ -2965,33 +2968,36 @@ window.skins={};
 		t.width = 80;
 		return t;
 	};
-	_proto.startBtn_i = function () {
-		var t = new eui.Group();
-		this.startBtn = t;
-		t.bottom = 105;
-		t.horizontalCenter = 0;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image2_i(),this.startLable_i()];
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "kuang_6";
-		t.y = 0;
-		return t;
-	};
-	_proto.startLable_i = function () {
+	_proto.hintTxt_i = function () {
 		var t = new eui.Label();
-		this.startLable = t;
+		this.hintTxt = t;
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
-		t.size = 36;
-		t.text = "加 入";
-		t.verticalCenter = 0;
+		t.size = 30;
+		t.text = "口令错误";
+		t.textColor = 0xe52929;
+		t.touchEnabled = false;
+		t.y = 408;
+		return t;
+	};
+	_proto.putBtn_i = function () {
+		var t = new eui.Button();
+		this.putBtn = t;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "加 入";
+		t.skinName = "ButSkin6";
+		t.y = 480;
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Button();
+		this.startBtn = t;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "马上开始";
+		t.skinName = "ButSkin6";
+		t.y = 480;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
@@ -3083,11 +3089,11 @@ window.skins={};
 	__extends(DailyItemSkin, _super);
 	function DailyItemSkin() {
 		_super.call(this);
-		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","awardImg","awardTxt"];
+		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","track","thumb","awardImg","awardTxt"];
 		
 		this.height = 120;
 		this.width = 560;
-		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this.awardImg_i(),this.awardTxt_i()];
+		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this._Group1_i(),this.awardImg_i(),this.awardTxt_i()];
 	}
 	var _proto = DailyItemSkin.prototype;
 
@@ -3127,9 +3133,36 @@ window.skins={};
 		t.height = 20;
 		t.skinName = "HSliderSkin";
 		t.value = 0;
+		t.visible = false;
 		t.width = 380;
 		t.x = 60;
 		t.y = 80;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.x = 60;
+		t.y = 65;
+		t.elementsContent = [this.track_i(),this.thumb_i()];
+		return t;
+	};
+	_proto.track_i = function () {
+		var t = new eui.Image();
+		this.track = t;
+		t.scale9Grid = new egret.Rectangle(7,4,2,2);
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "track";
+		t.verticalCenter = 0;
+		t.width = 380;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Image();
+		this.thumb = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "thumb";
 		return t;
 	};
 	_proto.awardImg_i = function () {
@@ -3808,7 +3841,7 @@ window.skins={};
 	__extends(TaskViewSkin, _super);
 	function TaskViewSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","list","shareBtn","refreshBtn","awardNameTxt","txList","numTxt","renwuCon","startLable","startBtn","closeBtn"];
+		this.skinParts = ["shade","titleTxt","list","shareBtn","refreshBtn","awardNameTxt","txList","numTxt","renwuCon","startBtn","nextBtn","closeBtn"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -3831,7 +3864,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this._Group1_i(),this._Image3_i(),this.shareBtn_i(),this.refreshBtn_i(),this.awardNameTxt_i(),this.renwuCon_i(),this.startBtn_i(),this.closeBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this._Group1_i(),this._Image3_i(),this.shareBtn_i(),this.refreshBtn_i(),this.awardNameTxt_i(),this.renwuCon_i(),this.startBtn_i(),this.nextBtn_i(),this.closeBtn_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -3846,7 +3879,7 @@ window.skins={};
 		this.titleTxt = t;
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 3;
-		t.size = 40;
+		t.size = 32;
 		t.text = "这里是任务名称";
 		t.textColor = 0x333333;
 		t.y = 120;
@@ -3920,6 +3953,7 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "icon_share";
+		t.visible = false;
 		t.y = 742;
 		return t;
 	};
@@ -3929,6 +3963,7 @@ window.skins={};
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "icon_refresh";
+		t.visible = false;
 		t.x = 75;
 		t.y = 742;
 		return t;
@@ -3990,32 +4025,24 @@ window.skins={};
 		return t;
 	};
 	_proto.startBtn_i = function () {
-		var t = new eui.Group();
+		var t = new eui.Button();
 		this.startBtn = t;
-		t.bottom = 105;
 		t.horizontalCenter = 0;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image4_i(),this.startLable_i()];
+		t.icon = "kuang_6";
+		t.label = "开 始";
+		t.skinName = "ButSkin6";
+		t.y = 730;
 		return t;
 	};
-	_proto._Image4_i = function () {
-		var t = new eui.Image();
+	_proto.nextBtn_i = function () {
+		var t = new eui.Button();
+		this.nextBtn = t;
 		t.horizontalCenter = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "kuang_6";
-		t.y = 0;
-		return t;
-	};
-	_proto.startLable_i = function () {
-		var t = new eui.Label();
-		this.startLable = t;
-		t.fontFamily = "黑体";
-		t.horizontalCenter = 0;
-		t.size = 36;
-		t.text = "开 始";
-		t.verticalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "下一关";
+		t.skinName = "ButSkin6";
+		t.visible = false;
+		t.y = 730;
 		return t;
 	};
 	_proto.closeBtn_i = function () {
