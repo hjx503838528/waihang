@@ -722,60 +722,6 @@ window.skins={};
 		return t;
 	};
 	return ButSkin3;
-})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin5.exml'] = window.ButSkin5 = (function (_super) {
-	__extends(ButSkin5, _super);
-	function ButSkin5() {
-		_super.call(this);
-		this.skinParts = ["iconDisplay","labelDisplay"];
-		
-		this.minHeight = 50;
-		this.minWidth = 100;
-		this.elementsContent = [this._Image1_i(),this.iconDisplay_i(),this.labelDisplay_i()];
-		this.states = [
-			new eui.State ("up",
-				[
-				])
-			,
-			new eui.State ("down",
-				[
-				])
-			,
-			new eui.State ("disabled",
-				[
-				])
-		];
-	}
-	var _proto = ButSkin5.prototype;
-
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_3";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto.iconDisplay_i = function () {
-		var t = new eui.Image();
-		this.iconDisplay = t;
-		t.horizontalCenter = 2;
-		t.source = "icon_mail";
-		t.verticalCenter = 2;
-		return t;
-	};
-	_proto.labelDisplay_i = function () {
-		var t = new eui.Label();
-		this.labelDisplay = t;
-		t.bold = true;
-		t.bottom = -25;
-		t.horizontalCenter = 0;
-		t.size = 20;
-		t.text = "消息";
-		t.textAlign = "center";
-		t.textColor = 0x333333;
-		t.verticalAlign = "middle";
-		return t;
-	};
-	return ButSkin5;
 })(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin6.exml'] = window.ButSkin6 = (function (_super) {
 	__extends(ButSkin6, _super);
 	function ButSkin6() {
