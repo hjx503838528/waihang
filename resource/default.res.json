@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,loading_bg_jpg,guangdao_json,bgm_mp3,button_mp3,gameicon_json,music_on_png,music_off_png,task_on2_mp3,task1_mp3,gold2_mp3,guanqia_mp3,medal_mp3,game2_mp3,task_win1_mp3,up_mp3,share_mp3,message_mp3",
+			"keys": "bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,loading_bg_jpg,guangdao_json,bgm_mp3,button_mp3,task_on2_mp3,task1_mp3,gold2_mp3,guanqia_mp3,medal_mp3,game2_mp3,task_win1_mp3,up_mp3,share_mp3,message_mp3,win2_png,win1_png,gameIcon_json,init_json",
 			"name": "preload"
 		},
 		{
@@ -42,12 +42,6 @@
 			"subkeys": "yun1,yun10,yun11,yun12,yun13,yun14,yun15,yun16,yun17,yun2,yun3,yun4,yun5,yun6,yun7,yun8,yun9"
 		},
 		{
-			"url": "assets/init.json",
-			"type": "sheet",
-			"name": "init_json",
-			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
-		},
-		{
 			"url": "assets/loading.json",
 			"type": "sheet",
 			"name": "loading_json",
@@ -73,22 +67,6 @@
 			"name": "button_mp3",
 			"type": "sound",
 			"url": "assets/sound/button.mp3"
-		},
-		{
-			"name": "gameicon_json",
-			"type": "sheet",
-			"url": "assets/gameicon.json",
-			"subkeys": "track,thumb,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,win2,win1,title1,rank3,rank2,rank1,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon13,icon14,icon15,icon16"
-		},
-		{
-			"name": "music_on_png",
-			"type": "image",
-			"url": "assets/music_on.png"
-		},
-		{
-			"name": "music_off_png",
-			"type": "image",
-			"url": "assets/music_off.png"
 		},
 		{
 			"name": "task_on2_mp3",
@@ -139,6 +117,28 @@
 			"name": "message_mp3",
 			"type": "sound",
 			"url": "assets/sound/message.mp3"
+		},
+		{
+			"name": "win2_png",
+			"type": "image",
+			"url": "assets/win2.png"
+		},
+		{
+			"name": "win1_png",
+			"type": "image",
+			"url": "assets/win1.png"
+		},
+		{
+			"name": "gameIcon_json",
+			"type": "sheet",
+			"url": "assets/gameIcon.json",
+			"subkeys": "icon6,icon7,icon8,icon9,icon10,icon11,icon12,icon13,icon14,icon15,icon16,kuang_1,kuang_2,kuang_3,kuang_4,kuang_5,kuang_6,kuang_7,kuang_8,music_off,music_on,rank1,rank2,rank3,taskIcon1,thumb,title1,track,bottom,gold1,gold2,gold3,icon,icon_bag,icon_bf,icon_close,icon_error,icon_gift,icon_guanka1,icon_guanka2,icon_guanka3,icon_help,icon_home,icon_luyin,icon_lx,icon_mail,icon_p2,icon_pj1,icon_pj3,icon_rank,icon_refresh,icon_right,icon_rubbish,icon_sao,icon_share,icon_xj,icon_xp1,icon_xp2,icon_xz1,icon_xz2,icon_zs,icon1,icon2,icon3,icon4,icon5"
+		},
+		{
+			"name": "init_json",
+			"type": "sheet",
+			"url": "assets/init.json",
+			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_png,thumb_pb_png,track_png,track_pb_png,track_sb_png,tracklight_png"
 		}
 	]
 }

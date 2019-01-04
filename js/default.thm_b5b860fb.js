@@ -770,7 +770,7 @@ window.skins={};
 	__extends(GameSkin, _super);
 	function GameSkin() {
 		_super.call(this);
-		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","dailyTaskBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -971,7 +971,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.top = 0;
 		t.width = 750;
-		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.bottomCom_i()];
+		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.dailyTaskBtn_i(),this.bottomCom_i()];
 		return t;
 	};
 	_proto.mapCon_i = function () {
@@ -1165,12 +1165,19 @@ window.skins={};
 		return t;
 	};
 	_proto.friendBtn_i = function () {
-		var t = new eui.Button();
+		var t = new eui.Image();
 		this.friendBtn = t;
-		t.icon = "icon12";
 		t.right = 40;
-		t.skinName = "ButSkin3";
-		t.y = 169;
+		t.source = "icon12";
+		t.y = 150;
+		return t;
+	};
+	_proto.dailyTaskBtn_i = function () {
+		var t = new eui.Image();
+		this.dailyTaskBtn = t;
+		t.right = 40;
+		t.source = "taskIcon1";
+		t.y = 270;
 		return t;
 	};
 	_proto.bottomCom_i = function () {
@@ -3302,9 +3309,11 @@ window.skins={};
 	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
+		t.scale9Grid = new egret.Rectangle(45,26,14,13);
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "kuang_8";
+		t.width = 500;
 		return t;
 	};
 	_proto.list_i = function () {
@@ -3319,7 +3328,7 @@ window.skins={};
 	};
 	_proto._HorizontalLayout1_i = function () {
 		var t = new eui.HorizontalLayout();
-		t.gap = 100;
+		t.gap = 90;
 		return t;
 	};
 	_proto._ArrayCollection1_i = function () {
@@ -3840,9 +3849,11 @@ window.skins={};
 	};
 	_proto._Image2_i = function () {
 		var t = new eui.Image();
+		t.scale9Grid = new egret.Rectangle(45,26,14,13);
 		t.scaleX = 1;
 		t.scaleY = 1;
 		t.source = "kuang_8";
+		t.width = 500;
 		return t;
 	};
 	_proto.list_i = function () {
@@ -3857,7 +3868,7 @@ window.skins={};
 	};
 	_proto._HorizontalLayout1_i = function () {
 		var t = new eui.HorizontalLayout();
-		t.gap = 100;
+		t.gap = 90;
 		return t;
 	};
 	_proto._ArrayCollection1_i = function () {
