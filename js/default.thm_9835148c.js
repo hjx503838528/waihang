@@ -1361,7 +1361,7 @@ window.skins={};
 		t.width = 800;
 		t.x = 0;
 		t.y = 0;
-		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Group1_i(),this._Group2_i()];
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Group1_i(),this._Group2_i(),this._Image45_i(),this._Image46_i(),this._Image47_i(),this._Image48_i(),this._Image49_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -1943,6 +1943,41 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
+	_proto._Image45_i = function () {
+		var t = new eui.Image();
+		t.source = "award_right";
+		t.x = 530;
+		t.y = 2625;
+		return t;
+	};
+	_proto._Image46_i = function () {
+		var t = new eui.Image();
+		t.source = "award_right";
+		t.x = 488;
+		t.y = 2492;
+		return t;
+	};
+	_proto._Image47_i = function () {
+		var t = new eui.Image();
+		t.source = "award_left";
+		t.x = 62;
+		t.y = 2492;
+		return t;
+	};
+	_proto._Image48_i = function () {
+		var t = new eui.Image();
+		t.source = "award_left";
+		t.x = 0;
+		t.y = 2266;
+		return t;
+	};
+	_proto._Image49_i = function () {
+		var t = new eui.Image();
+		t.source = "award_left";
+		t.x = 234.85;
+		t.y = 2266;
+		return t;
+	};
 	return GuanKaSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/HomeSkin.exml'] = window.HomeSkin = (function (_super) {
 	__extends(HomeSkin, _super);
@@ -2393,9 +2428,9 @@ window.skins={};
 		return t;
 	};
 	return HomeSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/item/AwardItemSkin.exml'] = window.AwardItemSkin = (function (_super) {
-	__extends(AwardItemSkin, _super);
-	function AwardItemSkin() {
+})(eui.Skin);generateEUI.paths['resource/skins/item/AwardItemSkin.exml'] = window.AwardListSkin = (function (_super) {
+	__extends(AwardListSkin, _super);
+	function AwardListSkin() {
 		_super.call(this);
 		this.skinParts = ["iconImg","labTxt"];
 		
@@ -2406,7 +2441,7 @@ window.skins={};
 		eui.Binding.$bindProperties(this, ["hostComponent.data.source"],[0],this.iconImg,"source");
 		eui.Binding.$bindProperties(this, ["hostComponent.data.text"],[0],this.labTxt,"text");
 	}
-	var _proto = AwardItemSkin.prototype;
+	var _proto = AwardListSkin.prototype;
 
 	_proto.iconImg_i = function () {
 		var t = new eui.Image();
@@ -2425,7 +2460,7 @@ window.skins={};
 		t.x = 42;
 		return t;
 	};
-	return AwardItemSkin;
+	return AwardListSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/item/DayItemSkin.exml'] = window.DayItemSkin = (function (_super) {
 	__extends(DayItemSkin, _super);
 	function DayItemSkin() {
@@ -2525,7 +2560,7 @@ window.skins={};
 	__extends(MapSkin, _super);
 	function MapSkin() {
 		_super.call(this);
-		this.skinParts = ["bgCon","gdCon","btnCon","mainCon","scroller"];
+		this.skinParts = ["bgCon","gdCon","btnCon","awardCon","mainCon","scroller"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -2548,7 +2583,7 @@ window.skins={};
 	_proto.mainCon_i = function () {
 		var t = new eui.Group();
 		this.mainCon = t;
-		t.elementsContent = [this.bgCon_i(),this.gdCon_i(),this.btnCon_i()];
+		t.elementsContent = [this.bgCon_i(),this.gdCon_i(),this.btnCon_i(),this.awardCon_i()];
 		return t;
 	};
 	_proto.bgCon_i = function () {
@@ -2570,6 +2605,15 @@ window.skins={};
 	_proto.btnCon_i = function () {
 		var t = new eui.Group();
 		this.btnCon = t;
+		t.horizontalCenter = 0;
+		t.touchChildren = true;
+		t.touchEnabled = false;
+		t.width = 800;
+		return t;
+	};
+	_proto.awardCon_i = function () {
+		var t = new eui.Group();
+		this.awardCon = t;
 		t.horizontalCenter = 0;
 		t.touchChildren = true;
 		t.touchEnabled = false;
@@ -3320,7 +3364,7 @@ window.skins={};
 		var t = new eui.List();
 		this.list = t;
 		t.horizontalCenter = 0;
-		t.itemRendererSkinName = AwardItemSkin;
+		t.itemRendererSkinName = AwardListSkin;
 		t.verticalCenter = 0;
 		t.layout = this._HorizontalLayout1_i();
 		t.dataProvider = this._ArrayCollection1_i();
@@ -3723,7 +3767,7 @@ window.skins={};
 		var t = new eui.List();
 		this.list = t;
 		t.horizontalCenter = 0;
-		t.itemRendererSkinName = AwardItemSkin;
+		t.itemRendererSkinName = AwardListSkin;
 		t.y = 634;
 		t.layout = this._HorizontalLayout3_i();
 		t.dataProvider = this._ArrayCollection1_i();
@@ -3860,7 +3904,7 @@ window.skins={};
 		var t = new eui.List();
 		this.list = t;
 		t.horizontalCenter = 0;
-		t.itemRendererSkinName = AwardItemSkin;
+		t.itemRendererSkinName = AwardListSkin;
 		t.verticalCenter = 0;
 		t.layout = this._HorizontalLayout1_i();
 		t.dataProvider = this._ArrayCollection1_i();
