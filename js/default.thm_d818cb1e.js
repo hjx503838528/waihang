@@ -1348,20 +1348,20 @@ window.skins={};
 	__extends(GuanKaSkin, _super);
 	function GuanKaSkin() {
 		_super.call(this);
-		this.skinParts = ["btn0","btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9","btn10","btn11","btn12","btn13","btn14","btn15","btn16","btn17","btn18","btn19","btn20","btn21","btn22","btn23","btn24","btn25","btn26","btn27","btn28","btn29"];
+		this.skinParts = ["treeCon","btn0","btn1","btn2","btn3","btn4","btn5","btn6","btn7","btn8","btn9","btn10","btn11","btn12","btn13","btn14","btn15","btn16","btn17","btn18","btn19","btn20","btn21","btn22","btn23","btn24","btn25","btn26","btn27","btn28","btn29"];
 		
-		this.height = 3050;
+		this.height = 1624;
 		this.width = 800;
-		this.elementsContent = [this._Group3_i()];
+		this.elementsContent = [this._Group5_i()];
 	}
 	var _proto = GuanKaSkin.prototype;
 
-	_proto._Group3_i = function () {
+	_proto._Group5_i = function () {
 		var t = new eui.Group();
 		t.width = 800;
 		t.x = 0;
 		t.y = 0;
-		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this._Group1_i(),this._Group2_i(),this._Image45_i(),this._Image46_i(),this._Image47_i(),this._Image48_i(),this._Image49_i()];
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this._Image3_i(),this.treeCon_i(),this._Group1_i(),this._Group2_i(),this._Group3_i(),this._Group4_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -1377,7 +1377,8 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.source = "bg1_png";
-		t.y = 1124;
+		t.visible = false;
+		t.y = 1624;
 		return t;
 	};
 	_proto._Image3_i = function () {
@@ -1385,307 +1386,407 @@ window.skins={};
 		t.left = 0;
 		t.right = 0;
 		t.source = "bg1_png";
+		t.visible = false;
 		t.y = 2748;
+		return t;
+	};
+	_proto.treeCon_i = function () {
+		var t = new eui.Group();
+		this.treeCon = t;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Image4_i(),this._Image5_i(),this._Image6_i(),this._Image7_i(),this._Image8_i(),this._Image9_i(),this._Image10_i(),this._Image11_i(),this._Image12_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i()];
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_grass";
+		t.x = 50;
+		t.y = 850;
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_grass";
+		t.x = 100;
+		t.y = 240;
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_grass";
+		t.x = 450;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_grass";
+		t.x = 650;
+		t.y = 565;
+		return t;
+	};
+	_proto._Image8_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_grass";
+		t.x = 680;
+		t.y = 950;
+		return t;
+	};
+	_proto._Image9_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_house";
+		t.x = 500;
+		t.y = 380;
+		return t;
+	};
+	_proto._Image10_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_house";
+		t.x = 330;
+		t.y = 990;
+		return t;
+	};
+	_proto._Image11_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_house";
+		t.x = 100;
+		t.y = 80;
+		return t;
+	};
+	_proto._Image12_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 260;
+		t.y = 740;
+		return t;
+	};
+	_proto._Image13_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 340;
+		t.y = 740;
+		return t;
+	};
+	_proto._Image14_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 360;
+		t.y = 1330;
+		return t;
+	};
+	_proto._Image15_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 440;
+		t.y = 1330;
+		return t;
+	};
+	_proto._Image16_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 630;
+		t.y = 180;
+		return t;
+	};
+	_proto._Image17_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_tree";
+		t.x = 100;
+		t.y = 1100;
 		return t;
 	};
 	_proto._Group1_i = function () {
 		var t = new eui.Group();
 		t.height = 2600;
-		t.scaleX = 1;
-		t.scaleY = 1;
+		t.visible = false;
 		t.width = 800;
 		t.x = 0;
 		t.y = 350;
-		t.elementsContent = [this._Image4_i(),this._Image5_i(),this._Image6_i(),this._Image7_i(),this._Image8_i(),this._Image9_i(),this._Image10_i(),this._Image11_i(),this._Image12_i(),this._Image13_i(),this._Image14_i(),this._Image15_i(),this._Image16_i(),this._Image17_i(),this._Image18_i(),this._Image19_i(),this._Image20_i(),this._Image21_i(),this._Image22_i(),this._Image23_i(),this._Image24_i(),this._Image25_i(),this._Image26_i(),this._Image27_i(),this._Image28_i(),this._Image29_i(),this._Image30_i(),this._Image31_i(),this._Image32_i(),this._Image33_i(),this._Image34_i(),this._Image35_i(),this._Image36_i(),this._Image37_i(),this._Image38_i(),this._Image39_i(),this._Image40_i(),this._Image41_i(),this._Image42_i(),this._Image43_i(),this._Image44_i()];
+		t.elementsContent = [this._Image18_i(),this._Image19_i(),this._Image20_i(),this._Image21_i(),this._Image22_i(),this._Image23_i(),this._Image24_i(),this._Image25_i(),this._Image26_i(),this._Image27_i(),this._Image28_i(),this._Image29_i(),this._Image30_i(),this._Image31_i(),this._Image32_i(),this._Image33_i(),this._Image34_i(),this._Image35_i(),this._Image36_i(),this._Image37_i(),this._Image38_i(),this._Image39_i(),this._Image40_i(),this._Image41_i(),this._Image42_i(),this._Image43_i(),this._Image44_i(),this._Image45_i(),this._Image46_i(),this._Image47_i(),this._Image48_i(),this._Image49_i(),this._Image50_i(),this._Image51_i(),this._Image52_i(),this._Image53_i(),this._Image54_i(),this._Image55_i(),this._Image56_i(),this._Image57_i(),this._Image58_i()];
 		return t;
 	};
-	_proto._Image4_i = function () {
+	_proto._Image18_i = function () {
 		var t = new eui.Image();
-		t.scaleX = 1;
-		t.scaleY = 1;
 		t.source = "guandao6";
 		t.x = 400;
 		t.y = -400;
 		return t;
 	};
-	_proto._Image5_i = function () {
+	_proto._Image19_i = function () {
 		var t = new eui.Image();
-		t.scaleX = 1;
-		t.scaleY = 1;
 		t.source = "guandao6";
 		t.x = 400;
 		t.y = -200;
 		return t;
 	};
-	_proto._Image6_i = function () {
-		var t = new eui.Image();
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "guandao3";
-		t.x = 400;
-		t.y = 0;
-		return t;
-	};
-	_proto._Image7_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 200;
-		t.y = 0;
-		return t;
-	};
-	_proto._Image8_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao1";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto._Image9_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao4";
-		t.x = 0;
-		t.y = 200;
-		return t;
-	};
-	_proto._Image10_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao2";
-		t.x = 200;
-		t.y = 200;
-		return t;
-	};
-	_proto._Image11_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao3";
-		t.x = 200;
-		t.y = 400;
-		return t;
-	};
-	_proto._Image12_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao1";
-		t.x = 0;
-		t.y = 400;
-		return t;
-	};
-	_proto._Image13_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao6";
-		t.x = 0;
-		t.y = 600;
-		return t;
-	};
-	_proto._Image14_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao6";
-		t.x = 0;
-		t.y = 800;
-		return t;
-	};
-	_proto._Image15_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao4";
-		t.x = 0;
-		t.y = 1000;
-		return t;
-	};
-	_proto._Image16_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 200;
-		t.y = 1000;
-		return t;
-	};
-	_proto._Image17_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao3";
-		t.x = 400;
-		t.y = 1000;
-		return t;
-	};
-	_proto._Image18_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao2";
-		t.x = 400;
-		t.y = 800;
-		return t;
-	};
-	_proto._Image19_i = function () {
-		var t = new eui.Image();
-		t.source = "guandao4";
-		t.x = 200;
-		t.y = 800;
-		return t;
-	};
 	_proto._Image20_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao1";
-		t.x = 200;
-		t.y = 600;
+		t.source = "guandao3";
+		t.x = 400;
+		t.y = 0;
 		return t;
 	};
 	_proto._Image21_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
-		t.x = 400;
-		t.y = 600;
+		t.x = 200;
+		t.y = 0;
 		return t;
 	};
 	_proto._Image22_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao2";
-		t.x = 600;
-		t.y = 600;
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 0;
 		return t;
 	};
 	_proto._Image23_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao6";
-		t.x = 600;
-		t.y = 800;
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 200;
 		return t;
 	};
 	_proto._Image24_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao6";
-		t.x = 600;
-		t.y = 1000;
+		t.source = "guandao2";
+		t.x = 200;
+		t.y = 200;
 		return t;
 	};
 	_proto._Image25_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao3";
-		t.x = 600;
-		t.y = 1200;
+		t.x = 200;
+		t.y = 400;
 		return t;
 	};
 	_proto._Image26_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 400;
-		t.y = 1200;
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 400;
 		return t;
 	};
 	_proto._Image27_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao5";
-		t.x = 200;
-		t.y = 1200;
+		t.source = "guandao6";
+		t.x = 0;
+		t.y = 600;
 		return t;
 	};
 	_proto._Image28_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao1";
+		t.source = "guandao6";
 		t.x = 0;
-		t.y = 1200;
+		t.y = 800;
 		return t;
 	};
 	_proto._Image29_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao4";
 		t.x = 0;
-		t.y = 1400;
+		t.y = 1000;
 		return t;
 	};
 	_proto._Image30_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
 		t.x = 200;
-		t.y = 1400;
+		t.y = 1000;
 		return t;
 	};
 	_proto._Image31_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao2";
+		t.source = "guandao3";
 		t.x = 400;
-		t.y = 1400;
+		t.y = 1000;
 		return t;
 	};
 	_proto._Image32_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao3";
+		t.source = "guandao2";
 		t.x = 400;
-		t.y = 1600;
+		t.y = 800;
 		return t;
 	};
 	_proto._Image33_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao1";
+		t.source = "guandao4";
 		t.x = 200;
-		t.y = 1600;
+		t.y = 800;
 		return t;
 	};
 	_proto._Image34_i = function () {
 		var t = new eui.Image();
-		t.source = "guandao4";
+		t.source = "guandao1";
 		t.x = 200;
-		t.y = 1800;
+		t.y = 600;
 		return t;
 	};
 	_proto._Image35_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
 		t.x = 400;
-		t.y = 1800;
+		t.y = 600;
 		return t;
 	};
 	_proto._Image36_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao2";
 		t.x = 600;
-		t.y = 1800;
+		t.y = 600;
 		return t;
 	};
 	_proto._Image37_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 600;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image38_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 600;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image39_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 600;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image40_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image41_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image42_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 0;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image43_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image44_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image45_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image46_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 400;
+		t.y = 1600;
+		return t;
+	};
+	_proto._Image47_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 200;
+		t.y = 1600;
+		return t;
+	};
+	_proto._Image48_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 200;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image49_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 400;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image50_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 600;
+		t.y = 1800;
+		return t;
+	};
+	_proto._Image51_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao3";
 		t.x = 600;
 		t.y = 2000;
 		return t;
 	};
-	_proto._Image38_i = function () {
+	_proto._Image52_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
 		t.x = 400;
 		t.y = 2000;
 		return t;
 	};
-	_proto._Image39_i = function () {
+	_proto._Image53_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
 		t.x = 200;
 		t.y = 2000;
 		return t;
 	};
-	_proto._Image40_i = function () {
+	_proto._Image54_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao1";
 		t.x = 0;
 		t.y = 2000;
 		return t;
 	};
-	_proto._Image41_i = function () {
+	_proto._Image55_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao4";
 		t.x = 0;
 		t.y = 2200;
 		return t;
 	};
-	_proto._Image42_i = function () {
+	_proto._Image56_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao5";
 		t.x = 200;
 		t.y = 2200;
 		return t;
 	};
-	_proto._Image43_i = function () {
+	_proto._Image57_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao2";
 		t.x = 400;
 		t.y = 2200;
 		return t;
 	};
-	_proto._Image44_i = function () {
+	_proto._Image58_i = function () {
 		var t = new eui.Image();
 		t.source = "guandao6";
 		t.x = 400;
@@ -1696,8 +1797,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.left = 0;
 		t.right = 0;
-		t.scaleX = 1;
-		t.scaleY = 1;
+		t.visible = false;
 		t.x = 0;
 		t.y = 350;
 		t.elementsContent = [this.btn0_i(),this.btn1_i(),this.btn2_i(),this.btn3_i(),this.btn4_i(),this.btn5_i(),this.btn6_i(),this.btn7_i(),this.btn8_i(),this.btn9_i(),this.btn10_i(),this.btn11_i(),this.btn12_i(),this.btn13_i(),this.btn14_i(),this.btn15_i(),this.btn16_i(),this.btn17_i(),this.btn18_i(),this.btn19_i(),this.btn20_i(),this.btn21_i(),this.btn22_i(),this.btn23_i(),this.btn24_i(),this.btn25_i(),this.btn26_i(),this.btn27_i(),this.btn28_i(),this.btn29_i()];
@@ -1943,39 +2043,174 @@ window.skins={};
 		t.y = 50;
 		return t;
 	};
-	_proto._Image45_i = function () {
-		var t = new eui.Image();
-		t.source = "award_right";
-		t.x = 530;
-		t.y = 2625;
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		t.height = 1624;
+		t.horizontalCenter = 0;
+		t.width = 600;
+		t.y = 0;
+		t.elementsContent = [this._Image59_i(),this._Image60_i(),this._Image61_i(),this._Image62_i(),this._Image63_i(),this._Image64_i(),this._Image65_i(),this._Image66_i(),this._Image67_i(),this._Image68_i(),this._Image69_i(),this._Image70_i(),this._Image71_i()];
 		return t;
 	};
-	_proto._Image46_i = function () {
+	_proto._Image59_i = function () {
 		var t = new eui.Image();
-		t.source = "award_right";
-		t.x = 488;
-		t.y = 2492;
+		t.source = "guandao6";
+		t.x = 200;
+		t.y = 0;
 		return t;
 	};
-	_proto._Image47_i = function () {
+	_proto._Image60_i = function () {
 		var t = new eui.Image();
-		t.source = "award_left";
-		t.x = 62;
-		t.y = 2492;
+		t.source = "guandao3";
+		t.x = 200;
+		t.y = 200;
 		return t;
 	};
-	_proto._Image48_i = function () {
+	_proto._Image61_i = function () {
 		var t = new eui.Image();
-		t.source = "award_left";
+		t.source = "guandao1";
 		t.x = 0;
-		t.y = 2266;
+		t.y = 200;
 		return t;
 	};
-	_proto._Image49_i = function () {
+	_proto._Image62_i = function () {
 		var t = new eui.Image();
-		t.source = "award_left";
-		t.x = 234.85;
-		t.y = 2266;
+		t.source = "guandao6";
+		t.x = 0;
+		t.y = 400;
+		return t;
+	};
+	_proto._Image63_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 0;
+		t.y = 600;
+		return t;
+	};
+	_proto._Image64_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao4";
+		t.x = 0;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image65_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao5";
+		t.x = 200;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image66_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao2";
+		t.x = 400;
+		t.y = 800;
+		return t;
+	};
+	_proto._Image67_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 400;
+		t.y = 1000;
+		return t;
+	};
+	_proto._Image68_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 400;
+		t.y = 1200;
+		return t;
+	};
+	_proto._Image69_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao3";
+		t.x = 400;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image70_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao1";
+		t.x = 200;
+		t.y = 1400;
+		return t;
+	};
+	_proto._Image71_i = function () {
+		var t = new eui.Image();
+		t.source = "guandao6";
+		t.x = 200;
+		t.y = 1424;
+		return t;
+	};
+	_proto._Group4_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.width = 600;
+		t.elementsContent = [this._GkItem1_i(),this._GkItem2_i(),this._GkItem3_i(),this._GkItem4_i(),this._GkItem5_i(),this._GkItem6_i(),this._GkItem7_i(),this._GkItem8_i(),this._GkItem9_i()];
+		return t;
+	};
+	_proto._GkItem1_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 237.5;
+		t.y = 50;
+		return t;
+	};
+	_proto._GkItem2_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 220;
+		t.y = 240;
+		return t;
+	};
+	_proto._GkItem3_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 37.5;
+		t.y = 420;
+		return t;
+	};
+	_proto._GkItem4_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 37.5;
+		t.y = 640;
+		return t;
+	};
+	_proto._GkItem5_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 70;
+		t.y = 850;
+		return t;
+	};
+	_proto._GkItem6_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 350;
+		t.y = 850;
+		return t;
+	};
+	_proto._GkItem7_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 437.5;
+		t.y = 1050;
+		return t;
+	};
+	_proto._GkItem8_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 437.5;
+		t.y = 1300;
+		return t;
+	};
+	_proto._GkItem9_i = function () {
+		var t = new GkItem();
+		t.skinName = "GkItemSkin";
+		t.x = 300;
+		t.y = 1450;
 		return t;
 	};
 	return GuanKaSkin;
@@ -2560,7 +2795,7 @@ window.skins={};
 	__extends(MapSkin, _super);
 	function MapSkin() {
 		_super.call(this);
-		this.skinParts = ["bgCon","gdCon","btnCon","awardCon","mainCon","scroller"];
+		this.skinParts = ["bgCon","treesCon","gdCon","btnCon","awardCon","mainCon","scroller"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -2583,14 +2818,24 @@ window.skins={};
 	_proto.mainCon_i = function () {
 		var t = new eui.Group();
 		this.mainCon = t;
-		t.elementsContent = [this.bgCon_i(),this.gdCon_i(),this.btnCon_i(),this.awardCon_i()];
+		t.elementsContent = [this.bgCon_i(),this.treesCon_i(),this.gdCon_i(),this.btnCon_i(),this.awardCon_i()];
 		return t;
 	};
 	_proto.bgCon_i = function () {
 		var t = new eui.Group();
 		this.bgCon = t;
-		t.touchChildren = true;
+		t.touchChildren = false;
 		t.touchEnabled = false;
+		return t;
+	};
+	_proto.treesCon_i = function () {
+		var t = new eui.Group();
+		this.treesCon = t;
+		t.height = 1334;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.width = 600;
 		return t;
 	};
 	_proto.gdCon_i = function () {
@@ -2599,7 +2844,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = false;
 		t.touchEnabled = false;
-		t.width = 800;
+		t.width = 600;
 		return t;
 	};
 	_proto.btnCon_i = function () {
@@ -2608,7 +2853,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = true;
 		t.touchEnabled = false;
-		t.width = 800;
+		t.width = 600;
 		return t;
 	};
 	_proto.awardCon_i = function () {
@@ -2617,7 +2862,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchChildren = true;
 		t.touchEnabled = false;
-		t.width = 800;
+		t.width = 600;
 		return t;
 	};
 	return MapSkin;
