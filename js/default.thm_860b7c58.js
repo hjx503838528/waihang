@@ -1177,6 +1177,7 @@ window.skins={};
 		this.dailyTaskBtn = t;
 		t.right = 40;
 		t.source = "taskIcon1";
+		t.visible = false;
 		t.y = 270;
 		return t;
 	};
