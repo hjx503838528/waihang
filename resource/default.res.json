@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,bgm_mp3,button_mp3,task_on2_mp3,task1_mp3,gold2_mp3,guanqia_mp3,medal_mp3,game2_mp3,task_win1_mp3,up_mp3,share_mp3,win2_png,win1_png,init_json,message_mp3,gameIcon_json,guangdao_json,gameIcon2_json",
+			"keys": "bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,bgm_mp3,button_mp3,task_on2_mp3,task1_mp3,gold2_mp3,guanqia_mp3,medal_mp3,game2_mp3,task_win1_mp3,up_mp3,share_mp3,win2_png,win1_png,init_json,message_mp3,gameIcon_json,guangdao_json",
 			"name": "preload"
 		},
 		{
@@ -132,19 +132,13 @@
 			"name": "gameIcon_json",
 			"type": "sheet",
 			"url": "assets/gameIcon.json",
-			"subkeys": "bottom,gold1,gold2,gold3,icon,icon_bag,icon_bf,icon_close,icon_error,icon_gift,icon_guanka1,icon_guanka2,icon_guanka3,icon_help,icon_home,icon_luyin,icon_lx,icon_mail,icon_p2,icon_pj1,icon_pj3,icon_rank,icon_refresh,icon_right,icon_rubbish,icon_sao,icon_share,icon_xj,icon_xp1,icon_xp2,icon_xz1,icon_xz2,icon_zs,icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10,icon11,icon12,icon13,icon14,icon15,icon16,kuang_1,kuang_2,kuang_3,kuang_4,kuang_5,kuang_6,kuang_7,kuang_8,music_off,music_on,rank1,rank2,rank3,taskIcon1,thumb,title1,track,icon_grass,icon_tree,icon_house,award_left,award_right,icon_on,icon_congold"
+			"subkeys": "icon_congold,icon_on,award_right,award_left,icon_house,icon_tree,icon_grass,track,title1,thumb,taskIcon1,rank3,rank2,rank1,music_on,music_off,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon16,icon15,icon14,icon13,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,award2,award3,award0,award1"
 		},
 		{
 			"name": "guangdao_json",
 			"type": "sheet",
 			"url": "assets/guangdao.json",
 			"subkeys": "guandao2,guandao3,guandao4,guandao5,guandao6,guandao1"
-		},
-		{
-			"name": "gameIcon2_json",
-			"type": "sheet",
-			"url": "assets/gameIcon.json",
-			"subkeys": "icon_congold,icon_on,award_right,award_left,icon_house,icon_tree,icon_grass,track,title1,thumb,taskIcon1,rank3,rank2,rank1,music_on,music_off,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon16,icon15,icon14,icon13,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,award2,award3,award0,award1"
 		}
 	]
 }
