@@ -105,12 +105,12 @@
     var maToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI5LCJvcGVuSWQiOiJvMk8xRzQ4cGQ5LTNrWEhLMXdJY1gzSHhma1c0Iiwicm9sZSI6MCwiaWF0IjoxNTQ4MjYxNjI4fQ.m9NQgN8Vo4VUxTbjr4yMGfFbtMsx39fWnUPh2rqCGHQ";
     if (token == maToken) {
         var script = document.createElement('script'); 
-        // script.src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js";
-        script.src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js";
+        script.src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js";
+        // script.src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js";
         document.body.appendChild(script); 
         script.onload = function () { 
-            // var vConsole=new VConsole();
-            eruda.init();
+            var vConsole=new VConsole();
+            // eruda.init();
             console.info("打开手机调试");
          } 
     }
