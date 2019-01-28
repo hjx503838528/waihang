@@ -95,25 +95,25 @@
     });
     xhr.send(null);
    //打开手机调试
-    function getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return decodeURIComponent(r[2]);
-        return null;
-    }
-   var token = getQueryString("token");
-    var maToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI5LCJvcGVuSWQiOiJvMk8xRzQ4cGQ5LTNrWEhLMXdJY1gzSHhma1c0Iiwicm9sZSI6MCwiaWF0IjoxNTQ4NjM5MzUwfQ.aWPHrAar8yfAwteDhcOBYUBdJIhdHCSPY9xPu47irBo";
-    if (token == maToken) {
-        var script = document.createElement('script'); 
-        script.src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js";
-        // script.src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js";
-        document.body.appendChild(script); 
-        script.onload = function () { 
-            var vConsole=new VConsole();
-            // eruda.init();
-            console.info("打开手机调试");
-         } 
-    }
+//     function getQueryString(name) {
+//         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+//         var r = window.location.search.substr(1).match(reg);
+//         if (r != null) return decodeURIComponent(r[2]);
+//         return null;
+//     }
+//    var token = getQueryString("token");
+//     var maToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI5LCJvcGVuSWQiOiJvMk8xRzQ4cGQ5LTNrWEhLMXdJY1gzSHhma1c0Iiwicm9sZSI6MCwiaWF0IjoxNTQ4NjM5MzUwfQ.aWPHrAar8yfAwteDhcOBYUBdJIhdHCSPY9xPu47irBo";
+//     if (token == maToken) {
+//         var script = document.createElement('script'); 
+//         script.src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js";
+//         // script.src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js";
+//         document.body.appendChild(script); 
+//         script.onload = function () { 
+//             var vConsole=new VConsole();
+//             // eruda.init();
+//             console.info("打开手机调试");
+//          } 
+//     }
 </script>
 
 </body>
