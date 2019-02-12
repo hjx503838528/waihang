@@ -620,79 +620,97 @@ window.skins={};
 		return t;
 	};
 	return VSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin3.exml'] = window.ButSkin3 = (function (_super) {
-	__extends(ButSkin3, _super);
-	function ButSkin3() {
-		_super.call(this);
-		this.skinParts = ["iconDisplay","labelDisplay"];
-		
-		this.minHeight = 50;
-		this.minWidth = 100;
-		this.elementsContent = [this._Image1_i(),this.iconDisplay_i(),this.labelDisplay_i()];
-		this.states = [
-			new eui.State ("up",
-				[
-				])
-			,
-			new eui.State ("down",
-				[
-				])
-			,
-			new eui.State ("disabled",
-				[
-				])
-		];
-	}
-	var _proto = ButSkin3.prototype;
-
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_1";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto.iconDisplay_i = function () {
-		var t = new eui.Image();
-		this.iconDisplay = t;
-		t.horizontalCenter = 0;
-		t.source = "icon_mail";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto.labelDisplay_i = function () {
-		var t = new eui.Label();
-		this.labelDisplay = t;
-		t.bold = true;
-		t.bottom = -25;
-		t.horizontalCenter = 0;
-		t.size = 20;
-		t.text = "消息";
-		t.textAlign = "center";
-		t.textColor = 0x333333;
-		t.verticalAlign = "middle";
-		return t;
-	};
-	return ButSkin3;
 })(eui.Skin);generateEUI.paths['resource/skins/branch/BranchSkin.exml'] = window.BranchSkin = (function (_super) {
 	__extends(BranchSkin, _super);
 	function BranchSkin() {
 		_super.call(this);
-		this.skinParts = ["mapCon","bird1","bird2","bird3","bird4","bird5","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["bird","mapCon","bird1","bird2","bird3","bird4","bird5","yunCon"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this._Group5_i()];
+		this.bird_i();
+		this.elementsContent = [this._Group1_i()];
+		
+		eui.Binding.$bindProperties(this, ["bird1"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [100],[],this._Object1,"x");
+		eui.Binding.$bindProperties(this, [0],[],this._Object1,"y");
+		eui.Binding.$bindProperties(this, [180],[],this._Object2,"rotation");
+		eui.Binding.$bindProperties(this, [400],[],this._Object2,"x");
+		eui.Binding.$bindProperties(this, [300],[],this._Object3,"x");
+		eui.Binding.$bindProperties(this, [320],[],this._Object3,"y");
+		eui.Binding.$bindProperties(this, [0],[],this._Object4,"rotation");
+		eui.Binding.$bindProperties(this, [-29],[],this._Object4,"x");
+		eui.Binding.$bindProperties(this, [131],[],this._Object4,"y");
 	}
 	var _proto = BranchSkin.prototype;
 
-	_proto._Group5_i = function () {
+	_proto.bird_i = function () {
+		var t = new egret.tween.TweenGroup();
+		this.bird = t;
+		t.items = [this._TweenItem1_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._Set1_i(),this._To1_i(),this._To2_i(),this._To3_i(),this._To4_i()];
+		return t;
+	};
+	_proto._Set1_i = function () {
+		var t = new egret.tween.Set();
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 12000;
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 50;
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._To3_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 12300;
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto._To4_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 1350;
+		t.props = this._Object4_i();
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		this._Object4 = t;
+		return t;
+	};
+	_proto._Group1_i = function () {
 		var t = new eui.Group();
 		t.bottom = 0;
 		t.horizontalCenter = 0;
 		t.top = 0;
 		t.width = 750;
-		t.elementsContent = [this.mapCon_i(),this.yunCon_i(),this._Group2_i(),this.bottomCom_i()];
+		t.elementsContent = [this.mapCon_i(),this.yunCon_i()];
 		return t;
 	};
 	_proto.mapCon_i = function () {
@@ -752,258 +770,6 @@ window.skins={};
 		t.source = "bird5";
 		t.x = 255;
 		t.y = 101;
-		return t;
-	};
-	_proto._Group2_i = function () {
-		var t = new eui.Group();
-		t.horizontalCenter = 0;
-		t.y = 44;
-		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
-		return t;
-	};
-	_proto._HorizontalLayout1_i = function () {
-		var t = new eui.HorizontalLayout();
-		t.gap = 40;
-		return t;
-	};
-	_proto.lvBtn_i = function () {
-		var t = new eui.Group();
-		this.lvBtn = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image1_i(),this._Image2_i(),this.lvTxt_i()];
-		return t;
-	};
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		t.width = 210;
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.source = "icon_zs";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto.lvTxt_i = function () {
-		var t = new eui.Label();
-		this.lvTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "Lv.1";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 110;
-		t.x = 70;
-		return t;
-	};
-	_proto._Group1_i = function () {
-		var t = new eui.Group();
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image3_i(),this._Image4_i(),this.jiaBtn_i(),this.goldTxt_i()];
-		return t;
-	};
-	_proto._Image3_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.scale9Grid = new egret.Rectangle(36,33,14,13);
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		t.width = 232;
-		return t;
-	};
-	_proto._Image4_i = function () {
-		var t = new eui.Image();
-		t.source = "gold1";
-		return t;
-	};
-	_proto.jiaBtn_i = function () {
-		var t = new eui.Image();
-		this.jiaBtn = t;
-		t.right = -25;
-		t.source = "icon6";
-		t.y = -22;
-		return t;
-	};
-	_proto.goldTxt_i = function () {
-		var t = new eui.Label();
-		this.goldTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "1234";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 122;
-		t.x = 74;
-		return t;
-	};
-	_proto.mdalBtn_i = function () {
-		var t = new eui.Group();
-		this.mdalBtn = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image5_i(),this._Image6_i(),this.mdalTxt_i()];
-		return t;
-	};
-	_proto._Image5_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto._Image6_i = function () {
-		var t = new eui.Image();
-		t.source = "icon_xz1";
-		t.x = 0;
-		return t;
-	};
-	_proto.mdalTxt_i = function () {
-		var t = new eui.Label();
-		this.mdalTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "1";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 100;
-		t.x = 70;
-		return t;
-	};
-	_proto.bottomCom_i = function () {
-		var t = new eui.Group();
-		this.bottomCom = t;
-		t.bottom = 0;
-		t.left = 0;
-		t.right = 0;
-		t.elementsContent = [this._Image7_i(),this._Group3_i(),this._Group4_i()];
-		return t;
-	};
-	_proto._Image7_i = function () {
-		var t = new eui.Image();
-		t.bottom = -6;
-		t.left = 0;
-		t.right = 0;
-		t.scale9Grid = new egret.Rectangle(60,66,36,64);
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "bottom";
-		t.y = 51;
-		return t;
-	};
-	_proto._Group3_i = function () {
-		var t = new eui.Group();
-		t.bottom = 50;
-		t.horizontalCenter = -275;
-		t.elementsContent = [this._Image8_i(),this._Rect1_i(),this.txImg_i(),this.rectMack_i()];
-		return t;
-	};
-	_proto._Image8_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_4";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto._Rect1_i = function () {
-		var t = new eui.Rect();
-		t.ellipseWidth = 100;
-		t.fillColor = 0xc0d4fe;
-		t.height = 94;
-		t.horizontalCenter = 0;
-		t.verticalCenter = 0;
-		t.visible = false;
-		t.width = 94;
-		return t;
-	};
-	_proto.txImg_i = function () {
-		var t = new eui.Image();
-		this.txImg = t;
-		t.height = 142;
-		t.source = "";
-		t.width = 142;
-		t.x = 9;
-		t.y = 9;
-		return t;
-	};
-	_proto.rectMack_i = function () {
-		var t = new eui.Rect();
-		this.rectMack = t;
-		t.ellipseWidth = 200;
-		t.fillAlpha = 1;
-		t.height = 142;
-		t.width = 142;
-		t.x = 9;
-		t.y = 9;
-		return t;
-	};
-	_proto._Group4_i = function () {
-		var t = new eui.Group();
-		t.horizontalCenter = 100;
-		t.y = 28;
-		t.layout = this._HorizontalLayout2_i();
-		t.elementsContent = [this.xiaoxiBtn_i(),this.bagBtn_i(),this.rankBtn_i(),this.helpBtn_i()];
-		return t;
-	};
-	_proto._HorizontalLayout2_i = function () {
-		var t = new eui.HorizontalLayout();
-		t.gap = 20;
-		t.paddingRight = 0;
-		return t;
-	};
-	_proto.xiaoxiBtn_i = function () {
-		var t = new eui.Button();
-		this.xiaoxiBtn = t;
-		t.icon = "icon_mail";
-		t.label = "消息";
-		t.skinName = "ButSkin3";
-		t.x = -7.83;
-		t.y = -579.05;
-		return t;
-	};
-	_proto.bagBtn_i = function () {
-		var t = new eui.Button();
-		this.bagBtn = t;
-		t.icon = "icon_bag";
-		t.label = "口袋";
-		t.skinName = "ButSkin3";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto.rankBtn_i = function () {
-		var t = new eui.Button();
-		this.rankBtn = t;
-		t.icon = "icon_rank";
-		t.label = "排行";
-		t.skinName = "ButSkin3";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto.helpBtn_i = function () {
-		var t = new eui.Button();
-		this.helpBtn = t;
-		t.icon = "icon_help";
-		t.label = "帮助";
-		t.skinName = "ButSkin3";
-		t.x = 0;
-		t.y = 0;
 		return t;
 	};
 	return BranchSkin;
@@ -1454,6 +1220,60 @@ window.skins={};
 		return t;
 	};
 	return ZxTaskViewSkin2;
+})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin3.exml'] = window.ButSkin3 = (function (_super) {
+	__extends(ButSkin3, _super);
+	function ButSkin3() {
+		_super.call(this);
+		this.skinParts = ["iconDisplay","labelDisplay"];
+		
+		this.minHeight = 50;
+		this.minWidth = 100;
+		this.elementsContent = [this._Image1_i(),this.iconDisplay_i(),this.labelDisplay_i()];
+		this.states = [
+			new eui.State ("up",
+				[
+				])
+			,
+			new eui.State ("down",
+				[
+				])
+			,
+			new eui.State ("disabled",
+				[
+				])
+		];
+	}
+	var _proto = ButSkin3.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_1";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.source = "icon_mail";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bold = true;
+		t.bottom = -25;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "消息";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	return ButSkin3;
 })(eui.Skin);generateEUI.paths['resource/skins/GameSkin.exml'] = window.GameSkin = (function (_super) {
 	__extends(GameSkin, _super);
 	function GameSkin() {
@@ -1857,6 +1677,7 @@ window.skins={};
 		this.friendBtn = t;
 		t.right = 40;
 		t.source = "icon12";
+		t.visible = false;
 		t.y = 150;
 		return t;
 	};
@@ -1875,6 +1696,7 @@ window.skins={};
 		t.bottom = 0;
 		t.left = 0;
 		t.right = 0;
+		t.visible = false;
 		t.elementsContent = [this._Image7_i(),this._Group3_i(),this._Group4_i()];
 		return t;
 	};
@@ -3806,6 +3628,547 @@ window.skins={};
 		return t;
 	};
 	return RankSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/ui/GameViewSkin.exml'] = window.GameViewSkin = (function (_super) {
+	__extends(GameViewSkin, _super);
+	function GameViewSkin() {
+		_super.call(this);
+		this.skinParts = ["yun","mapCon","yun0","yun1","yun2","yun3","yun4","yunCon"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.yun_i();
+		this.elementsContent = [this.mapCon_i(),this.yunCon_i()];
+		
+		eui.Binding.$bindProperties(this, ["yun3"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [800],[],this._Object1,"x");
+		eui.Binding.$bindProperties(this, [242],[],this._Object2,"x");
+		eui.Binding.$bindProperties(this, ["yun4"],[0],this._TweenItem2,"target");
+		eui.Binding.$bindProperties(this, [-600],[],this._Object3,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object4,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object5,"x");
+		eui.Binding.$bindProperties(this, ["yun2"],[0],this._TweenItem3,"target");
+		eui.Binding.$bindProperties(this, [-300],[],this._Object6,"x");
+		eui.Binding.$bindProperties(this, [-162],[],this._Object7,"x");
+		eui.Binding.$bindProperties(this, ["yun1"],[0],this._TweenItem4,"target");
+		eui.Binding.$bindProperties(this, [445],[],this._Object8,"x");
+		eui.Binding.$bindProperties(this, [280],[],this._Object9,"x");
+		eui.Binding.$bindProperties(this, [336],[],this._Object10,"x");
+		eui.Binding.$bindProperties(this, ["yun0"],[0],this._TweenItem5,"target");
+		eui.Binding.$bindProperties(this, [110],[],this._Object11,"x");
+		eui.Binding.$bindProperties(this, [75],[],this._Object12,"x");
+	}
+	var _proto = GameViewSkin.prototype;
+
+	_proto.yun_i = function () {
+		var t = new egret.tween.TweenGroup();
+		this.yun = t;
+		t.items = [this._TweenItem1_i(),this._TweenItem2_i(),this._TweenItem3_i(),this._TweenItem4_i(),this._TweenItem5_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._To1_i(),this._To2_i()];
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._TweenItem2_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem2 = t;
+		t.paths = [this._To3_i(),this._To4_i(),this._To5_i()];
+		return t;
+	};
+	_proto._To3_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 18000;
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto._To4_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 21000;
+		t.props = this._Object4_i();
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		this._Object4 = t;
+		return t;
+	};
+	_proto._To5_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 500;
+		t.props = this._Object5_i();
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		this._Object5 = t;
+		return t;
+	};
+	_proto._TweenItem3_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem3 = t;
+		t.paths = [this._To6_i(),this._To7_i()];
+		return t;
+	};
+	_proto._To6_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object6_i();
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		this._Object6 = t;
+		return t;
+	};
+	_proto._To7_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 14000;
+		t.props = this._Object7_i();
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		this._Object7 = t;
+		return t;
+	};
+	_proto._TweenItem4_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem4 = t;
+		t.paths = [this._To8_i(),this._To9_i(),this._To10_i()];
+		return t;
+	};
+	_proto._To8_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object8_i();
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		this._Object8 = t;
+		return t;
+	};
+	_proto._To9_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 12000;
+		t.props = this._Object9_i();
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		this._Object9 = t;
+		return t;
+	};
+	_proto._To10_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object10_i();
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		this._Object10 = t;
+		return t;
+	};
+	_proto._TweenItem5_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem5 = t;
+		t.paths = [this._To11_i(),this._To12_i()];
+		return t;
+	};
+	_proto._To11_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object11_i();
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		this._Object11 = t;
+		return t;
+	};
+	_proto._To12_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object12_i();
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
+		this._Object12 = t;
+		return t;
+	};
+	_proto.mapCon_i = function () {
+		var t = new eui.Group();
+		this.mapCon = t;
+		t.horizontalCenter = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.yunCon_i = function () {
+		var t = new eui.Group();
+		this.yunCon = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.elementsContent = [this.yun0_i(),this.yun1_i(),this.yun2_i(),this.yun3_i(),this.yun4_i()];
+		return t;
+	};
+	_proto.yun0_i = function () {
+		var t = new eui.Image();
+		this.yun0 = t;
+		t.source = "yun12";
+		t.x = 75;
+		t.y = -85;
+		return t;
+	};
+	_proto.yun1_i = function () {
+		var t = new eui.Image();
+		this.yun1 = t;
+		t.source = "yun1";
+		t.x = 336;
+		t.y = -97;
+		return t;
+	};
+	_proto.yun2_i = function () {
+		var t = new eui.Image();
+		this.yun2 = t;
+		t.source = "yun2";
+		t.x = -162;
+		t.y = -97;
+		return t;
+	};
+	_proto.yun3_i = function () {
+		var t = new eui.Image();
+		this.yun3 = t;
+		t.source = "yun3";
+		t.x = 242;
+		t.y = 77;
+		return t;
+	};
+	_proto.yun4_i = function () {
+		var t = new eui.Image();
+		this.yun4 = t;
+		t.source = "yun4";
+		t.x = -125;
+		t.y = 72;
+		return t;
+	};
+	return GameViewSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/ui/UIViewSkin.exml'] = window.UIViewSkin = (function (_super) {
+	__extends(UIViewSkin, _super);
+	function UIViewSkin() {
+		_super.call(this);
+		this.skinParts = ["lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","dailyTaskBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this._Group2_i(),this.friendBtn_i(),this.dailyTaskBtn_i(),this.bottomCom_i()];
+	}
+	var _proto = UIViewSkin.prototype;
+
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 44;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 40;
+		return t;
+	};
+	_proto.lvBtn_i = function () {
+		var t = new eui.Group();
+		this.lvBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this.lvTxt_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 210;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_zs";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lvTxt_i = function () {
+		var t = new eui.Label();
+		this.lvTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "Lv.1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 110;
+		t.x = 70;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image3_i(),this._Image4_i(),this.jiaBtn_i(),this.goldTxt_i()];
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(36,33,14,13);
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 232;
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.source = "gold1";
+		return t;
+	};
+	_proto.jiaBtn_i = function () {
+		var t = new eui.Image();
+		this.jiaBtn = t;
+		t.right = -25;
+		t.source = "icon6";
+		t.y = -22;
+		return t;
+	};
+	_proto.goldTxt_i = function () {
+		var t = new eui.Label();
+		this.goldTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1234";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 122;
+		t.x = 74;
+		return t;
+	};
+	_proto.mdalBtn_i = function () {
+		var t = new eui.Group();
+		this.mdalBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image5_i(),this._Image6_i(),this.mdalTxt_i()];
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_xz1";
+		t.x = 0;
+		return t;
+	};
+	_proto.mdalTxt_i = function () {
+		var t = new eui.Label();
+		this.mdalTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 100;
+		t.x = 70;
+		return t;
+	};
+	_proto.friendBtn_i = function () {
+		var t = new eui.Image();
+		this.friendBtn = t;
+		t.right = 40;
+		t.source = "icon12";
+		t.y = 150;
+		return t;
+	};
+	_proto.dailyTaskBtn_i = function () {
+		var t = new eui.Image();
+		this.dailyTaskBtn = t;
+		t.right = 40;
+		t.source = "taskIcon1";
+		t.visible = false;
+		t.y = 270;
+		return t;
+	};
+	_proto.bottomCom_i = function () {
+		var t = new eui.Group();
+		this.bottomCom = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.elementsContent = [this._Image7_i(),this._Group3_i(),this._Group4_i()];
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.bottom = -6;
+		t.left = 0;
+		t.right = 0;
+		t.scale9Grid = new egret.Rectangle(60,66,36,64);
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "bottom";
+		t.y = 51;
+		return t;
+	};
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		t.bottom = 50;
+		t.horizontalCenter = -275;
+		t.elementsContent = [this._Image8_i(),this._Rect1_i(),this.txImg_i(),this.rectMack_i()];
+		return t;
+	};
+	_proto._Image8_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_4";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.ellipseWidth = 100;
+		t.fillColor = 0xc0d4fe;
+		t.height = 94;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.visible = false;
+		t.width = 94;
+		return t;
+	};
+	_proto.txImg_i = function () {
+		var t = new eui.Image();
+		this.txImg = t;
+		t.height = 142;
+		t.source = "";
+		t.width = 142;
+		t.x = 9;
+		t.y = 9;
+		return t;
+	};
+	_proto.rectMack_i = function () {
+		var t = new eui.Rect();
+		this.rectMack = t;
+		t.ellipseWidth = 200;
+		t.fillAlpha = 1;
+		t.height = 142;
+		t.width = 142;
+		t.x = 9;
+		t.y = 9;
+		return t;
+	};
+	_proto._Group4_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 100;
+		t.y = 28;
+		t.layout = this._HorizontalLayout2_i();
+		t.elementsContent = [this.xiaoxiBtn_i(),this.bagBtn_i(),this.rankBtn_i(),this.helpBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 20;
+		t.paddingRight = 0;
+		return t;
+	};
+	_proto.xiaoxiBtn_i = function () {
+		var t = new eui.Button();
+		this.xiaoxiBtn = t;
+		t.icon = "icon_mail";
+		t.label = "消息";
+		t.skinName = "ButSkin3";
+		t.x = -7.83;
+		t.y = -579.05;
+		return t;
+	};
+	_proto.bagBtn_i = function () {
+		var t = new eui.Button();
+		this.bagBtn = t;
+		t.icon = "icon_bag";
+		t.label = "口袋";
+		t.skinName = "ButSkin3";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.rankBtn_i = function () {
+		var t = new eui.Button();
+		this.rankBtn = t;
+		t.icon = "icon_rank";
+		t.label = "排行";
+		t.skinName = "ButSkin3";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.helpBtn_i = function () {
+		var t = new eui.Button();
+		this.helpBtn = t;
+		t.icon = "icon_help";
+		t.label = "帮助";
+		t.skinName = "ButSkin3";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	return UIViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/CommanViewSkin.exml'] = window.CommanViewSkin = (function (_super) {
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
