@@ -624,152 +624,19 @@ window.skins={};
 	__extends(BranchSkin, _super);
 	function BranchSkin() {
 		_super.call(this);
-		this.skinParts = ["bird","mapCon","bird1","bird2","bird3","bird4","bird5","yunCon"];
+		this.skinParts = ["mapCon"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.bird_i();
-		this.elementsContent = [this._Group1_i()];
-		
-		eui.Binding.$bindProperties(this, ["bird1"],[0],this._TweenItem1,"target");
-		eui.Binding.$bindProperties(this, [100],[],this._Object1,"x");
-		eui.Binding.$bindProperties(this, [0],[],this._Object1,"y");
-		eui.Binding.$bindProperties(this, [180],[],this._Object2,"rotation");
-		eui.Binding.$bindProperties(this, [400],[],this._Object2,"x");
-		eui.Binding.$bindProperties(this, [300],[],this._Object3,"x");
-		eui.Binding.$bindProperties(this, [320],[],this._Object3,"y");
-		eui.Binding.$bindProperties(this, [0],[],this._Object4,"rotation");
-		eui.Binding.$bindProperties(this, [-29],[],this._Object4,"x");
-		eui.Binding.$bindProperties(this, [131],[],this._Object4,"y");
+		this.elementsContent = [this.mapCon_i()];
 	}
 	var _proto = BranchSkin.prototype;
 
-	_proto.bird_i = function () {
-		var t = new egret.tween.TweenGroup();
-		this.bird = t;
-		t.items = [this._TweenItem1_i()];
-		return t;
-	};
-	_proto._TweenItem1_i = function () {
-		var t = new egret.tween.TweenItem();
-		this._TweenItem1 = t;
-		t.paths = [this._Set1_i(),this._To1_i(),this._To2_i(),this._To3_i(),this._To4_i()];
-		return t;
-	};
-	_proto._Set1_i = function () {
-		var t = new egret.tween.Set();
-		return t;
-	};
-	_proto._To1_i = function () {
-		var t = new egret.tween.To();
-		t.duration = 12000;
-		t.props = this._Object1_i();
-		return t;
-	};
-	_proto._Object1_i = function () {
-		var t = {};
-		this._Object1 = t;
-		return t;
-	};
-	_proto._To2_i = function () {
-		var t = new egret.tween.To();
-		t.duration = 50;
-		t.props = this._Object2_i();
-		return t;
-	};
-	_proto._Object2_i = function () {
-		var t = {};
-		this._Object2 = t;
-		return t;
-	};
-	_proto._To3_i = function () {
-		var t = new egret.tween.To();
-		t.duration = 12300;
-		t.props = this._Object3_i();
-		return t;
-	};
-	_proto._Object3_i = function () {
-		var t = {};
-		this._Object3 = t;
-		return t;
-	};
-	_proto._To4_i = function () {
-		var t = new egret.tween.To();
-		t.duration = 1350;
-		t.props = this._Object4_i();
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		this._Object4 = t;
-		return t;
-	};
-	_proto._Group1_i = function () {
-		var t = new eui.Group();
-		t.bottom = 0;
-		t.horizontalCenter = 0;
-		t.top = 0;
-		t.width = 750;
-		t.elementsContent = [this.mapCon_i(),this.yunCon_i()];
-		return t;
-	};
 	_proto.mapCon_i = function () {
 		var t = new eui.Group();
 		this.mapCon = t;
 		t.horizontalCenter = 0;
 		t.y = 0;
-		return t;
-	};
-	_proto.yunCon_i = function () {
-		var t = new eui.Group();
-		this.yunCon = t;
-		t.bottom = 0;
-		t.left = 0;
-		t.right = 0;
-		t.top = 0;
-		t.touchChildren = false;
-		t.touchEnabled = false;
-		t.elementsContent = [this.bird1_i(),this.bird2_i(),this.bird3_i(),this.bird4_i(),this.bird5_i()];
-		return t;
-	};
-	_proto.bird1_i = function () {
-		var t = new eui.Image();
-		this.bird1 = t;
-		t.source = "bird1";
-		t.x = -29;
-		t.y = 131;
-		return t;
-	};
-	_proto.bird2_i = function () {
-		var t = new eui.Image();
-		this.bird2 = t;
-		t.source = "bird2";
-		t.x = 255;
-		t.y = -37;
-		return t;
-	};
-	_proto.bird3_i = function () {
-		var t = new eui.Image();
-		this.bird3 = t;
-		t.source = "bird3";
-		t.x = 523;
-		t.y = 1;
-		return t;
-	};
-	_proto.bird4_i = function () {
-		var t = new eui.Image();
-		this.bird4 = t;
-		t.source = "bird4";
-		t.x = 425.5;
-		t.y = 131;
-		return t;
-	};
-	_proto.bird5_i = function () {
-		var t = new eui.Image();
-		this.bird5 = t;
-		t.source = "bird5";
-		t.x = 255;
-		t.y = 101;
 		return t;
 	};
 	return BranchSkin;
@@ -1530,7 +1397,7 @@ window.skins={};
 		this.yun3 = t;
 		t.source = "yun3";
 		t.x = 242;
-		t.y = 77;
+		t.y = 67;
 		return t;
 	};
 	_proto.yun4_i = function () {
@@ -1538,7 +1405,7 @@ window.skins={};
 		this.yun4 = t;
 		t.source = "yun4";
 		t.x = -125;
-		t.y = 72;
+		t.y = 60;
 		return t;
 	};
 	_proto._Group2_i = function () {
@@ -3843,6 +3710,7 @@ window.skins={};
 		t.top = 0;
 		t.touchChildren = false;
 		t.touchEnabled = false;
+		t.visible = false;
 		t.elementsContent = [this.yun0_i(),this.yun1_i(),this.yun2_i(),this.yun3_i(),this.yun4_i()];
 		return t;
 	};
@@ -3891,14 +3759,259 @@ window.skins={};
 	__extends(UIViewSkin, _super);
 	function UIViewSkin() {
 		_super.call(this);
-		this.skinParts = ["lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","dailyTaskBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom"];
+		this.skinParts = ["yun","yun0","yun1","yun2","yun3","yun4","yunCon","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","friendBtn","dailyTaskBtn","txImg","rectMack","xiaoxiBtn","bagBtn","rankBtn","helpBtn","bottomCom","backHome"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this._Group2_i(),this.friendBtn_i(),this.dailyTaskBtn_i(),this.bottomCom_i()];
+		this.yun_i();
+		this.elementsContent = [this.yunCon_i(),this._Group2_i(),this.friendBtn_i(),this.dailyTaskBtn_i(),this.bottomCom_i(),this.backHome_i()];
+		
+		eui.Binding.$bindProperties(this, ["yun3"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [800],[],this._Object1,"x");
+		eui.Binding.$bindProperties(this, [242],[],this._Object2,"x");
+		eui.Binding.$bindProperties(this, ["yun4"],[0],this._TweenItem2,"target");
+		eui.Binding.$bindProperties(this, [-600],[],this._Object3,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object4,"x");
+		eui.Binding.$bindProperties(this, [-125],[],this._Object5,"x");
+		eui.Binding.$bindProperties(this, ["yun2"],[0],this._TweenItem3,"target");
+		eui.Binding.$bindProperties(this, [-300],[],this._Object6,"x");
+		eui.Binding.$bindProperties(this, [-162],[],this._Object7,"x");
+		eui.Binding.$bindProperties(this, ["yun1"],[0],this._TweenItem4,"target");
+		eui.Binding.$bindProperties(this, [445],[],this._Object8,"x");
+		eui.Binding.$bindProperties(this, [280],[],this._Object9,"x");
+		eui.Binding.$bindProperties(this, [336],[],this._Object10,"x");
+		eui.Binding.$bindProperties(this, ["yun0"],[0],this._TweenItem5,"target");
+		eui.Binding.$bindProperties(this, [110],[],this._Object11,"x");
+		eui.Binding.$bindProperties(this, [75],[],this._Object12,"x");
 	}
 	var _proto = UIViewSkin.prototype;
 
+	_proto.yun_i = function () {
+		var t = new egret.tween.TweenGroup();
+		this.yun = t;
+		t.items = [this._TweenItem1_i(),this._TweenItem2_i(),this._TweenItem3_i(),this._TweenItem4_i(),this._TweenItem5_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._To1_i(),this._To2_i()];
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 20000;
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._TweenItem2_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem2 = t;
+		t.paths = [this._To3_i(),this._To4_i(),this._To5_i()];
+		return t;
+	};
+	_proto._To3_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 18000;
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto._To4_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 21000;
+		t.props = this._Object4_i();
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		this._Object4 = t;
+		return t;
+	};
+	_proto._To5_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 500;
+		t.props = this._Object5_i();
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		this._Object5 = t;
+		return t;
+	};
+	_proto._TweenItem3_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem3 = t;
+		t.paths = [this._To6_i(),this._To7_i()];
+		return t;
+	};
+	_proto._To6_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 15000;
+		t.props = this._Object6_i();
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		this._Object6 = t;
+		return t;
+	};
+	_proto._To7_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 14000;
+		t.props = this._Object7_i();
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		this._Object7 = t;
+		return t;
+	};
+	_proto._TweenItem4_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem4 = t;
+		t.paths = [this._To8_i(),this._To9_i(),this._To10_i()];
+		return t;
+	};
+	_proto._To8_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object8_i();
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		this._Object8 = t;
+		return t;
+	};
+	_proto._To9_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 12000;
+		t.props = this._Object9_i();
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		this._Object9 = t;
+		return t;
+	};
+	_proto._To10_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object10_i();
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		this._Object10 = t;
+		return t;
+	};
+	_proto._TweenItem5_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem5 = t;
+		t.paths = [this._To11_i(),this._To12_i()];
+		return t;
+	};
+	_proto._To11_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object11_i();
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		this._Object11 = t;
+		return t;
+	};
+	_proto._To12_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 10000;
+		t.props = this._Object12_i();
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
+		this._Object12 = t;
+		return t;
+	};
+	_proto.yunCon_i = function () {
+		var t = new eui.Group();
+		this.yunCon = t;
+		t.bottom = 0;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.touchThrough = true;
+		t.elementsContent = [this.yun0_i(),this.yun1_i(),this.yun2_i(),this.yun3_i(),this.yun4_i()];
+		return t;
+	};
+	_proto.yun0_i = function () {
+		var t = new eui.Image();
+		this.yun0 = t;
+		t.source = "yun12";
+		t.touchEnabled = false;
+		t.x = 75;
+		t.y = -85;
+		return t;
+	};
+	_proto.yun1_i = function () {
+		var t = new eui.Image();
+		this.yun1 = t;
+		t.source = "yun1";
+		t.touchEnabled = false;
+		t.x = 336;
+		t.y = -97;
+		return t;
+	};
+	_proto.yun2_i = function () {
+		var t = new eui.Image();
+		this.yun2 = t;
+		t.source = "yun2";
+		t.touchEnabled = false;
+		t.x = -162;
+		t.y = -97;
+		return t;
+	};
+	_proto.yun3_i = function () {
+		var t = new eui.Image();
+		this.yun3 = t;
+		t.source = "yun3";
+		t.touchEnabled = false;
+		t.x = 242;
+		t.y = 67;
+		return t;
+	};
+	_proto.yun4_i = function () {
+		var t = new eui.Image();
+		this.yun4 = t;
+		t.source = "yun4";
+		t.touchEnabled = false;
+		t.x = -125;
+		t.y = 60;
+		return t;
+	};
 	_proto._Group2_i = function () {
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
@@ -4166,6 +4279,14 @@ window.skins={};
 		t.skinName = "ButSkin3";
 		t.x = 0;
 		t.y = 0;
+		return t;
+	};
+	_proto.backHome_i = function () {
+		var t = new eui.Image();
+		this.backHome = t;
+		t.source = "backHome";
+		t.x = 20;
+		t.y = 260;
 		return t;
 	};
 	return UIViewSkin;
