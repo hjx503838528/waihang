@@ -620,6 +620,373 @@ window.skins={};
 		return t;
 	};
 	return VSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/item/BarSkin1.exml'] = window.BarSkin1 = (function (_super) {
+	__extends(BarSkin1, _super);
+	function BarSkin1() {
+		_super.call(this);
+		this.skinParts = ["thumb","labelDisplay"];
+		
+		this.minHeight = 30;
+		this.minWidth = 100;
+		this.elementsContent = [this._Image1_i(),this.thumb_i(),this.labelDisplay_i()];
+	}
+	var _proto = BarSkin1.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.percentHeight = 100;
+		t.scale9Grid = new egret.Rectangle(1,1,4,4);
+		t.source = "track_pb_png";
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Rect();
+		this.thumb = t;
+		t.ellipseWidth = 5;
+		t.fillColor = 0xd4ea85;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "0/3";
+		t.textAlign = "center";
+		t.textColor = 0x829f42;
+		t.verticalAlign = "middle";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return BarSkin1;
+})(eui.Skin);generateEUI.paths['resource/skins/branch/BranchRankItemSkin.exml'] = window.BranchRankItemSkin = (function (_super) {
+	__extends(BranchRankItemSkin, _super);
+	function BranchRankItemSkin() {
+		_super.call(this);
+		this.skinParts = ["rankIcon","rankNum","iconImg","mackRect","bar","nameTxt","iconTxt","medalTxt","lvTxt"];
+		
+		this.height = 130;
+		this.width = 600;
+		this.elementsContent = [this.rankIcon_i(),this.rankNum_i(),this._Group1_i(),this.bar_i(),this.nameTxt_i(),this._Image1_i(),this.iconTxt_i(),this._Image2_i(),this.medalTxt_i(),this.lvTxt_i()];
+	}
+	var _proto = BranchRankItemSkin.prototype;
+
+	_proto.rankIcon_i = function () {
+		var t = new eui.Image();
+		this.rankIcon = t;
+		t.source = "rank1";
+		t.verticalCenter = -2;
+		t.x = 30;
+		return t;
+	};
+	_proto.rankNum_i = function () {
+		var t = new eui.Label();
+		this.rankNum = t;
+		t.fontFamily = "黑体";
+		t.text = "1";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.verticalCenter = 0;
+		t.width = 70;
+		t.x = 24;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.height = 64;
+		t.verticalCenter = 0;
+		t.width = 64;
+		t.x = 120;
+		t.elementsContent = [this._Rect1_i(),this.iconImg_i(),this.mackRect_i()];
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.bottom = 0;
+		t.ellipseWidth = 100;
+		t.fillColor = 0xc0d4fe;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		return t;
+	};
+	_proto.iconImg_i = function () {
+		var t = new eui.Image();
+		this.iconImg = t;
+		t.height = 60;
+		t.horizontalCenter = 0;
+		t.mask = this.mackRect;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "";
+		t.verticalCenter = 0;
+		t.width = 60;
+		t.x = 170;
+		t.y = 2;
+		return t;
+	};
+	_proto.mackRect_i = function () {
+		var t = new eui.Rect();
+		this.mackRect = t;
+		t.ellipseWidth = 100;
+		t.height = 60;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 60;
+		if(this.iconImg)
+		{
+			this.iconImg.mask = this.mackRect;
+		}
+		return t;
+	};
+	_proto.bar_i = function () {
+		var t = new eui.ProgressBar();
+		this.bar = t;
+		t.height = 30;
+		t.right = 20;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "BarSkin1";
+		t.value = 50;
+		t.width = 120;
+		t.y = 30;
+		return t;
+	};
+	_proto.nameTxt_i = function () {
+		var t = new eui.Label();
+		this.nameTxt = t;
+		t.fontFamily = "黑体";
+		t.size = 30;
+		t.text = "派大星";
+		t.textColor = 0x333333;
+		t.x = 205;
+		t.y = 30;
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.scaleX = 0.5;
+		t.scaleY = 0.5;
+		t.source = "award0";
+		t.x = 200;
+		t.y = 75;
+		return t;
+	};
+	_proto.iconTxt_i = function () {
+		var t = new eui.Label();
+		this.iconTxt = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 28;
+		t.text = "100";
+		t.textColor = 0x333333;
+		t.x = 240;
+		t.y = 78;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.scaleX = 0.5;
+		t.scaleY = 0.5;
+		t.source = "award2";
+		t.x = 360;
+		t.y = 75;
+		return t;
+	};
+	_proto.medalTxt_i = function () {
+		var t = new eui.Label();
+		this.medalTxt = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 28;
+		t.text = "100";
+		t.textColor = 0x333333;
+		t.x = 400;
+		t.y = 78;
+		return t;
+	};
+	_proto.lvTxt_i = function () {
+		var t = new eui.Label();
+		this.lvTxt = t;
+		t.fontFamily = "黑体";
+		t.right = 20;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 28;
+		t.text = "Lv.40";
+		t.textColor = 0x333333;
+		t.y = 78;
+		return t;
+	};
+	return BranchRankItemSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin1.exml'] = window.ButSkin1 = (function (_super) {
+	__extends(ButSkin1, _super);
+	function ButSkin1() {
+		_super.call(this);
+		this.skinParts = ["iconDisplay","labelDisplay"];
+		
+		this.minHeight = 20;
+		this.minWidth = 20;
+		this.elementsContent = [this.iconDisplay_i(),this.labelDisplay_i()];
+		this.states = [
+			new eui.State ("up",
+				[
+				])
+			,
+			new eui.State ("down",
+				[
+				])
+			,
+			new eui.State ("disabled",
+				[
+				])
+		];
+	}
+	var _proto = ButSkin1.prototype;
+
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.right = -3;
+		t.scale9Grid = new egret.Rectangle(21,23,6,6);
+		t.source = "icon1";
+		t.y = 0;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bold = true;
+		t.bottom = -25;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "消息";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	return ButSkin1;
+})(eui.Skin);generateEUI.paths['resource/skins/branch/BranchRankSkin.exml'] = window.BranchRankSkin = (function (_super) {
+	__extends(BranchRankSkin, _super);
+	function BranchRankSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","titleTxt","closeBtn","list","scroller"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group1_i()];
+	}
+	var _proto = BranchRankSkin.prototype;
+
+	_proto.shade_i = function () {
+		var t = new eui.Rect();
+		this.shade = t;
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchEnabled = true;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.closeBtn_i(),this.scroller_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "bg4_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "时间调查员小组";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	_proto.scroller_i = function () {
+		var t = new eui.Scroller();
+		this.scroller = t;
+		t.height = 697;
+		t.horizontalCenter = 0;
+		t.width = 610;
+		t.y = 195;
+		t.viewport = this.list_i();
+		return t;
+	};
+	_proto.list_i = function () {
+		var t = new eui.List();
+		this.list = t;
+		t.itemRendererSkinName = BranchRankItemSkin;
+		t.layout = this._VerticalLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._VerticalLayout1_i = function () {
+		var t = new eui.VerticalLayout();
+		t.gap = 6;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		return t;
+	};
+	return BranchRankSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/branch/BranchSkin.exml'] = window.BranchSkin = (function (_super) {
 	__extends(BranchSkin, _super);
 	function BranchSkin() {
@@ -686,54 +1053,6 @@ window.skins={};
 		return t;
 	};
 	return ButSkin6;
-})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin1.exml'] = window.ButSkin1 = (function (_super) {
-	__extends(ButSkin1, _super);
-	function ButSkin1() {
-		_super.call(this);
-		this.skinParts = ["iconDisplay","labelDisplay"];
-		
-		this.minHeight = 20;
-		this.minWidth = 20;
-		this.elementsContent = [this.iconDisplay_i(),this.labelDisplay_i()];
-		this.states = [
-			new eui.State ("up",
-				[
-				])
-			,
-			new eui.State ("down",
-				[
-				])
-			,
-			new eui.State ("disabled",
-				[
-				])
-		];
-	}
-	var _proto = ButSkin1.prototype;
-
-	_proto.iconDisplay_i = function () {
-		var t = new eui.Image();
-		this.iconDisplay = t;
-		t.right = -3;
-		t.scale9Grid = new egret.Rectangle(21,23,6,6);
-		t.source = "icon1";
-		t.y = 0;
-		return t;
-	};
-	_proto.labelDisplay_i = function () {
-		var t = new eui.Label();
-		this.labelDisplay = t;
-		t.bold = true;
-		t.bottom = -25;
-		t.horizontalCenter = 0;
-		t.size = 20;
-		t.text = "消息";
-		t.textAlign = "center";
-		t.textColor = 0x333333;
-		t.verticalAlign = "middle";
-		return t;
-	};
-	return ButSkin1;
 })(eui.Skin);generateEUI.paths['resource/skins/branch/ZxTaskViewSkin1.exml'] = window.ZxTaskViewSkin1 = (function (_super) {
 	__extends(ZxTaskViewSkin1, _super);
 	function ZxTaskViewSkin1() {
@@ -3211,6 +3530,8 @@ window.skins={};
 		this.height = 60;
 		this.width = 60;
 		this.elementsContent = [this.iconImg_i(),this.mackRect_i()];
+		
+		eui.Binding.$bindProperties(this, ["hostComponent.data.source"],[0],this.iconImg,"source");
 	}
 	var _proto = TxItemSkin.prototype;
 
@@ -3220,7 +3541,6 @@ window.skins={};
 		t.height = 60;
 		t.horizontalCenter = 0;
 		t.mask = this.mackRect;
-		t.source = "";
 		t.verticalCenter = 0;
 		t.width = 60;
 		return t;
@@ -4541,133 +4861,90 @@ window.skins={};
 		return t;
 	};
 	return CommanViewSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/win/HSliderSkin.exml'] = window.HSliderSkin = (function (_super) {
-	__extends(HSliderSkin, _super);
-	function HSliderSkin() {
-		_super.call(this);
-		this.skinParts = ["track","thumb"];
-		
-		this.minHeight = 8;
-		this.minWidth = 20;
-		this.elementsContent = [this.track_i(),this.thumb_i()];
-	}
-	var _proto = HSliderSkin.prototype;
-
-	_proto.track_i = function () {
-		var t = new eui.Image();
-		this.track = t;
-		t.scale9Grid = new egret.Rectangle(7,4,2,2);
-		t.source = "track";
-		t.verticalCenter = 0;
-		t.percentWidth = 100;
-		t.x = 0;
-		return t;
-	};
-	_proto.thumb_i = function () {
-		var t = new eui.Image();
-		this.thumb = t;
-		t.source = "thumb";
-		t.verticalCenter = 0;
-		return t;
-	};
-	return HSliderSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/DailyItemSkin.exml'] = window.DailyItemSkin = (function (_super) {
 	__extends(DailyItemSkin, _super);
 	function DailyItemSkin() {
 		_super.call(this);
-		this.skinParts = ["selectBtn","titleTxt","numTxt","hSlider","track","thumb","awardImg","awardTxt"];
+		this.skinParts = ["bg","goBtn","icon","namTxt","bar","titleTxt"];
 		
-		this.height = 120;
-		this.width = 560;
-		this.elementsContent = [this.selectBtn_i(),this.titleTxt_i(),this.numTxt_i(),this.hSlider_i(),this._Group1_i(),this.awardImg_i(),this.awardTxt_i()];
+		this.minHeight = 114;
+		this.minWidth = 595;
+		this.elementsContent = [this._Group2_i()];
 	}
 	var _proto = DailyItemSkin.prototype;
 
-	_proto.selectBtn_i = function () {
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 0;
+		t.elementsContent = [this.bg_i(),this.goBtn_i(),this._Group1_i(),this.titleTxt_i()];
+		return t;
+	};
+	_proto.bg_i = function () {
 		var t = new eui.Image();
-		this.selectBtn = t;
-		t.source = "icon16";
-		t.x = 5;
-		t.y = 5;
+		this.bg = t;
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(200,41,32,34);
+		t.source = "zx_bg3";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.goBtn_i = function () {
+		var t = new eui.Image();
+		this.goBtn = t;
+		t.right = 14;
+		t.source = "icon_ks";
+		t.y = 8;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.verticalCenter = 0;
+		t.x = 20;
+		t.elementsContent = [this.icon_i(),this.namTxt_i(),this.bar_i()];
+		return t;
+	};
+	_proto.icon_i = function () {
+		var t = new eui.Image();
+		this.icon = t;
+		t.scaleX = 0.6;
+		t.scaleY = 0.6;
+		t.source = "award0";
+		return t;
+	};
+	_proto.namTxt_i = function () {
+		var t = new eui.Label();
+		this.namTxt = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 28;
+		t.text = "100";
+		t.x = 47;
+		t.y = 6;
+		return t;
+	};
+	_proto.bar_i = function () {
+		var t = new eui.ProgressBar();
+		this.bar = t;
+		t.height = 30;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "BarSkin1";
+		t.value = 50;
+		t.width = 100;
+		t.x = 10;
+		t.y = 47;
 		return t;
 	};
 	_proto.titleTxt_i = function () {
 		var t = new eui.Label();
 		this.titleTxt = t;
 		t.fontFamily = "黑体";
-		t.size = 30;
-		t.text = "找多少人pk";
+		t.text = "完成3个调查任务";
 		t.textColor = 0x333333;
-		t.x = 60;
-		t.y = 10;
-		return t;
-	};
-	_proto.numTxt_i = function () {
-		var t = new eui.Label();
-		this.numTxt = t;
-		t.fontFamily = "黑体";
-		t.right = 10;
-		t.size = 26;
-		t.text = "还差5人";
-		t.textColor = 0x666666;
-		t.y = 10;
-		return t;
-	};
-	_proto.hSlider_i = function () {
-		var t = new eui.HSlider();
-		this.hSlider = t;
-		t.height = 20;
-		t.skinName = "HSliderSkin";
-		t.value = 0;
-		t.visible = false;
-		t.width = 380;
-		t.x = 60;
-		t.y = 80;
-		return t;
-	};
-	_proto._Group1_i = function () {
-		var t = new eui.Group();
-		t.x = 60;
-		t.y = 65;
-		t.elementsContent = [this.track_i(),this.thumb_i()];
-		return t;
-	};
-	_proto.track_i = function () {
-		var t = new eui.Image();
-		this.track = t;
-		t.scale9Grid = new egret.Rectangle(7,4,2,2);
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "track";
-		t.verticalCenter = 0;
-		t.width = 380;
-		return t;
-	};
-	_proto.thumb_i = function () {
-		var t = new eui.Image();
-		this.thumb = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.source = "thumb";
-		return t;
-	};
-	_proto.awardImg_i = function () {
-		var t = new eui.Image();
-		this.awardImg = t;
-		t.source = "gold3";
-		t.x = 460;
-		t.y = 70;
-		return t;
-	};
-	_proto.awardTxt_i = function () {
-		var t = new eui.Label();
-		this.awardTxt = t;
-		t.fontFamily = "黑体";
-		t.right = 10;
-		t.size = 24;
-		t.text = "x50";
-		t.textColor = 0x333333;
-		t.y = 76;
+		t.x = 187;
+		t.y = 42;
 		return t;
 	};
 	return DailyItemSkin;
@@ -4675,7 +4952,7 @@ window.skins={};
 	__extends(DailyTaskSkin, _super);
 	function DailyTaskSkin() {
 		_super.call(this);
-		this.skinParts = ["shade","titleTxt","infoTxt","startBtn","list","closeBtn"];
+		this.skinParts = ["shade","titleTxt","infoTxt","startBtn","list"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -4698,7 +4975,7 @@ window.skins={};
 		var t = new eui.Group();
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.infoTxt_i(),this.startBtn_i(),this.list_i(),this.closeBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.infoTxt_i(),this.startBtn_i(),this.list_i()];
 		return t;
 	};
 	_proto._Image1_i = function () {
@@ -4727,6 +5004,7 @@ window.skins={};
 		t.size = 26;
 		t.text = "分享得20金币";
 		t.textColor = 0x333333;
+		t.visible = false;
 		t.y = 851;
 		return t;
 	};
@@ -4737,6 +5015,7 @@ window.skins={};
 		t.icon = "kuang_6";
 		t.label = "炫耀一下";
 		t.skinName = "ButSkin6";
+		t.visible = false;
 		t.y = 730;
 		return t;
 	};
@@ -4745,14 +5024,14 @@ window.skins={};
 		this.list = t;
 		t.horizontalCenter = 0;
 		t.itemRendererSkinName = DailyItemSkin;
-		t.y = 250;
+		t.y = 200;
 		t.layout = this._VerticalLayout1_i();
 		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._VerticalLayout1_i = function () {
 		var t = new eui.VerticalLayout();
-		t.gap = 10;
+		t.gap = 20;
 		return t;
 	};
 	_proto._ArrayCollection1_i = function () {
@@ -4770,18 +5049,6 @@ window.skins={};
 	};
 	_proto._Object3_i = function () {
 		var t = {};
-		return t;
-	};
-	_proto.closeBtn_i = function () {
-		var t = new eui.Button();
-		this.closeBtn = t;
-		t.icon = "icon_close";
-		t.label = "";
-		t.right = 50;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.skinName = "ButSkin1";
-		t.y = 50;
 		return t;
 	};
 	return DailyTaskSkin;
@@ -5039,6 +5306,195 @@ window.skins={};
 		return t;
 	};
 	return FriendHelpSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/HSliderSkin.exml'] = window.HSliderSkin = (function (_super) {
+	__extends(HSliderSkin, _super);
+	function HSliderSkin() {
+		_super.call(this);
+		this.skinParts = ["track","thumb"];
+		
+		this.minHeight = 8;
+		this.minWidth = 20;
+		this.elementsContent = [this.track_i(),this.thumb_i()];
+	}
+	var _proto = HSliderSkin.prototype;
+
+	_proto.track_i = function () {
+		var t = new eui.Image();
+		this.track = t;
+		t.scale9Grid = new egret.Rectangle(7,4,2,2);
+		t.source = "track";
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
+		t.x = 0;
+		return t;
+	};
+	_proto.thumb_i = function () {
+		var t = new eui.Image();
+		this.thumb = t;
+		t.source = "thumb";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return HSliderSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/MedalViewSkin.exml'] = window.MedalViewSkin = (function (_super) {
+	__extends(MedalViewSkin, _super);
+	function MedalViewSkin() {
+		_super.call(this);
+		this.skinParts = ["lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this._Image1_i(),this._Group2_i(),this.backHome_i()];
+	}
+	var _proto = MedalViewSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.source = "bg_wall_png";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 44;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 40;
+		return t;
+	};
+	_proto.lvBtn_i = function () {
+		var t = new eui.Group();
+		this.lvBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image2_i(),this._Image3_i(),this.lvTxt_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 210;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_zs";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lvTxt_i = function () {
+		var t = new eui.Label();
+		this.lvTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "Lv.1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 110;
+		t.x = 70;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image4_i(),this._Image5_i(),this.jiaBtn_i(),this.goldTxt_i()];
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(36,33,14,13);
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 232;
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.source = "gold1";
+		return t;
+	};
+	_proto.jiaBtn_i = function () {
+		var t = new eui.Image();
+		this.jiaBtn = t;
+		t.right = -25;
+		t.source = "icon6";
+		t.y = -22;
+		return t;
+	};
+	_proto.goldTxt_i = function () {
+		var t = new eui.Label();
+		this.goldTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1234";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 122;
+		t.x = 74;
+		return t;
+	};
+	_proto.mdalBtn_i = function () {
+		var t = new eui.Group();
+		this.mdalBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image6_i(),this._Image7_i(),this.mdalTxt_i()];
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_xz1";
+		t.x = 0;
+		return t;
+	};
+	_proto.mdalTxt_i = function () {
+		var t = new eui.Label();
+		this.mdalTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 100;
+		t.x = 70;
+		return t;
+	};
+	_proto.backHome_i = function () {
+		var t = new eui.Image();
+		this.backHome = t;
+		t.source = "backHome";
+		t.x = 20;
+		t.y = 175;
+		return t;
+	};
+	return MedalViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/MessageSkin.exml'] = window.MessageSkin = (function (_super) {
 	__extends(MessageSkin, _super);
 	function MessageSkin() {
@@ -6140,4 +6596,341 @@ window.skins={};
 		return t;
 	};
 	return TaskViewSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/zudui/ZuDuiSkin.exml'] = window.ZuDuiSkin = (function (_super) {
+	__extends(ZuDuiSkin, _super);
+	function ZuDuiSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","titleTxt","taskTxt","numTxt","editable","list","startBtn","closeBtn","zzTxImg","rectMack","txList"];
+		
+		this.currentState = "input";
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group7_i()];
+		this.states = [
+			new eui.State ("input",
+				[
+					new eui.SetProperty("taskTxt","visible",false),
+					new eui.SetProperty("startBtn","visible",false)
+				])
+			,
+			new eui.State ("output",
+				[
+					new eui.SetProperty("titleTxt","text","口令确认"),
+					new eui.SetProperty("_Group2","visible",false),
+					new eui.SetProperty("_Label1","text","口令确认"),
+					new eui.SetProperty("_Label2","text","口令确认")
+				])
+		];
+	}
+	var _proto = ZuDuiSkin.prototype;
+
+	_proto.shade_i = function () {
+		var t = new eui.Rect();
+		this.shade = t;
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchEnabled = true;
+		return t;
+	};
+	_proto._Group7_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this._Image1_i(),this.titleTxt_i(),this.taskTxt_i(),this._Group2_i(),this._Group3_i(),this.startBtn_i(),this.closeBtn_i(),this._Group5_i(),this._Group6_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "bg4_png";
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "建立时间调查员小组";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.taskTxt_i = function () {
+		var t = new eui.Label();
+		this.taskTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 5;
+		t.lineSpacing = 10;
+		t.size = 30;
+		t.text = "口令30分钟内有效\n组队后将获得额外奖励,招募2-4人即可！";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.touchEnabled = false;
+		t.width = 540;
+		t.y = 350;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		this._Group2 = t;
+		t.horizontalCenter = 0;
+		t.touchEnabled = false;
+		t.y = 200;
+		t.elementsContent = [this.numTxt_i(),this.editable_i(),this._Group1_i()];
+		return t;
+	};
+	_proto.numTxt_i = function () {
+		var t = new eui.BitmapLabel();
+		this.numTxt = t;
+		t.font = "font1_fnt";
+		t.letterSpacing = 60;
+		t.text = "0000";
+		t.touchEnabled = false;
+		return t;
+	};
+	_proto.editable_i = function () {
+		var t = new eui.EditableText();
+		this.editable = t;
+		t.height = 110;
+		t.prompt = "510";
+		t.size = 2;
+		t.text = "";
+		t.textColor = 0xffffff;
+		t.width = 430;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.x = 53;
+		t.y = 110;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Rect4_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 42;
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect2_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect3_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Rect4_i = function () {
+		var t = new eui.Rect();
+		t.fillColor = 0x666666;
+		t.height = 6;
+		t.width = 80;
+		return t;
+	};
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.y = 445;
+		t.elementsContent = [this._Image2_i(),this.list_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.scale9Grid = new egret.Rectangle(45,26,14,13);
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_8";
+		t.width = 500;
+		return t;
+	};
+	_proto.list_i = function () {
+		var t = new eui.List();
+		this.list = t;
+		t.horizontalCenter = 0;
+		t.itemRendererSkinName = AwardListSkin;
+		t.verticalCenter = 0;
+		t.layout = this._HorizontalLayout2_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._HorizontalLayout2_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 90;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+0";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+0";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.source = "icon_xz2";
+		t.text = "+0";
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Button();
+		this.startBtn = t;
+		t.bottom = 80;
+		t.horizontalCenter = 0;
+		t.icon = "kuang_6";
+		t.label = "立即建立小组";
+		t.skinName = "ButSkin6";
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	_proto._Group5_i = function () {
+		var t = new eui.Group();
+		t.x = 85;
+		t.y = 580;
+		t.elementsContent = [this._Label1_i(),this._Group4_i()];
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		this._Label1 = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 30;
+		t.text = "组长";
+		t.textColor = 0x333333;
+		t.x = 0;
+		t.y = 12;
+		return t;
+	};
+	_proto._Group4_i = function () {
+		var t = new eui.Group();
+		t.x = 70;
+		t.elementsContent = [this.zzTxImg_i(),this.rectMack_i()];
+		return t;
+	};
+	_proto.zzTxImg_i = function () {
+		var t = new eui.Image();
+		this.zzTxImg = t;
+		t.height = 60;
+		t.source = "";
+		t.width = 60;
+		return t;
+	};
+	_proto.rectMack_i = function () {
+		var t = new eui.Rect();
+		this.rectMack = t;
+		t.ellipseWidth = 200;
+		t.fillAlpha = 1;
+		t.height = 60;
+		t.width = 60;
+		return t;
+	};
+	_proto._Group6_i = function () {
+		var t = new eui.Group();
+		t.x = 85;
+		t.y = 660;
+		t.elementsContent = [this._Label2_i(),this.txList_i()];
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		this._Label2 = t;
+		t.fontFamily = "黑体";
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 30;
+		t.text = "组员";
+		t.textColor = 0x333333;
+		t.x = 0;
+		t.y = 12;
+		return t;
+	};
+	_proto.txList_i = function () {
+		var t = new eui.List();
+		this.txList = t;
+		t.height = 60;
+		t.itemRendererSkinName = TxItemSkin;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.x = 70;
+		t.layout = this._HorizontalLayout3_i();
+		t.dataProvider = this._ArrayCollection2_i();
+		return t;
+	};
+	_proto._HorizontalLayout3_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 20;
+		return t;
+	};
+	_proto._ArrayCollection2_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i()];
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		return t;
+	};
+	return ZuDuiSkin;
 })(eui.Skin);
