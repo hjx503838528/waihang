@@ -3530,8 +3530,6 @@ window.skins={};
 		this.height = 60;
 		this.width = 60;
 		this.elementsContent = [this.iconImg_i(),this.mackRect_i()];
-		
-		eui.Binding.$bindProperties(this, ["hostComponent.data.source"],[0],this.iconImg,"source");
 	}
 	var _proto = TxItemSkin.prototype;
 
@@ -3541,6 +3539,7 @@ window.skins={};
 		t.height = 60;
 		t.horizontalCenter = 0;
 		t.mask = this.mackRect;
+		t.source = "";
 		t.verticalCenter = 0;
 		t.width = 60;
 		return t;
