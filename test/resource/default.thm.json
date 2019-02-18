@@ -29,9 +29,12 @@
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
+		"resource/skins/item/BarSkin1.exml",
+		"resource/skins/branch/BranchRankItemSkin.exml",
+		"resource/skins/btn/ButSkin1.exml",
+		"resource/skins/branch/BranchRankSkin.exml",
 		"resource/skins/branch/BranchSkin.exml",
 		"resource/skins/btn/ButSkin6.exml",
-		"resource/skins/btn/ButSkin1.exml",
 		"resource/skins/branch/ZxTaskViewSkin1.exml",
 		"resource/skins/branch/ZxTaskViewSkin2.exml",
 		"resource/skins/btn/ButSkin3.exml",
@@ -49,14 +52,16 @@
 		"resource/skins/ui/GameViewSkin.exml",
 		"resource/skins/ui/UIViewSkin.exml",
 		"resource/skins/win/CommanViewSkin.exml",
-		"resource/skins/win/HSliderSkin.exml",
 		"resource/skins/win/DailyItemSkin.exml",
 		"resource/skins/win/DailyTaskSkin.exml",
 		"resource/skins/win/FriendHelpSkin.exml",
+		"resource/skins/win/HSliderSkin.exml",
+		"resource/skins/win/MedalViewSkin.exml",
 		"resource/skins/win/MessageSkin.exml",
 		"resource/skins/win/ResultSkin.exml",
 		"resource/skins/win/SignInSkin.exml",
-		"resource/skins/win/TaskViewSkin.exml"
+		"resource/skins/win/TaskViewSkin.exml",
+		"resource/skins/zudui/ZuDuiSkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }
