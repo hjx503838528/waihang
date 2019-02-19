@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bgm_mp3,button_mp3,game2_mp3,gold2_mp3,guanqia_mp3,medal_mp3,message_mp3,share_mp3,task1_mp3,task_on2_mp3,task_win1_mp3,up_mp3,win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameicon_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,gamezx_json",
+			"keys": "bgm_mp3,button_mp3,game2_mp3,gold2_mp3,guanqia_mp3,medal_mp3,message_mp3,share_mp3,task1_mp3,task_on2_mp3,task_win1_mp3,up_mp3,win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,icon2_json",
 			"name": "preload"
 		},
 		{
@@ -135,41 +135,41 @@
 			"subkeys": "guandao1,guandao2,guandao3,guandao4,guandao5,guandao6"
 		},
 		{
-			"name": "gameIcon_json",
-			"type": "sheet",
 			"url": "assets/gameIcon.json",
-			"subkeys": "icon_congold,icon_on,award_right,award_left,icon_house,icon_tree,icon_grass,track,title1,thumb,taskIcon1,rank3,rank2,rank1,music_on,music_off,kuang_8,kuang_7,kuang_6,kuang_5,kuang_4,kuang_3,kuang_2,kuang_1,icon16,icon15,icon14,icon13,icon12,icon11,icon10,icon9,icon8,icon7,icon6,icon5,icon4,icon3,icon2,icon1,icon_zs,icon_xz2,icon_xz1,icon_xp2,icon_xp1,icon_xj,icon_share,icon_sao,icon_rubbish,icon_right,icon_refresh,icon_rank,icon_pj3,icon_pj1,icon_p2,icon_mail,icon_lx,icon_luyin,icon_home,icon_help,icon_guanka3,icon_guanka2,icon_guanka1,icon_gift,icon_error,icon_close,icon_bf,icon_bag,icon,gold3,gold2,gold1,bottom,award2,award3,award0,award1"
-		},
-		{
-			"name": "shan_png",
-			"type": "image",
-			"url": "assets/img/shan.png"
-		},
-		{
-			"name": "shan2_png",
-			"type": "image",
-			"url": "assets/img/shan2.png"
-		},
-		{
-			"name": "zhuan_png",
-			"type": "image",
-			"url": "assets/img/zhuan.png"
-		},
-		{
-			"name": "bg_wall_png",
-			"type": "image",
-			"url": "assets/img/bg_wall.png"
-		},
-		{
-			"name": "zx_bg2_jpg",
-			"type": "image",
-			"url": "assets/img/zx_bg2.jpg"
-		},
-		{
-			"name": "gamezx_json",
 			"type": "sheet",
-			"url": "assets/img/gamezx.json",
-			"subkeys": "icon_guanka4,icon_guanka5,icon_ks,icon_sy,zx_bg3,zx_gd1,zx_gd2,zx_gd3,zx_gd4,zx_gd5,zx_gd6,back,backHome,icon_fx"
+			"name": "gameIcon_json",
+			"subkeys": "award0,award1,award2,award3,award_left,award_right,bottom,gold1,gold2,gold3,icon,icon1,icon10,icon11,icon12,icon13,icon14,icon15,icon16,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon_bag,icon_bf,icon_close,icon_congold,icon_error,icon_gift,icon_grass,icon_guanka1,icon_guanka2,icon_guanka3,icon_help,icon_home,icon_house,icon_luyin,icon_lx,icon_mail,icon_on,icon_p2,icon_pj1,icon_pj3,icon_rank,icon_refresh,icon_right,icon_rubbish,icon_sao,icon_share,icon_tree,icon_xj,icon_xp1,icon_xp2,icon_xz1,icon_xz2,icon_zs,kuang_1,kuang_2,kuang_3,kuang_4,kuang_5,kuang_6,kuang_7,kuang_8,music_off,music_on,rank1,rank2,rank3,taskIcon1,thumb,title1,track"
+		},
+		{
+			"url": "assets/img/shan.png",
+			"type": "image",
+			"name": "shan_png"
+		},
+		{
+			"url": "assets/img/shan2.png",
+			"type": "image",
+			"name": "shan2_png"
+		},
+		{
+			"url": "assets/img/zhuan.png",
+			"type": "image",
+			"name": "zhuan_png"
+		},
+		{
+			"url": "assets/img/bg_wall.png",
+			"type": "image",
+			"name": "bg_wall_png"
+		},
+		{
+			"url": "assets/img/zx_bg2.jpg",
+			"type": "image",
+			"name": "zx_bg2_jpg"
+		},
+		{
+			"name": "icon2_json",
+			"type": "sheet",
+			"url": "assets/img/icon2.json",
+			"subkeys": "icon_baek1,icon_baek2,icon_baek3,icon_bg,icon_bg1,icon_bg2,icon_bg3,icon_fx,icon_guanka4,icon_guanka5,icon_ks,icon_sy,medal_img,medal_no,medal1,medal2,medal3,zx_bg3,zx_gd1,zx_gd2,zx_gd3,zx_gd4,zx_gd5,zx_gd6,back,backHome,btn_bg1,btn_bg2,btn_bg3,card_img,daoju_img"
 		}
 	]
 }
