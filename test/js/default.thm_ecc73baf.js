@@ -1406,6 +1406,62 @@ window.skins={};
 		return t;
 	};
 	return ZxTaskViewSkin2;
+})(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin2.exml'] = window.ButSkin2 = (function (_super) {
+	__extends(ButSkin2, _super);
+	function ButSkin2() {
+		_super.call(this);
+		this.skinParts = ["iconDisplay","labelDisplay"];
+		
+		this.minHeight = 20;
+		this.minWidth = 20;
+		this.elementsContent = [this._Image1_i(),this.iconDisplay_i(),this.labelDisplay_i()];
+		this.states = [
+			new eui.State ("up",
+				[
+				])
+			,
+			new eui.State ("down",
+				[
+				])
+			,
+			new eui.State ("disabled",
+				[
+				])
+		];
+	}
+	var _proto = ButSkin2.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.right = -3;
+		t.scale9Grid = new egret.Rectangle(41,40,9,10);
+		t.source = "icon_bg";
+		t.y = 0;
+		return t;
+	};
+	_proto.iconDisplay_i = function () {
+		var t = new eui.Image();
+		this.iconDisplay = t;
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(21,23,6,6);
+		t.source = "card_img";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.labelDisplay_i = function () {
+		var t = new eui.Label();
+		this.labelDisplay = t;
+		t.bold = true;
+		t.bottom = -25;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "消息";
+		t.textAlign = "center";
+		t.textColor = 0x333333;
+		t.verticalAlign = "middle";
+		return t;
+	};
+	return ButSkin2;
 })(eui.Skin);generateEUI.paths['resource/skins/btn/ButSkin3.exml'] = window.ButSkin3 = (function (_super) {
 	__extends(ButSkin3, _super);
 	function ButSkin3() {
@@ -3409,6 +3465,115 @@ window.skins={};
 		return t;
 	};
 	return AwardListSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/item/CardItemSkin.exml'] = window.CardItemSkin = (function (_super) {
+	__extends(CardItemSkin, _super);
+	function CardItemSkin() {
+		_super.call(this);
+		this.skinParts = ["iconImg","nameTxt","explainTxt","timeTxt","useTxt","useBtn","mainCon"];
+		
+		this.height = 235;
+		this.width = 685;
+		this.elementsContent = [this.mainCon_i()];
+	}
+	var _proto = CardItemSkin.prototype;
+
+	_proto.mainCon_i = function () {
+		var t = new eui.Group();
+		this.mainCon = t;
+		t.horizontalCenter = 0;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.elementsContent = [this.iconImg_i(),this._Image1_i(),this.nameTxt_i(),this.explainTxt_i(),this.timeTxt_i(),this.useBtn_i()];
+		return t;
+	};
+	_proto.iconImg_i = function () {
+		var t = new eui.Image();
+		this.iconImg = t;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "icon_bg1";
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.x = -224;
+		t.y = -50;
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.height = 140;
+		t.source = "card_img";
+		t.touchEnabled = false;
+		t.width = 200;
+		t.x = 30;
+		t.y = 30;
+		return t;
+	};
+	_proto.nameTxt_i = function () {
+		var t = new eui.Label();
+		this.nameTxt = t;
+		t.fontFamily = "黑体";
+		t.size = 30;
+		t.text = "啊啊啊";
+		t.textColor = 0x333333;
+		t.touchEnabled = false;
+		t.x = 240;
+		t.y = 30;
+		return t;
+	};
+	_proto.explainTxt_i = function () {
+		var t = new eui.Label();
+		this.explainTxt = t;
+		t.fontFamily = "黑体";
+		t.lineSpacing = 6;
+		t.size = 26;
+		t.text = "至尊披萨5折能量披萨券×1";
+		t.textColor = 0x333333;
+		t.touchEnabled = false;
+		t.width = 285;
+		t.x = 240;
+		t.y = 85;
+		return t;
+	};
+	_proto.timeTxt_i = function () {
+		var t = new eui.Label();
+		this.timeTxt = t;
+		t.bottom = 24;
+		t.fontFamily = "黑体";
+		t.size = 22;
+		t.text = "有效期：2019/02/01-2019/02/28";
+		t.textColor = 0x666666;
+		t.touchEnabled = false;
+		t.x = 30;
+		return t;
+	};
+	_proto.useBtn_i = function () {
+		var t = new eui.Group();
+		this.useBtn = t;
+		t.height = 174;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.width = 110;
+		t.x = 555;
+		t.y = 30;
+		t.elementsContent = [this.useTxt_i()];
+		return t;
+	};
+	_proto.useTxt_i = function () {
+		var t = new eui.Label();
+		this.useTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.lineSpacing = 6;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 36;
+		t.text = "立即\n使用";
+		t.textColor = 0xffffff;
+		t.verticalCenter = 0;
+		return t;
+	};
+	return CardItemSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/item/DayItemSkin.exml'] = window.DayItemSkin = (function (_super) {
 	__extends(DayItemSkin, _super);
 	function DayItemSkin() {
@@ -3466,6 +3631,28 @@ window.skins={};
 		return t;
 	};
 	return DayItemSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/item/MedalItemSkin.exml'] = window.MedalItemSkin = (function (_super) {
+	__extends(MedalItemSkin, _super);
+	function MedalItemSkin() {
+		_super.call(this);
+		this.skinParts = ["iconImg"];
+		
+		this.height = 295;
+		this.width = 216;
+		this.elementsContent = [this.iconImg_i()];
+		
+		eui.Binding.$bindProperties(this, ["hostComponent.data.icon"],[0],this.iconImg,"source");
+	}
+	var _proto = MedalItemSkin.prototype;
+
+	_proto.iconImg_i = function () {
+		var t = new eui.Image();
+		this.iconImg = t;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		return t;
+	};
+	return MedalItemSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/item/QiPaoItemSkin.exml'] = window.QiPaoItemSkin = (function (_super) {
 	__extends(QiPaoItemSkin, _super);
 	function QiPaoItemSkin() {
@@ -4613,6 +4800,201 @@ window.skins={};
 		return t;
 	};
 	return UIViewSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/BagViewSkin.exml'] = window.BagViewSkin = (function (_super) {
+	__extends(BagViewSkin, _super);
+	function BagViewSkin() {
+		_super.call(this);
+		this.skinParts = ["lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","medalBtn","cardBtn","daojuBtn"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this._Image1_i(),this._Group2_i(),this.backHome_i(),this._Group3_i()];
+	}
+	var _proto = BagViewSkin.prototype;
+
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.source = "bg_wall_png";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 44;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 40;
+		return t;
+	};
+	_proto.lvBtn_i = function () {
+		var t = new eui.Group();
+		this.lvBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image2_i(),this._Image3_i(),this.lvTxt_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 210;
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_zs";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lvTxt_i = function () {
+		var t = new eui.Label();
+		this.lvTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "Lv.1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 110;
+		t.x = 70;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image4_i(),this._Image5_i(),this.jiaBtn_i(),this.goldTxt_i()];
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(36,33,14,13);
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 232;
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.source = "gold1";
+		return t;
+	};
+	_proto.jiaBtn_i = function () {
+		var t = new eui.Image();
+		this.jiaBtn = t;
+		t.right = -25;
+		t.source = "icon6";
+		t.y = -22;
+		return t;
+	};
+	_proto.goldTxt_i = function () {
+		var t = new eui.Label();
+		this.goldTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1234";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 122;
+		t.x = 74;
+		return t;
+	};
+	_proto.mdalBtn_i = function () {
+		var t = new eui.Group();
+		this.mdalBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image6_i(),this._Image7_i(),this.mdalTxt_i()];
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_xz1";
+		t.x = 0;
+		return t;
+	};
+	_proto.mdalTxt_i = function () {
+		var t = new eui.Label();
+		this.mdalTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 100;
+		t.x = 70;
+		return t;
+	};
+	_proto.backHome_i = function () {
+		var t = new eui.Image();
+		this.backHome = t;
+		t.source = "backHome";
+		t.x = 20;
+		t.y = 150;
+		return t;
+	};
+	_proto._Group3_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 250;
+		t.layout = this._TileLayout1_i();
+		t.elementsContent = [this.medalBtn_i(),this.cardBtn_i(),this.daojuBtn_i()];
+		return t;
+	};
+	_proto._TileLayout1_i = function () {
+		var t = new eui.TileLayout();
+		t.horizontalGap = 50;
+		t.requestedColumnCount = 3;
+		t.verticalGap = 50;
+		return t;
+	};
+	_proto.medalBtn_i = function () {
+		var t = new eui.Button();
+		this.medalBtn = t;
+		t.icon = "medal_img";
+		t.skinName = "ButSkin2";
+		return t;
+	};
+	_proto.cardBtn_i = function () {
+		var t = new eui.Button();
+		this.cardBtn = t;
+		t.icon = "card_img";
+		t.skinName = "ButSkin2";
+		return t;
+	};
+	_proto.daojuBtn_i = function () {
+		var t = new eui.Button();
+		this.daojuBtn = t;
+		t.icon = "daoju_img";
+		t.skinName = "ButSkin2";
+		return t;
+	};
+	return BagViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/CommanViewSkin.exml'] = window.CommanViewSkin = (function (_super) {
 	__extends(CommanViewSkin, _super);
 	function CommanViewSkin() {
@@ -5339,165 +5721,6 @@ window.skins={};
 		return t;
 	};
 	return HSliderSkin;
-})(eui.Skin);generateEUI.paths['resource/skins/win/MedalViewSkin.exml'] = window.MedalViewSkin = (function (_super) {
-	__extends(MedalViewSkin, _super);
-	function MedalViewSkin() {
-		_super.call(this);
-		this.skinParts = ["lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome"];
-		
-		this.height = 1334;
-		this.width = 750;
-		this.elementsContent = [this._Image1_i(),this._Group2_i(),this.backHome_i()];
-	}
-	var _proto = MedalViewSkin.prototype;
-
-	_proto._Image1_i = function () {
-		var t = new eui.Image();
-		t.source = "bg_wall_png";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto._Group2_i = function () {
-		var t = new eui.Group();
-		t.horizontalCenter = 0;
-		t.y = 44;
-		t.layout = this._HorizontalLayout1_i();
-		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
-		return t;
-	};
-	_proto._HorizontalLayout1_i = function () {
-		var t = new eui.HorizontalLayout();
-		t.gap = 40;
-		return t;
-	};
-	_proto.lvBtn_i = function () {
-		var t = new eui.Group();
-		this.lvBtn = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image2_i(),this._Image3_i(),this.lvTxt_i()];
-		return t;
-	};
-	_proto._Image2_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		t.width = 210;
-		return t;
-	};
-	_proto._Image3_i = function () {
-		var t = new eui.Image();
-		t.source = "icon_zs";
-		t.x = 0;
-		t.y = 0;
-		return t;
-	};
-	_proto.lvTxt_i = function () {
-		var t = new eui.Label();
-		this.lvTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "Lv.1";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 110;
-		t.x = 70;
-		return t;
-	};
-	_proto._Group1_i = function () {
-		var t = new eui.Group();
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image4_i(),this._Image5_i(),this.jiaBtn_i(),this.goldTxt_i()];
-		return t;
-	};
-	_proto._Image4_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.scale9Grid = new egret.Rectangle(36,33,14,13);
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		t.width = 232;
-		return t;
-	};
-	_proto._Image5_i = function () {
-		var t = new eui.Image();
-		t.source = "gold1";
-		return t;
-	};
-	_proto.jiaBtn_i = function () {
-		var t = new eui.Image();
-		this.jiaBtn = t;
-		t.right = -25;
-		t.source = "icon6";
-		t.y = -22;
-		return t;
-	};
-	_proto.goldTxt_i = function () {
-		var t = new eui.Label();
-		this.goldTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "1234";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 122;
-		t.x = 74;
-		return t;
-	};
-	_proto.mdalBtn_i = function () {
-		var t = new eui.Group();
-		this.mdalBtn = t;
-		t.scaleX = 1;
-		t.scaleY = 1;
-		t.touchChildren = false;
-		t.touchEnabled = true;
-		t.elementsContent = [this._Image6_i(),this._Image7_i(),this.mdalTxt_i()];
-		return t;
-	};
-	_proto._Image6_i = function () {
-		var t = new eui.Image();
-		t.horizontalCenter = 0;
-		t.source = "kuang_7";
-		t.verticalCenter = 0;
-		return t;
-	};
-	_proto._Image7_i = function () {
-		var t = new eui.Image();
-		t.source = "icon_xz1";
-		t.x = 0;
-		return t;
-	};
-	_proto.mdalTxt_i = function () {
-		var t = new eui.Label();
-		this.mdalTxt = t;
-		t.bold = true;
-		t.size = 36;
-		t.text = "1";
-		t.textAlign = "center";
-		t.textColor = 0xffffff;
-		t.verticalCenter = -2;
-		t.width = 100;
-		t.x = 70;
-		return t;
-	};
-	_proto.backHome_i = function () {
-		var t = new eui.Image();
-		this.backHome = t;
-		t.source = "backHome";
-		t.x = 20;
-		t.y = 175;
-		return t;
-	};
-	return MedalViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/MessageSkin.exml'] = window.MessageSkin = (function (_super) {
 	__extends(MessageSkin, _super);
 	function MessageSkin() {
@@ -5604,6 +5827,398 @@ window.skins={};
 		return t;
 	};
 	return MessageSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/PropViewSkin.exml'] = window.PropViewSkin = (function (_super) {
+	__extends(PropViewSkin, _super);
+	function PropViewSkin() {
+		_super.call(this);
+		this.skinParts = ["bg","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","titleBg","titleTxt","titleCon","medalList","medalScroller","medalCon","cardList","cardScroller","cardUseCon","cardCon","daojuCon"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.bg_i(),this._Group2_i(),this.backHome_i(),this.titleCon_i(),this.medalCon_i(),this.cardCon_i(),this.daojuCon_i()];
+	}
+	var _proto = PropViewSkin.prototype;
+
+	_proto.bg_i = function () {
+		var t = new eui.Image();
+		this.bg = t;
+		t.source = "bg_wall_png";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 44;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.lvBtn_i(),this._Group1_i(),this.mdalBtn_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 40;
+		return t;
+	};
+	_proto.lvBtn_i = function () {
+		var t = new eui.Group();
+		this.lvBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image1_i(),this._Image2_i(),this.lvTxt_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 210;
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_zs";
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lvTxt_i = function () {
+		var t = new eui.Label();
+		this.lvTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "Lv.1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 110;
+		t.x = 70;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image3_i(),this._Image4_i(),this.jiaBtn_i(),this.goldTxt_i()];
+		return t;
+	};
+	_proto._Image3_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scale9Grid = new egret.Rectangle(36,33,14,13);
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		t.width = 232;
+		return t;
+	};
+	_proto._Image4_i = function () {
+		var t = new eui.Image();
+		t.source = "gold1";
+		return t;
+	};
+	_proto.jiaBtn_i = function () {
+		var t = new eui.Image();
+		this.jiaBtn = t;
+		t.right = -25;
+		t.source = "icon6";
+		t.y = -22;
+		return t;
+	};
+	_proto.goldTxt_i = function () {
+		var t = new eui.Label();
+		this.goldTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1234";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 122;
+		t.x = 74;
+		return t;
+	};
+	_proto.mdalBtn_i = function () {
+		var t = new eui.Group();
+		this.mdalBtn = t;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image5_i(),this._Image6_i(),this.mdalTxt_i()];
+		return t;
+	};
+	_proto._Image5_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.source = "kuang_7";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto._Image6_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_xz1";
+		t.x = 0;
+		return t;
+	};
+	_proto.mdalTxt_i = function () {
+		var t = new eui.Label();
+		this.mdalTxt = t;
+		t.bold = true;
+		t.size = 36;
+		t.text = "1";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.verticalCenter = -2;
+		t.width = 100;
+		t.x = 70;
+		return t;
+	};
+	_proto.backHome_i = function () {
+		var t = new eui.Image();
+		this.backHome = t;
+		t.source = "icon_baek3";
+		t.x = 20;
+		t.y = 165;
+		return t;
+	};
+	_proto.titleCon_i = function () {
+		var t = new eui.Group();
+		this.titleCon = t;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = false;
+		t.y = 155;
+		t.elementsContent = [this.titleBg_i(),this.titleTxt_i()];
+		return t;
+	};
+	_proto.titleBg_i = function () {
+		var t = new eui.Image();
+		this.titleBg = t;
+		t.scale9Grid = new egret.Rectangle(41,36,11,18);
+		t.source = "btn_bg3";
+		t.width = 380;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.bold = true;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = -5;
+		t.size = 36;
+		t.text = "勋 章";
+		t.verticalCenter = -5;
+		return t;
+	};
+	_proto.medalCon_i = function () {
+		var t = new eui.Group();
+		this.medalCon = t;
+		t.left = 0;
+		t.right = 0;
+		t.y = 300;
+		t.elementsContent = [this.medalScroller_i()];
+		return t;
+	};
+	_proto.medalScroller_i = function () {
+		var t = new eui.Scroller();
+		this.medalScroller = t;
+		t.height = 950;
+		t.horizontalCenter = 0;
+		t.width = 710;
+		t.viewport = this.medalList_i();
+		return t;
+	};
+	_proto.medalList_i = function () {
+		var t = new eui.List();
+		this.medalList = t;
+		t.itemRendererSkinName = MedalItemSkin;
+		t.layout = this._TileLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._TileLayout1_i = function () {
+		var t = new eui.TileLayout();
+		t.horizontalGap = 30;
+		t.requestedColumnCount = 3;
+		t.verticalGap = 30;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i(),this._Object10_i(),this._Object11_i(),this._Object12_i(),this._Object13_i(),this._Object14_i(),this._Object15_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.icon = "medal1";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.icon = "medal2";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.icon = "medal3";
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object13_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object14_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object15_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto.cardCon_i = function () {
+		var t = new eui.Group();
+		this.cardCon = t;
+		t.left = 0;
+		t.right = 0;
+		t.visible = false;
+		t.y = 280;
+		t.elementsContent = [this.cardScroller_i(),this.cardUseCon_i()];
+		return t;
+	};
+	_proto.cardScroller_i = function () {
+		var t = new eui.Scroller();
+		this.cardScroller = t;
+		t.height = 1010;
+		t.horizontalCenter = 15;
+		t.width = 710;
+		t.viewport = this.cardList_i();
+		return t;
+	};
+	_proto.cardList_i = function () {
+		var t = new eui.List();
+		this.cardList = t;
+		t.itemRendererSkinName = CardItemSkin;
+		t.layout = this._VerticalLayout1_i();
+		t.dataProvider = this._ArrayCollection2_i();
+		return t;
+	};
+	_proto._VerticalLayout1_i = function () {
+		var t = new eui.VerticalLayout();
+		t.gap = 20;
+		return t;
+	};
+	_proto._ArrayCollection2_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object16_i(),this._Object17_i(),this._Object18_i(),this._Object19_i(),this._Object20_i(),this._Object21_i()];
+		return t;
+	};
+	_proto._Object16_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object17_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object18_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object19_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object20_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object21_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto.cardUseCon_i = function () {
+		var t = new eui.Group();
+		this.cardUseCon = t;
+		t.horizontalCenter = 0;
+		t.visible = false;
+		t.elementsContent = [this._Image7_i(),this._Image8_i()];
+		return t;
+	};
+	_proto._Image7_i = function () {
+		var t = new eui.Image();
+		t.height = 1168;
+		t.scale9Grid = new egret.Rectangle(65,44,26,42);
+		t.source = "icon_bg2";
+		return t;
+	};
+	_proto._Image8_i = function () {
+		var t = new eui.Image();
+		t.source = "icon_bg3";
+		t.y = 1168;
+		return t;
+	};
+	_proto.daojuCon_i = function () {
+		var t = new eui.Group();
+		this.daojuCon = t;
+		t.horizontalCenter = 0;
+		t.visible = false;
+		t.y = 300;
+		return t;
+	};
+	return PropViewSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/ResultSkin.exml'] = window.ResultSkin = (function (_super) {
 	__extends(ResultSkin, _super);
 	function ResultSkin() {
