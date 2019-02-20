@@ -8,7 +8,12 @@
 		"./js/game.min_45aa06f6.js"
 	],
 	"game": [
+<<<<<<< HEAD
 		"./js/default.thm_ecc73baf.js",
 		"./js/main.min_52d676af.js"
+=======
+		"./js/default.thm_bad75097.js",
+		"./js/main.min_77f0612e.js"
+>>>>>>> 0829cce9f6c606a1c1f6f39425a3635d33490b3d
 	]
 }
