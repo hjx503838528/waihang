@@ -3483,12 +3483,11 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.touchEnabled = false;
 		t.verticalCenter = 0;
-		t.elementsContent = [this.iconImg_i(),this._Image1_i(),this.nameTxt_i(),this.explainTxt_i(),this.timeTxt_i(),this.useBtn_i()];
+		t.elementsContent = [this._Image1_i(),this.iconImg_i(),this.nameTxt_i(),this.explainTxt_i(),this.timeTxt_i(),this.useBtn_i()];
 		return t;
 	};
-	_proto.iconImg_i = function () {
+	_proto._Image1_i = function () {
 		var t = new eui.Image();
-		this.iconImg = t;
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
@@ -3499,8 +3498,9 @@ window.skins={};
 		t.y = -50;
 		return t;
 	};
-	_proto._Image1_i = function () {
+	_proto.iconImg_i = function () {
 		var t = new eui.Image();
+		this.iconImg = t;
 		t.height = 140;
 		t.source = "card_img";
 		t.touchEnabled = false;
@@ -6038,7 +6038,6 @@ window.skins={};
 		this.medalList = t;
 		t.itemRendererSkinName = MedalItemSkin;
 		t.layout = this._TileLayout1_i();
-		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._TileLayout1_i = function () {
@@ -6046,86 +6045,6 @@ window.skins={};
 		t.horizontalGap = 30;
 		t.requestedColumnCount = 3;
 		t.verticalGap = 30;
-		return t;
-	};
-	_proto._ArrayCollection1_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i(),this._Object10_i(),this._Object11_i(),this._Object12_i(),this._Object13_i(),this._Object14_i(),this._Object15_i()];
-		return t;
-	};
-	_proto._Object1_i = function () {
-		var t = {};
-		t.icon = "medal1";
-		return t;
-	};
-	_proto._Object2_i = function () {
-		var t = {};
-		t.icon = "medal2";
-		return t;
-	};
-	_proto._Object3_i = function () {
-		var t = {};
-		t.icon = "medal3";
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object8_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object9_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object10_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object11_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object12_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object13_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object14_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object15_i = function () {
-		var t = {};
-		t.icon = "medal_no";
 		return t;
 	};
 	_proto.cardCon_i = function () {
@@ -6152,7 +6071,7 @@ window.skins={};
 		this.cardList = t;
 		t.itemRendererSkinName = CardItemSkin;
 		t.layout = this._VerticalLayout1_i();
-		t.dataProvider = this._ArrayCollection2_i();
+		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._VerticalLayout1_i = function () {
@@ -6160,32 +6079,32 @@ window.skins={};
 		t.gap = 20;
 		return t;
 	};
-	_proto._ArrayCollection2_i = function () {
+	_proto._ArrayCollection1_i = function () {
 		var t = new eui.ArrayCollection();
-		t.source = [this._Object16_i(),this._Object17_i(),this._Object18_i(),this._Object19_i(),this._Object20_i(),this._Object21_i()];
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i()];
 		return t;
 	};
-	_proto._Object16_i = function () {
+	_proto._Object1_i = function () {
 		var t = {};
 		return t;
 	};
-	_proto._Object17_i = function () {
+	_proto._Object2_i = function () {
 		var t = {};
 		return t;
 	};
-	_proto._Object18_i = function () {
+	_proto._Object3_i = function () {
 		var t = {};
 		return t;
 	};
-	_proto._Object19_i = function () {
+	_proto._Object4_i = function () {
 		var t = {};
 		return t;
 	};
-	_proto._Object20_i = function () {
+	_proto._Object5_i = function () {
 		var t = {};
 		return t;
 	};
-	_proto._Object21_i = function () {
+	_proto._Object6_i = function () {
 		var t = {};
 		return t;
 	};
