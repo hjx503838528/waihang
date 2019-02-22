@@ -3653,6 +3653,80 @@ window.skins={};
 		return t;
 	};
 	return MedalItemSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/item/PropItemSkin.exml'] = window.PropItemSkin = (function (_super) {
+	__extends(PropItemSkin, _super);
+	function PropItemSkin() {
+		_super.call(this);
+		this.skinParts = ["iconImg","nameTxt","userBtn","mainCon"];
+		
+		this.height = 144;
+		this.width = 664;
+		this.elementsContent = [this.mainCon_i()];
+	}
+	var _proto = PropItemSkin.prototype;
+
+	_proto.mainCon_i = function () {
+		var t = new eui.Group();
+		this.mainCon = t;
+		t.horizontalCenter = 0;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.elementsContent = [this._Image1_i(),this.iconImg_i(),this.nameTxt_i(),this.userBtn_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "prop_bg_png";
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.x = -224;
+		t.y = -50;
+		return t;
+	};
+	_proto.iconImg_i = function () {
+		var t = new eui.Image();
+		this.iconImg = t;
+		t.height = 90;
+		t.source = "card_img";
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.width = 90;
+		t.x = 30;
+		return t;
+	};
+	_proto.nameTxt_i = function () {
+		var t = new eui.Label();
+		this.nameTxt = t;
+		t.fontFamily = "黑体";
+		t.size = 30;
+		t.text = "使用券信息";
+		t.textColor = 0xffffff;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.x = 150;
+		return t;
+	};
+	_proto.userBtn_i = function () {
+		var t = new eui.Label();
+		this.userBtn = t;
+		t.fontFamily = "黑体";
+		t.height = 100;
+		t.lineSpacing = 6;
+		t.size = 26;
+		t.text = "使用";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.touchEnabled = false;
+		t.verticalAlign = "middle";
+		t.width = 100;
+		t.x = 553;
+		t.y = 8.5;
+		return t;
+	};
+	return PropItemSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/item/QiPaoItemSkin.exml'] = window.QiPaoItemSkin = (function (_super) {
 	__extends(QiPaoItemSkin, _super);
 	function QiPaoItemSkin() {
@@ -5831,11 +5905,11 @@ window.skins={};
 	__extends(PropViewSkin, _super);
 	function PropViewSkin() {
 		_super.call(this);
-		this.skinParts = ["bg","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","titleBg","titleTxt","titleCon","medalList","medalScroller","medalCon","cardList","cardScroller","cardUseCon","cardCon","daojuCon"];
+		this.skinParts = ["bg","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","titleBg","titleTxt","titleCon","medalList","medalScroller","medalCon","cardList","cardScroller","cardUseCon","cardCon","propList","propScroller","propCon"];
 		
 		this.height = 1334;
 		this.width = 750;
-		this.elementsContent = [this.bg_i(),this._Group2_i(),this.backHome_i(),this.titleCon_i(),this.medalCon_i(),this.cardCon_i(),this.daojuCon_i()];
+		this.elementsContent = [this.bg_i(),this._Group2_i(),this.backHome_i(),this.titleCon_i(),this.medalCon_i(),this.cardCon_i(),this.propCon_i()];
 	}
 	var _proto = PropViewSkin.prototype;
 
@@ -6020,6 +6094,7 @@ window.skins={};
 		this.medalCon = t;
 		t.left = 0;
 		t.right = 0;
+		t.visible = false;
 		t.y = 300;
 		t.elementsContent = [this.medalScroller_i()];
 		return t;
@@ -6129,12 +6204,64 @@ window.skins={};
 		t.y = 1168;
 		return t;
 	};
-	_proto.daojuCon_i = function () {
+	_proto.propCon_i = function () {
 		var t = new eui.Group();
-		this.daojuCon = t;
+		this.propCon = t;
 		t.horizontalCenter = 0;
 		t.visible = false;
 		t.y = 300;
+		t.elementsContent = [this.propScroller_i()];
+		return t;
+	};
+	_proto.propScroller_i = function () {
+		var t = new eui.Scroller();
+		this.propScroller = t;
+		t.height = 980;
+		t.horizontalCenter = 5;
+		t.width = 665;
+		t.viewport = this.propList_i();
+		return t;
+	};
+	_proto.propList_i = function () {
+		var t = new eui.List();
+		this.propList = t;
+		t.itemRendererSkinName = PropItemSkin;
+		t.layout = this._VerticalLayout2_i();
+		t.dataProvider = this._ArrayCollection2_i();
+		return t;
+	};
+	_proto._VerticalLayout2_i = function () {
+		var t = new eui.VerticalLayout();
+		t.gap = 20;
+		return t;
+	};
+	_proto._ArrayCollection2_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object7_i(),this._Object8_i(),this._Object9_i(),this._Object10_i(),this._Object11_i(),this._Object12_i()];
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object10_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object11_i = function () {
+		var t = {};
+		return t;
+	};
+	_proto._Object12_i = function () {
+		var t = {};
 		return t;
 	};
 	return PropViewSkin;
