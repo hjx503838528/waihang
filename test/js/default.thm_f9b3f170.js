@@ -6205,6 +6205,7 @@ window.skins={};
 		var t = new eui.Group();
 		this.propCon = t;
 		t.horizontalCenter = 0;
+		t.visible = false;
 		t.y = 300;
 		t.elementsContent = [this.propScroller_i()];
 		return t;
@@ -6223,41 +6224,11 @@ window.skins={};
 		this.propList = t;
 		t.itemRendererSkinName = PropItemSkin;
 		t.layout = this._VerticalLayout2_i();
-		t.dataProvider = this._ArrayCollection2_i();
 		return t;
 	};
 	_proto._VerticalLayout2_i = function () {
 		var t = new eui.VerticalLayout();
 		t.gap = 20;
-		return t;
-	};
-	_proto._ArrayCollection2_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object10_i(),this._Object11_i(),this._Object12_i(),this._Object13_i(),this._Object14_i(),this._Object15_i()];
-		return t;
-	};
-	_proto._Object10_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object11_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object12_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object13_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object14_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object15_i = function () {
-		var t = {};
 		return t;
 	};
 	return PropViewSkin;
