@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bgm_mp3,button_mp3,game2_mp3,gold2_mp3,guanqia_mp3,medal_mp3,message_mp3,share_mp3,task1_mp3,task_on2_mp3,task_win1_mp3,up_mp3,win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,icon2_json,prop_bg1_png",
+			"keys": "bgm_mp3,button_mp3,game2_mp3,gold2_mp3,guanqia_mp3,medal_mp3,message_mp3,share_mp3,task1_mp3,task_on2_mp3,task_win1_mp3,up_mp3,win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,icon2_json",
 			"name": "preload"
 		},
 		{
@@ -169,12 +169,7 @@
 			"name": "icon2_json",
 			"type": "sheet",
 			"url": "assets/img/icon2.json",
-			"subkeys": "icon_baek1,icon_baek2,icon_baek3,icon_bg,icon_bg1,icon_bg2,icon_bg3,icon_fx,icon_guanka4,icon_guanka5,icon_ks,icon_sy,medal_img,medal_no,medal1,medal2,medal3,zx_bg3,zx_gd1,zx_gd2,zx_gd3,zx_gd4,zx_gd5,zx_gd6,back,backHome,btn_bg1,btn_bg2,btn_bg3,card_img,daoju_img"
-		},
-		{
-			"name": "prop_bg1_png",
-			"type": "image",
-			"url": "assets/prop_bg1.png"
+			"subkeys": "btn_bg1,btn_bg2,btn_bg3,card_img,daoju_img,icon_baek1,icon_baek2,icon_baek3,icon_bg,icon_bg1,back,backHome,zx_bg3,zx_gd1,zx_gd2,zx_gd3,zx_gd4,zx_gd5,zx_gd6,icon_guanka4,icon_guanka5,medal_img,medal_no,medal1,medal2,medal3,prop_bg,icon_fx,icon_ks,icon_sy"
 		}
 	]
 }

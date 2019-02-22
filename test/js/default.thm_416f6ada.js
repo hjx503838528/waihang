@@ -3679,7 +3679,7 @@ window.skins={};
 		t.horizontalCenter = 0;
 		t.scaleX = 1;
 		t.scaleY = 1;
-		t.source = "prop_bg1_png";
+		t.source = "prop_bg";
 		t.touchEnabled = false;
 		t.verticalCenter = 0;
 		t.x = -224;
@@ -5905,7 +5905,7 @@ window.skins={};
 	__extends(PropViewSkin, _super);
 	function PropViewSkin() {
 		_super.call(this);
-		this.skinParts = ["bg","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","titleBg","titleTxt","titleCon","medalList","medalScroller","medalCon","cardList","cardScroller","cardUseCon","cardCon","propList","propScroller","propCon"];
+		this.skinParts = ["bg","lvTxt","lvBtn","jiaBtn","goldTxt","mdalTxt","mdalBtn","backHome","titleBg","titleTxt","titleCon","medalList","medalScroller","medalCon","cardList","cardScroller","cardCon","propList","propScroller","propCon"];
 		
 		this.height = 1334;
 		this.width = 750;
@@ -6094,7 +6094,6 @@ window.skins={};
 		this.medalCon = t;
 		t.left = 0;
 		t.right = 0;
-		t.visible = false;
 		t.y = 300;
 		t.elementsContent = [this.medalScroller_i()];
 		return t;
@@ -6102,7 +6101,7 @@ window.skins={};
 	_proto.medalScroller_i = function () {
 		var t = new eui.Scroller();
 		this.medalScroller = t;
-		t.height = 950;
+		t.height = 970;
 		t.horizontalCenter = 0;
 		t.width = 710;
 		t.viewport = this.medalList_i();
@@ -6113,6 +6112,7 @@ window.skins={};
 		this.medalList = t;
 		t.itemRendererSkinName = MedalItemSkin;
 		t.layout = this._TileLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._TileLayout1_i = function () {
@@ -6122,6 +6122,56 @@ window.skins={};
 		t.verticalGap = 30;
 		return t;
 	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.icon = "medal1";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.icon = "medal2";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.icon = "medal3";
+		return t;
+	};
+	_proto._Object4_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object5_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object6_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object7_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object8_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
+	_proto._Object9_i = function () {
+		var t = {};
+		t.icon = "medal_no";
+		return t;
+	};
 	_proto.cardCon_i = function () {
 		var t = new eui.Group();
 		this.cardCon = t;
@@ -6129,13 +6179,13 @@ window.skins={};
 		t.right = 0;
 		t.visible = false;
 		t.y = 280;
-		t.elementsContent = [this.cardScroller_i(),this.cardUseCon_i()];
+		t.elementsContent = [this.cardScroller_i()];
 		return t;
 	};
 	_proto.cardScroller_i = function () {
 		var t = new eui.Scroller();
 		this.cardScroller = t;
-		t.height = 1010;
+		t.height = 970;
 		t.horizontalCenter = 15;
 		t.width = 710;
 		t.viewport = this.cardList_i();
@@ -6146,62 +6196,11 @@ window.skins={};
 		this.cardList = t;
 		t.itemRendererSkinName = CardItemSkin;
 		t.layout = this._VerticalLayout1_i();
-		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._VerticalLayout1_i = function () {
 		var t = new eui.VerticalLayout();
-		t.gap = 20;
-		return t;
-	};
-	_proto._ArrayCollection1_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i()];
-		return t;
-	};
-	_proto._Object1_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object2_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object3_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto.cardUseCon_i = function () {
-		var t = new eui.Group();
-		this.cardUseCon = t;
-		t.horizontalCenter = 0;
-		t.visible = false;
-		t.elementsContent = [this._Image7_i(),this._Image8_i()];
-		return t;
-	};
-	_proto._Image7_i = function () {
-		var t = new eui.Image();
-		t.height = 1168;
-		t.scale9Grid = new egret.Rectangle(65,44,26,42);
-		t.source = "icon_bg2";
-		return t;
-	};
-	_proto._Image8_i = function () {
-		var t = new eui.Image();
-		t.source = "icon_bg3";
-		t.y = 1168;
+		t.gap = 10;
 		return t;
 	};
 	_proto.propCon_i = function () {
@@ -6216,7 +6215,7 @@ window.skins={};
 	_proto.propScroller_i = function () {
 		var t = new eui.Scroller();
 		this.propScroller = t;
-		t.height = 980;
+		t.height = 970;
 		t.horizontalCenter = 5;
 		t.width = 665;
 		t.viewport = this.propList_i();
@@ -6227,41 +6226,11 @@ window.skins={};
 		this.propList = t;
 		t.itemRendererSkinName = PropItemSkin;
 		t.layout = this._VerticalLayout2_i();
-		t.dataProvider = this._ArrayCollection2_i();
 		return t;
 	};
 	_proto._VerticalLayout2_i = function () {
 		var t = new eui.VerticalLayout();
 		t.gap = 20;
-		return t;
-	};
-	_proto._ArrayCollection2_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object7_i(),this._Object8_i(),this._Object9_i(),this._Object10_i(),this._Object11_i(),this._Object12_i()];
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object8_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object9_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object10_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object11_i = function () {
-		var t = {};
-		return t;
-	};
-	_proto._Object12_i = function () {
-		var t = {};
 		return t;
 	};
 	return PropViewSkin;
