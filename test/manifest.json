@@ -9,6 +9,10 @@
 	],
 	"game": [
 		"./js/default.thm_f73af821.js",
+<<<<<<< HEAD
 		"./js/main.min_a85bf73c.js"
+=======
+		"./js/main.min_ef143efe.js"
+>>>>>>> 99ca41225f7abd97ee985a7af0be5e90141f07a7
 	]
 }
