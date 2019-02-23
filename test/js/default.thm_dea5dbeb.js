@@ -3502,7 +3502,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconImg = t;
 		t.height = 140;
-		t.source = "card_img";
+		t.source = "";
 		t.touchEnabled = false;
 		t.width = 200;
 		t.x = 30;
@@ -3640,8 +3640,6 @@ window.skins={};
 		this.height = 295;
 		this.width = 216;
 		this.elementsContent = [this.iconImg_i()];
-		
-		eui.Binding.$bindProperties(this, ["hostComponent.data.icon"],[0],this.iconImg,"source");
 	}
 	var _proto = MedalItemSkin.prototype;
 
@@ -3649,6 +3647,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconImg = t;
 		t.horizontalCenter = 0;
+		t.source = "";
 		t.verticalCenter = 0;
 		return t;
 	};
@@ -3688,7 +3687,7 @@ window.skins={};
 		var t = new eui.Image();
 		this.iconImg = t;
 		t.height = 90;
-		t.source = "card_img";
+		t.source = "";
 		t.touchEnabled = false;
 		t.verticalCenter = 0;
 		t.width = 90;
@@ -3780,6 +3779,45 @@ window.skins={};
 		return t;
 	};
 	return QiPaoItemSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/item/TipsSkin.exml'] = window.TipsSkin = (function (_super) {
+	__extends(TipsSkin, _super);
+	function TipsSkin() {
+		_super.call(this);
+		this.skinParts = ["bg","lab"];
+		
+		this.height = 42;
+		this.width = 453;
+		this.elementsContent = [this.bg_i(),this.lab_i()];
+	}
+	var _proto = TipsSkin.prototype;
+
+	_proto.bg_i = function () {
+		var t = new eui.Rect();
+		this.bg = t;
+		t.alpha = 0.7;
+		t.ellipseWidth = 20;
+		t.height = 42;
+		t.width = 453;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.lab_i = function () {
+		var t = new eui.Label();
+		this.lab = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 30;
+		t.stroke = 1;
+		t.text = "Tips";
+		t.textAlign = "center";
+		t.textColor = 0xffffff;
+		t.touchEnabled = false;
+		t.verticalAlign = "middle";
+		t.verticalCenter = 0;
+		return t;
+	};
+	return TipsSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/item/TxItemSkin.exml'] = window.TxItemSkin = (function (_super) {
 	__extends(TxItemSkin, _super);
 	function TxItemSkin() {
@@ -6110,7 +6148,6 @@ window.skins={};
 		this.medalList = t;
 		t.itemRendererSkinName = MedalItemSkin;
 		t.layout = this._TileLayout1_i();
-		t.dataProvider = this._ArrayCollection1_i();
 		return t;
 	};
 	_proto._TileLayout1_i = function () {
@@ -6118,56 +6155,6 @@ window.skins={};
 		t.horizontalGap = 30;
 		t.requestedColumnCount = 3;
 		t.verticalGap = 30;
-		return t;
-	};
-	_proto._ArrayCollection1_i = function () {
-		var t = new eui.ArrayCollection();
-		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i(),this._Object4_i(),this._Object5_i(),this._Object6_i(),this._Object7_i(),this._Object8_i(),this._Object9_i()];
-		return t;
-	};
-	_proto._Object1_i = function () {
-		var t = {};
-		t.icon = "medal1";
-		return t;
-	};
-	_proto._Object2_i = function () {
-		var t = {};
-		t.icon = "medal2";
-		return t;
-	};
-	_proto._Object3_i = function () {
-		var t = {};
-		t.icon = "medal3";
-		return t;
-	};
-	_proto._Object4_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object5_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object6_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object7_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object8_i = function () {
-		var t = {};
-		t.icon = "medal_no";
-		return t;
-	};
-	_proto._Object9_i = function () {
-		var t = {};
-		t.icon = "medal_no";
 		return t;
 	};
 	_proto.cardCon_i = function () {
