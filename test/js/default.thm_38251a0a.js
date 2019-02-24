@@ -6786,15 +6786,174 @@ window.skins={};
 		t.fontFamily = "黑体";
 		t.horizontalCenter = 0;
 		t.lineSpacing = 12;
-		t.size = 56;
+		t.size = 52;
 		t.text = "WOW,你已经升到了7级";
 		t.textAlign = "center";
 		t.textColor = 0xffffff;
 		t.touchEnabled = false;
-		t.y = 900;
+		t.width = 600;
+		t.y = 850;
 		return t;
 	};
 	return ResultSkin;
+})(eui.Skin);generateEUI.paths['resource/skins/win/ShiBaiSkin.exml'] = window.ShiBaiSkin = (function (_super) {
+	__extends(ShiBaiSkin, _super);
+	function ShiBaiSkin() {
+		_super.call(this);
+		this.skinParts = ["shade","bg","nameTxt","titleTxt","list","startLable","startBtn","closeBtn"];
+		
+		this.height = 1334;
+		this.width = 750;
+		this.elementsContent = [this.shade_i(),this._Group2_i()];
+	}
+	var _proto = ShiBaiSkin.prototype;
+
+	_proto.shade_i = function () {
+		var t = new eui.Rect();
+		this.shade = t;
+		t.bottom = 0;
+		t.fillAlpha = 0.6;
+		t.left = 0;
+		t.right = 0;
+		t.top = 0;
+		t.touchEnabled = true;
+		return t;
+	};
+	_proto._Group2_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.elementsContent = [this.bg_i(),this.nameTxt_i(),this.titleTxt_i(),this._Group1_i(),this.startBtn_i(),this.closeBtn_i()];
+		return t;
+	};
+	_proto.bg_i = function () {
+		var t = new eui.Image();
+		this.bg = t;
+		t.height = 560;
+		t.horizontalCenter = -1;
+		t.scale9Grid = new egret.Rectangle(354,458,144,78);
+		t.source = "bg3_png";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.nameTxt_i = function () {
+		var t = new eui.Label();
+		this.nameTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "这个在四川叫什么？";
+		t.textColor = 0x333333;
+		t.y = 120;
+		return t;
+	};
+	_proto.titleTxt_i = function () {
+		var t = new eui.Label();
+		this.titleTxt = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 3;
+		t.size = 40;
+		t.text = "对不起，任务审核失败";
+		t.textColor = 0x333333;
+		t.y = 320;
+		return t;
+	};
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.horizontalCenter = 0;
+		t.y = 190;
+		t.elementsContent = [this._Image1_i(),this.list_i()];
+		return t;
+	};
+	_proto._Image1_i = function () {
+		var t = new eui.Image();
+		t.scale9Grid = new egret.Rectangle(45,26,14,13);
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_8";
+		t.width = 500;
+		return t;
+	};
+	_proto.list_i = function () {
+		var t = new eui.List();
+		this.list = t;
+		t.horizontalCenter = 0;
+		t.itemRendererSkinName = AwardListSkin;
+		t.verticalCenter = 0;
+		t.layout = this._HorizontalLayout1_i();
+		t.dataProvider = this._ArrayCollection1_i();
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 90;
+		return t;
+	};
+	_proto._ArrayCollection1_i = function () {
+		var t = new eui.ArrayCollection();
+		t.source = [this._Object1_i(),this._Object2_i(),this._Object3_i()];
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		t.source = "gold2";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		t.source = "icon_xp1";
+		t.text = "+30";
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		t.source = "icon_xz2";
+		t.text = "+30";
+		return t;
+	};
+	_proto.startBtn_i = function () {
+		var t = new eui.Group();
+		this.startBtn = t;
+		t.bottom = 60;
+		t.horizontalCenter = 0;
+		t.touchChildren = false;
+		t.touchEnabled = true;
+		t.elementsContent = [this._Image2_i(),this.startLable_i()];
+		return t;
+	};
+	_proto._Image2_i = function () {
+		var t = new eui.Image();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.source = "kuang_6";
+		t.y = 0;
+		return t;
+	};
+	_proto.startLable_i = function () {
+		var t = new eui.Label();
+		this.startLable = t;
+		t.fontFamily = "黑体";
+		t.horizontalCenter = 0;
+		t.size = 36;
+		t.text = "知道啦";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.closeBtn_i = function () {
+		var t = new eui.Button();
+		this.closeBtn = t;
+		t.icon = "icon_close";
+		t.label = "";
+		t.right = 50;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.skinName = "ButSkin1";
+		t.y = 50;
+		return t;
+	};
+	return ShiBaiSkin;
 })(eui.Skin);generateEUI.paths['resource/skins/win/SignInSkin.exml'] = window.SignInSkin = (function (_super) {
 	__extends(SignInSkin, _super);
 	function SignInSkin() {

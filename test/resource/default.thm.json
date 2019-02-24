@@ -65,6 +65,7 @@
 		"resource/skins/win/MessageSkin.exml",
 		"resource/skins/win/PropViewSkin.exml",
 		"resource/skins/win/ResultSkin.exml",
+		"resource/skins/win/ShiBaiSkin.exml",
 		"resource/skins/win/SignInSkin.exml",
 		"resource/skins/win/TaskViewSkin.exml",
 		"resource/skins/zudui/ZuDuiSkin.exml"
