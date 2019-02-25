@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bgm_mp3,button_mp3,game2_mp3,gold2_mp3,guanqia_mp3,medal_mp3,message_mp3,share_mp3,task1_mp3,task_on2_mp3,task_win1_mp3,up_mp3,win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,bagicon1_json",
+			"keys": "win1_png,win2_png,bg1_png,bg3_png,bg4_png,font1_fnt,font1_png,yun_json,init_json,guangdao_json,gameIcon_json,shan_png,shan2_png,zhuan_png,bg_wall_png,zx_bg2_jpg,bagicon1_json",
 			"name": "preload"
 		},
 		{
@@ -10,66 +10,6 @@
 		}
 	],
 	"resources": [
-		{
-			"url": "assets/sound/bgm.mp3",
-			"type": "sound",
-			"name": "bgm_mp3"
-		},
-		{
-			"url": "assets/sound/button.mp3",
-			"type": "sound",
-			"name": "button_mp3"
-		},
-		{
-			"url": "assets/sound/game2.mp3",
-			"type": "sound",
-			"name": "game2_mp3"
-		},
-		{
-			"url": "assets/sound/gold2.mp3",
-			"type": "sound",
-			"name": "gold2_mp3"
-		},
-		{
-			"url": "assets/sound/guanqia.mp3",
-			"type": "sound",
-			"name": "guanqia_mp3"
-		},
-		{
-			"url": "assets/sound/medal.mp3",
-			"type": "sound",
-			"name": "medal_mp3"
-		},
-		{
-			"url": "assets/sound/message.mp3",
-			"type": "sound",
-			"name": "message_mp3"
-		},
-		{
-			"url": "assets/sound/share.mp3",
-			"type": "sound",
-			"name": "share_mp3"
-		},
-		{
-			"url": "assets/sound/task1.mp3",
-			"type": "sound",
-			"name": "task1_mp3"
-		},
-		{
-			"url": "assets/sound/task_on2.mp3",
-			"type": "sound",
-			"name": "task_on2_mp3"
-		},
-		{
-			"url": "assets/sound/task_win1.mp3",
-			"type": "sound",
-			"name": "task_win1_mp3"
-		},
-		{
-			"url": "assets/sound/up.mp3",
-			"type": "sound",
-			"name": "up_mp3"
-		},
 		{
 			"url": "assets/loading_bg.jpg",
 			"type": "image",
