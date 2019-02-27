@@ -1170,6 +1170,7 @@ window.skins={};
 		t.text = "有89位调查员\n已经完成了该任务";
 		t.textAlign = "center";
 		t.textColor = 0x333333;
+		t.visible = false;
 		t.width = 357;
 		t.y = 630;
 		return t;
